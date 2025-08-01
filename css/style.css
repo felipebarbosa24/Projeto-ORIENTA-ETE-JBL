@@ -648,7 +648,7 @@
 }
 /*** Blog End ***/
 
-/*** Team Start ***/
+/***New Team Start ***/
 #team-container {
   width: 90vw;
   max-width: 1100px;
@@ -689,11 +689,11 @@
 }
 
 .card .image {
-  height: 140px;
-  width: 140px;
+  height: 50%;
+  width: 160px;
   border-radius: 20%;
   background: #7d2ae8;
-  margin-top: 30px;
+  margin-top: 5px;
   padding: 3px;
 }
 
@@ -730,17 +730,19 @@
 }
 
 .card .button button {
-  background: #7d2ae8;
-  color: white;
+  background: var(--bs-primary);
+  color: var(--bs-white);
   border: none;
   padding: 8px 20px;
-  border-radius: 10px;
+  border-radius: 800px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .card .button button:hover {
-  background: #6616d0;
+  background: var(--bs-dark);
+  color: var(--bs-white);
 }
 
 /* Navegação Swiper */
@@ -756,6 +758,69 @@
 .swiper-pagination-bullet {
   background: white;
   opacity: 1;
+}
+/***New Team End ***/
+
+/*** Team Start ***/
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+
+.team .team-item .team-img img {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.team .team-item .team-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img::after {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.team .team-item .team-img .team-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: -100%;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.team .team-item:hover .team-img .team-icon {
+    margin-bottom: 0;
+}
+
+.team .team-item .team-title {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.team .team-item .team-title h4 {
+    color: var(--bs-white);
+}
+
+.team .team-item:hover .team-title {
+    background: var(--bs-dark);
 }
 /*** Team End ***/
 
