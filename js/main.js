@@ -131,3 +131,21 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // só anima uma vez
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('#team-container .swiper-slide').forEach(slide => {
+      slide.classList.add('animate-on-scroll');
+      observer.observe(slide);
+    });
+  });
