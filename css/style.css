@@ -309,6 +309,10 @@
     align-items: center;
 }
 
+.carousel-img {
+    width: 120%;
+}
+
 @media (max-width: 991px) {
     .header-carousel .header-carousel-item .carousel-caption {
         padding-top: 45px;
@@ -319,19 +323,19 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .header-carousel .header-carousel-item {
-        height: 950px;
+        height: 600px;
     }
 
-    .header-carousel .owl-nav .owl-prev {
+    .header-carousel .owl-nav .owl-next {
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
-    .header-carousel .owl-nav .owl-next {
+    .header-carousel .owl-nav .owl-prev {
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
