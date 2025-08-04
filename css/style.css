@@ -692,7 +692,7 @@
   height: 50%;
   width: 160px;
   border-radius: 20%;
-  background: #7d2ae8;
+  background: rgba(1, 95, 201, .8);
   margin-top: 5px;
   padding: 3px;
 }

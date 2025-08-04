@@ -108,6 +108,11 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   loop: true,
   loopFillGroupWithBlank: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  speed: 800,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -130,6 +135,17 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerGroup: 2,
     },
   },
+});
+
+// Pausar autoplay ao passar o mouse sobre o carrossel
+const swiperEl = document.querySelector('.mySwiper');
+
+swiperEl.addEventListener('mouseenter', () => {
+  swiper.autoplay.stop();
+});
+
+swiperEl.addEventListener('mouseleave', () => {
+  swiper.autoplay.start();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
