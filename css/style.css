@@ -162,6 +162,15 @@
         padding: 20px 0;
     }
 
+    .swiper {
+        padding-bottom: 40px;
+    }
+
+    .card {
+        height: auto;
+        margin: 10px 0;
+    }
+
     .navbar .navbar-nav .nav-link {
         padding: 0;
     }
@@ -323,6 +332,12 @@
     .header-carousel .header-carousel-item {
         height: 950px;
     }
+
+    .card {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
 
     .header-carousel .owl-nav .owl-prev {
         bottom: -30px;
@@ -659,6 +674,13 @@
 .swiper {
   width: 100%;
   padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -689,8 +711,9 @@
 }
 
 .card .image {
-  height: 50%;
-  width: 160px;
+  width: 100%;
+  max-width: 160px; /* permite que a imagem ocupe até 160px, mas reduza em telas */
+  aspect-ratio: 1 / 1; /* mantém a proporção quadrada automaticamente. */
   border-radius: 20%;
   background: rgba(1, 95, 201, .8);
   margin-top: 5px;
