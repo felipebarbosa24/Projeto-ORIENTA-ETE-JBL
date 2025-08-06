@@ -138,15 +138,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // Pausar autoplay ao passar o mouse sobre o carrossel
-const swiperEl = document.querySelector('.mySwiper');
-
-swiperEl.addEventListener('mouseenter', () => {
-  swiper.autoplay.stop();
-});
-
-swiperEl.addEventListener('mouseleave', () => {
-  swiper.autoplay.start();
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver((entries) => {
