@@ -102,3 +102,57 @@
 
 })(jQuery);
 
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 30,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  speed: 800,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
+});
+
+// Pausar autoplay ao passar o mouse sobre o carrossel
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // só anima uma vez
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('#team-container .swiper-slide').forEach(slide => {
+      slide.classList.add('animate-on-scroll');
+      observer.observe(slide);
+    });
+  });

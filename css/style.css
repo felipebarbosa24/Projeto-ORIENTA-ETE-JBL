@@ -162,6 +162,15 @@
         padding: 20px 0;
     }
 
+    .swiper {
+        padding-bottom: 40px;
+    }
+
+    .card {
+        height: auto;
+        margin: 10px 0;
+    }
+
     .navbar .navbar-nav .nav-link {
         padding: 0;
     }
@@ -323,6 +332,12 @@
     .header-carousel .header-carousel-item {
         height: 950px;
     }
+
+    .card {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
 
     .header-carousel .owl-nav .owl-prev {
         bottom: -30px;
@@ -668,6 +683,126 @@
 }
 /*** Blog End ***/
 
+/***New Team Start ***/
+#team-container {
+  width: 90vw;
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: auto auto 100px auto;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  height: 400px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  z-index: 100;
+  position: relative;
+}
+
+.card .image {
+  width: 100%;
+  max-width: 160px; /* permite que a imagem ocupe até 160px, mas reduza em telas */
+  aspect-ratio: 1 / 1; /* mantém a proporção quadrada automaticamente. */
+  border-radius: 20%;
+  background: rgba(1, 95, 201, .8);
+  margin-top: 5px;
+  padding: 3px;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20%;
+  border: 3px solid white;
+}
+
+.card .name-profession {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.name-profession .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.name-profession .profession {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .rating {
+  margin-top: 15px;
+}
+
+.card .button {
+  margin-top: 20px;
+}
+
+.card .button button {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 800px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card .button button:hover {
+  background: var(--bs-dark);
+  color: var(--bs-white);
+}
+
+/* Navegação Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 1;
+}
+/***New Team End ***/
 
 /*** Team Start ***/
 .team .team-item .team-img {
@@ -731,7 +866,6 @@
     background: var(--bs-dark);
 }
 /*** Team End ***/
-
 
 /*** Testimonial Start ***/
 .testimonial-carousel .owl-stage-outer {
@@ -907,3 +1041,26 @@
 /*** copyright end ***/
 
 
+/* Animação fade-up suave ao entrar na tela */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease forwards;
+}
