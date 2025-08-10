@@ -102,57 +102,52 @@
 
 })(jQuery);
 
+// Inicializa o carrossel Swiper para a seção "Nosso Time"
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 30,
-  loop: true,
-  loopFillGroupWithBlank: true,
+  spaceBetween: 30, // espaçamento entre slides
   autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+    delay: 5000, // troca automática a cada 5s
+    disableOnInteraction: false, // continua após interação
   },
-  speed: 800,
+  speed: 800, // velocidade da transição
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: true, // permite clicar nas bolinhas
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next", // seta direita
+    prevEl: ".swiper-button-prev", // seta esquerda
   },
+  loop: false, // não repete infinito
+  loopFillGroupWithBlank: false,
   breakpoints: {
-    0: {
+    0: { // mobile
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      centeredSlides: false
+    },
+    769: { // desktop
       slidesPerView: 2,
       slidesPerGroup: 2,
-    },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    1024: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-  },
+      centerInsufficientSlides: true // centraliza último slide se faltar
+    }
+  }
 });
 
-// Pausar autoplay ao passar o mouse sobre o carrossel
-
+// Anima slides quando entram na tela
 document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // só anima uma vez
-        }
-      });
-    }, {
-      threshold: 0.2
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); // aplica classe visível
+        observer.unobserve(entry.target); // anima apenas uma vez
+      }
     });
+  }, { threshold: 0.2 }); // só dispara quando 20% visível
 
-    document.querySelectorAll('#team-container .swiper-slide').forEach(slide => {
-      slide.classList.add('animate-on-scroll');
-      observer.observe(slide);
-    });
+  // Aplica o observador a todos os slides da seção
+  document.querySelectorAll('#team-container .swiper-slide').forEach(slide => {
+    slide.classList.add('animate-on-scroll'); // classe inicial
+    observer.observe(slide);
   });
+});
