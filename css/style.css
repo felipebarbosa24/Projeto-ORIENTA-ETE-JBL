@@ -321,14 +321,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: -30px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: -30px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -345,14 +345,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: -30px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: -30px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -365,14 +365,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: -30px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: -30px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
