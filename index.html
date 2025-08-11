@@ -29,6 +29,14 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+        <!-- Fontawesome CDN Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0. 0-beta3/css/all.min.css"/>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     </head>
 
     <body>
@@ -553,85 +561,188 @@
             <!-- Blog End -->
 
             <!-- Team Start -->
-            <section class="container-fluid team pb-5">
-                <div class="container pb-5">
-                    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                        <h4 class="text-primary">Our Team</h4>
-                        <h1 class="display-4 mb-4">Meet Our Expert Team Members</h1>
-                        <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                        </p>
+            <section id="team-container">
+                <header class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Nosso Time</h4>
+                    <h1 class="display-4 mb-4">Conheça Nosso Time</h1>
+                    <p class="mb-0">
+                        Nossa equipe é formada por profissionais experientes e apaixonados pelo que fazem, comprometidos em oferecer soluções criativas e eficientes. Trabalhamos juntos para transformar ideias em resultados, sempre buscando inovação, qualidade e excelência no atendimento aos nossos clientes.
+                    </p>
+                </header>
+
+                <section class="swiper mySwiper wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-1.jpg" alt="Pessoa 1" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 1</span><br>
+                                        <span class="profession">Profissão 1</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 2 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-2.jpg" alt="Pessoa 2" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 2</span><br>
+                                        <span class="profession">Profissão 2</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 3 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-3.jpg" alt="Pessoa 3" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 3</span><br>
+                                        <span class="profession">Profissão 3</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 4 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-4.jpg" alt="Pessoa 4" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 4</span><br>
+                                        <span class="profession">Profissão 4</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 5 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-4.jpg" alt="Pessoa 5" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 5</span><br>
+                                        <span class="profession">Profissão 5</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 6 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-4.jpg" alt="Pessoa 6" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 6</span><br>
+                                        <span class="profession">Profissão 6</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 7 -->
+                        <article class="swiper-slide">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="img/team-4.jpg" alt="Pessoa 7" />
+                                    </div>
+                                    <header class="name-profession">
+                                        <span class="name">Pessoa 7</span><br>
+                                        <span class="profession">Profissão 7</span>
+                                    </header>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="button">
+                                        <button class="btn btn-primary">Ver mais</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
                     </div>
-                    <div class="row g-4">
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                                    <div class="team-icon">
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-title p-4">
-                                    <h4 class="mb-0">David James</h4>
-                                    <p class="mb-0">Profession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                                    <div class="team-icon">
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-title p-4">
-                                    <h4 class="mb-0">David James</h4>
-                                    <p class="mb-0">Profession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                                    <div class="team-icon">
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-title p-4">
-                                    <h4 class="mb-0">David James</h4>
-                                    <p class="mb-0">Profession</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                                    <div class="team-icon">
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-title p-4">
-                                    <h4 class="mb-0">David James</h4>
-                                    <p class="mb-0">Profession</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                    <!-- Botões de navegação -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <!-- Paginação -->
+                    <div class="swiper-pagination"></div>
+                </section>
             </section>
             <!-- Team End -->
 
@@ -850,7 +961,7 @@
         <script src="lib/counterup/counterup.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>

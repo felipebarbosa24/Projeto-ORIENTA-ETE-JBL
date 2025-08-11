@@ -102,3 +102,52 @@
 
 })(jQuery);
 
+// Inicializa o carrossel Swiper para a seção "Nosso Time"
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30, // espaçamento entre slides
+  autoplay: {
+    delay: 5000, // troca automática a cada 5s
+    disableOnInteraction: false, // continua após interação
+  },
+  speed: 800, // velocidade da transição
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true, // permite clicar nas bolinhas
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", // seta direita
+    prevEl: ".swiper-button-prev", // seta esquerda
+  },
+  loop: false, // não repete infinito
+  loopFillGroupWithBlank: false,
+  breakpoints: {
+    0: { // mobile
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      centeredSlides: false
+    },
+    769: { // desktop
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      centerInsufficientSlides: true // centraliza último slide se faltar
+    }
+  }
+});
+
+// Anima slides quando entram na tela
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); // aplica classe visível
+        observer.unobserve(entry.target); // anima apenas uma vez
+      }
+    });
+  }, { threshold: 0.2 }); // só dispara quando 20% visível
+
+  // Aplica o observador a todos os slides da seção
+  document.querySelectorAll('#team-container .swiper-slide').forEach(slide => {
+    slide.classList.add('animate-on-scroll'); // classe inicial
+    observer.observe(slide);
+  });
+});
