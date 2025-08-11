@@ -318,6 +318,32 @@
     align-items: center;
 }
 
+.carousel-img {
+    mask-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 1) 80%, 
+    rgba(0, 0, 0, 0) 100%);
+}
+
+@media (min-width: 992px) {
+    .header-carousel .header-carousel-item {
+        height: 650px;
+    }
+
+    .header-carousel .owl-nav .owl-next {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -45px;
+    }
+
+    .header-carousel .owl-nav .owl-prev {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 45px;
+    }
+}
+
 @media (max-width: 991px) {
     .header-carousel .header-carousel-item .carousel-caption {
         padding-top: 45px;
@@ -325,6 +351,20 @@
 
     .header-carousel .header-carousel-item {
         height: 1300px;
+    }
+
+    .header-carousel .owl-nav .owl-next {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -45px;
+    }
+
+    .header-carousel .owl-nav .owl-prev {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 45px;
     }
 }
 
@@ -341,13 +381,14 @@
 
     .header-carousel .owl-nav .owl-prev {
         bottom: -30px;
+
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
-    .header-carousel .owl-nav .owl-next {
-        bottom: -30px;
+    .header-carousel .owl-nav .owl-prev {
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -455,6 +496,9 @@
 /*** Service Start ***/
 .service .service-item {
     border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .service .service-item .service-img {
     position: relative;
@@ -525,16 +569,26 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background: var(--bs-light);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service .service-item .service-content .service-content-inner {
     position: relative;
     z-index: 9;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service .service-item .service-content .service-content-inner .h4,
 .service .service-item .service-content .service-content-inner p {
     transition: 0.5s;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+
 }
 
 .service .service-item:hover .service-content .service-content-inner .h4,
@@ -572,6 +626,13 @@
 
 .service .service-item:hover .service-content::after {
     height: 100%;
+}
+
+.service .service-item .service-content .service-content-inner a.btn {
+    align-self: flex-start;
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
 }
 /*** Service End ***/
 
