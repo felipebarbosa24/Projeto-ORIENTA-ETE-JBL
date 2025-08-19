@@ -402,6 +402,26 @@
 }
 /*** Single Page Hero Header End ***/
 
+/*** School Mural Page Hero Header Start ***/
+.school-mural {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/school-mural-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.school-mural .breadcrumb {
+    position: relative;
+}
+
+.school-mural .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/*** School Mural Page Hero Header End ***/
 
 /*** Feature Start ***/
 .feature .feature-item {
