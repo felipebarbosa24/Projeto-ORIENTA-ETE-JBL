@@ -979,6 +979,21 @@
     background: var(--bs-dark);
     color: var(--bs-white);
 }
+
+.testimonial-carousel .owl-stage {
+    display: flex;
+}
+
+.testimonial-carousel .owl-item {
+    display: flex;
+    height: auto !important;
+}
+
+.testimonial-item {
+    display: flex;
+    flex: 1;
+}
+
 /*** Testimonial End ***/
 
 
