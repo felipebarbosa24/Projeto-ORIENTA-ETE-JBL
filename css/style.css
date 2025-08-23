@@ -942,7 +942,7 @@
 }
 /*** Team End ***/
 
-/*** Testimonial Start ***/
+/*** Our Presence Start ***/
 .testimonial-carousel .owl-stage-outer {
     margin-top: 58px;
     margin-right: -1px;
@@ -994,7 +994,14 @@
     flex: 1;
 }
 
-/*** Testimonial End ***/
+.testimonial-carousel .owl-prev {
+  transform: rotate(180deg);
+}
+
+.testimonial-carousel .owl-next {
+  transform: rotate(180deg);
+}
+/*** Our Presence End ***/
 
 
 /*** Contact Start ***/
