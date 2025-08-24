@@ -962,7 +962,7 @@
 }
 /*** Team End ***/
 
-/*** Testimonial Start ***/
+/*** Our Presence Start ***/
 .testimonial-carousel .owl-stage-outer {
     margin-top: 58px;
     margin-right: -1px;
@@ -999,7 +999,29 @@
     background: var(--bs-dark);
     color: var(--bs-white);
 }
-/*** Testimonial End ***/
+
+.testimonial-carousel .owl-stage {
+    display: flex;
+}
+
+.testimonial-carousel .owl-item {
+    display: flex;
+    height: auto !important;
+}
+
+.testimonial-item {
+    display: flex;
+    flex: 1;
+}
+
+.testimonial-carousel .owl-prev {
+  transform: rotate(180deg);
+}
+
+.testimonial-carousel .owl-next {
+  transform: rotate(180deg);
+}
+/*** Our Presence End ***/
 
 
 /*** Contact Start ***/
