@@ -408,6 +408,27 @@
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
+/* Estilo exclusivo para a página de teste vocacional */
+.vocational-button {
+    background-color: #F5AE00;
+    color: #082E53 !important;
+    font-size: 20px;
+
+
+}
+
+.vocational-button:hover {
+    background-color: #082E53 !important;
+    color: #fff !important;
+
+}
+
+.vocational-bg{
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/vocational-page-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /* Estilo exclusivo para o FAQ */
 .faq-page .bg-breadcrumb {
