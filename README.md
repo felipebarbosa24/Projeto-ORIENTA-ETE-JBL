@@ -1,25 +1,31 @@
-# 🎓 Projeto ORIENTA ETEJBL
+# 🎓 Projeto ORIENTA ETEJBL  
 
-Website oficial do **ORIENTA**, um aplicativo mobile criado para apoiar estudantes da **ETE Jurandir Bezerra Lins** com informações escolares, organização de estudos e orientação profissional.
+Website oficial do **ORIENTA**, um projeto de TCC desenvolvido por estudantes da **ETE Jurandir Bezerra Lins**.  
 
-Este site tem como objetivo **apresentar** o aplicativo, suas funcionalidades e benefícios, funcionando como uma vitrine institucional.
+O site tem como principal objetivo **apresentar o aplicativo ORIENTA**, funcionando como uma vitrine digital das suas funcionalidades, benefícios e da proposta geral do projeto.  
 
-## 🧰 Tecnologias Utilizadas
+Além de servir como espaço institucional, o site também é uma forma de **divulgar as ideias e a missão do ORIENTA**, aproximando a comunidade escolar, potenciais usuários e interessados no projeto.  
 
-O site foi desenvolvido com:
+## 🧰 Tecnologias Utilizadas  
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6+)**
-- **Bootstrap 5**
+O site foi desenvolvido com:  
 
-## 🌟 Sobre o Aplicativo ORIENTA
+- **HTML5**  
+- **CSS3**  
+- **JavaScript (ES6+)**  
+- **Bootstrap 5**  
 
-O **ORIENTA** é um app mobile voltado para estudantes, oferecendo:
+## 🌟 Sobre o Aplicativo ORIENTA  
 
-- 📢 Informativos da escola, gestão e grêmio estudantil  
-- 🧭 Testes vocacionais  
-- 📚 Planos de estudo personalizados  
-- 🎓 Sugestões de cursos e profissões alinhados ao perfil do aluno  
-- 📝 Consulta de médias de nota de corte do ENEM por curso  
+O **App ORIENTA** é uma plataforma centralizada que reúne **informativos da escola, mundo acadêmico, avisos da gestão e do grêmio estudantil**.  Além disso, conta com uma área dedicada ao aluno, oferecendo:  
 
+- 🧭 **Testes vocacionais** para auxiliar na escolha profissional.  
+- 📚 **Planos de estudo personalizados**.  
+- 🎓 **Sugestões de cursos e carreiras** alinhados ao perfil do estudante.
+- 📝 **Consulta das notas de corte do ENEM** por curso.  
+
+📌 **Acesse aqui o repositório da aplicação:** [ORIENTA - Aplicativo Mobile](https://github.com/felipebarbosa24/App-ORIENTA-ETE-JBL)  
+
+[![Repositório ORIENTA](https://img.shields.io/badge/GitHub-ORIENTA%20App-181717?style=for-the-badge&logo=github)](https://github.com/felipebarbosa24/App-ORIENTA-ETE-JBL)  
+
+---
