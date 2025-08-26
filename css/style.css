@@ -330,14 +330,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -354,14 +354,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -378,17 +378,15 @@
         margin: 0 auto 20px;
     }
 
-
-    .header-carousel .owl-nav .owl-prev {
-        bottom: -30px;
-
+    .header-carousel .owl-nav .owl-next {
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -448,6 +446,7 @@
 /*** School Mural Page Hero Header End ***/
 
 /*** Feature Start ***/
+/***
 .feature .feature-item {
     border-radius: 10px;
     background: var(--bs-white);
@@ -518,7 +517,14 @@
     background: var(--bs-dark);
     color: var(--bs-white);
 }
+***/
 /*** Feature End ***/
+
+/*** About Start ***/
+.about {
+    margin-top: 6rem;
+}
+/*** About End ***/
 
 
 /*** Service Start ***/
@@ -680,6 +686,10 @@
 
 
 /*** Blog Start ***/
+.blog {
+    margin-top: -3rem;
+}
+
 .blog .blog-item {
     border-radius: 10px;
     transition: 0.5s;
@@ -755,10 +765,7 @@
 /*** New Team Start ***/
 /* Container principal da seção de equipe, limita largura e centraliza */
 #team-container {
-  width: 90vw; /* ocupa 90% da largura da viewport */
-  max-width: 1100px; /* não ultrapassa 1100px */
-  padding: 0 15px;
-  margin: auto auto 100px auto; /* centraliza e adiciona margem inferior */
+  margin-bottom: 100px;
 }
 
 /* Configuração do carrossel Swiper */
