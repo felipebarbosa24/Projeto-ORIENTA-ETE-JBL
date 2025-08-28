@@ -911,6 +911,14 @@
 #nosso-time-html {
     margin-top: 48px;
 }
+
+/* Estilo exclusivo para o team.html */
+.team-page .bg-breadcrumb {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-nosso-time.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /*** New Team End ***/
 
 /*** Our Presence Start ***/
