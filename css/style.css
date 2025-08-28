@@ -445,6 +445,27 @@
 }
 /*** School Mural Page Hero Header End ***/
 
+/*** Our Contact Page Hero Header Start ***/
+.our-contact {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/our-contact-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.our-contact .breadcrumb {
+    position: relative;
+}
+
+.our-contact .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/*** Our Contact Page Hero Header End ***/
+
 /*** Feature Start ***/
 /***
 .feature .feature-item {
