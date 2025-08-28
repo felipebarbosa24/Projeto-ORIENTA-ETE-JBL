@@ -134,6 +134,24 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+// Enem Score Page Search Start
+
+function search(){
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase()
+  let x = document.getElementsByClassName('universities')
+
+  for(i = 0; i < x.length; i++){
+    if(!x[i].innerHTML.toLowerCase().includes(input)){
+      x[i].style.display = "none"
+    }else{
+      x[i].style.display = "list-item"
+    }
+  }
+}
+
+//Enem Score Page Search End
+
 // Anima slides quando entram na tela
 document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries) => {

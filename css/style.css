@@ -439,6 +439,79 @@
 }
 /*** School Mural Page Hero Header End ***/
 
+/*** Enem Score Page Header Start ***/
+.enem-score {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/enem-cutoff-score-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.enem-score .breadcrumb {
+    position: relative;
+}
+
+.enem-score .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+.counter-enem.bg-light.rounded {
+  height: 450px;
+  overflow-y: scroll;
+  max-width: 500px;
+  height: 450px;
+  overflow-y: scroll;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#searchbar {
+  display: block;
+  margin: 0 auto;
+  margin: 20px auto;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 460px;
+  
+  font-size: 16px;
+  color: #333;
+  
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  
+  transition: 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#searchbar:focus {
+  border-color: #007bff; /* azul */
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+.counter-enem li {
+  margin: 20px;
+}
+
+.counter-enem ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faculdades-title {
+  gap: 15px;
+  margin-left: -30px;
+  justify-content: center;
+  display: flex;
+  
+}
+/*** Enem Score Page Header End ***/
+
 /*** Feature Start ***/
 .feature .feature-item {
     border-radius: 10px;
