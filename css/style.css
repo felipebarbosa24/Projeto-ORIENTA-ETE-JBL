@@ -330,14 +330,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -354,14 +354,14 @@
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -378,17 +378,15 @@
         margin: 0 auto 20px;
     }
 
-
-    .header-carousel .owl-nav .owl-prev {
-        bottom: -30px;
-
+    .header-carousel .owl-nav .owl-next {
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-prev {
-        bottom: 5px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
@@ -408,27 +406,34 @@
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
-/* Estilo exclusivo para a página de teste vocacional */
+
+/*** Vocational Test Page Start ***/
+
+/***
+APAGAR COMENTÁRIOS APÓS TRABALHO, Aqui nessa seção css você acrescenta todo css necessário para que a página funcione corretamente, pode copiar o css de feature e jogar aqui, porém ao acrescentar aqui você muda a classe no vocational-test.html e aqui você chama respectivamente.
+***/
+.feature-item{ /*** trocar nome para a classe respectiva, tanto no css quanto no html! ***/
+    min-height: 450px;
+}
+
 .vocational-button {
     background-color: #F5AE00;
     color: #082E53 !important;
     font-size: 20px;
-
-
 }
 
 .vocational-button:hover {
     background-color: #082E53 !important;
     color: #fff !important;
-
 }
-
 .vocational-bg{
     background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/vocational-page-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+/*** Vocational Test Page End ***/
+
 
 /* Estilo exclusivo para o FAQ */
 .faq-page .bg-breadcrumb {
@@ -469,6 +474,7 @@
 /*** School Mural Page Hero Header End ***/
 
 /*** Feature Start ***/
+/***
 .feature .feature-item {
     border-radius: 10px;
     background: var(--bs-white);
@@ -540,11 +546,17 @@
     color: var(--bs-white);
 }
 
-
 .feature-item{
     min-height: 450px;
 }
+***/
 /*** Feature End ***/
+
+/*** About Start ***/
+.about {
+    margin-top: 6rem;
+}
+/*** About End ***/
 
 
 /*** Service Start ***/
@@ -706,6 +718,10 @@
 
 
 /*** Blog Start ***/
+.blog {
+    margin-top: -3rem;
+}
+
 .blog .blog-item {
     border-radius: 10px;
     transition: 0.5s;
@@ -781,10 +797,7 @@
 /*** New Team Start ***/
 /* Container principal da seção de equipe, limita largura e centraliza */
 #team-container {
-  width: 90vw; /* ocupa 90% da largura da viewport */
-  max-width: 1100px; /* não ultrapassa 1100px */
-  padding: 0 15px;
-  margin: auto auto 100px auto; /* centraliza e adiciona margem inferior */
+  margin-bottom: 100px;
 }
 
 /* Configuração do carrossel Swiper */
