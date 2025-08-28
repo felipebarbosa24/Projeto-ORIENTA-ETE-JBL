@@ -451,6 +451,11 @@
     transition: 0.5s;
 }
 
+.enem-item-content {
+  border: 1px solid #b1b1b1; /* borda vermelha de 3px */
+  border-radius: 15px;       /* arredondamento maior que o padrão */
+}
+
 .enem-score .breadcrumb {
     position: relative;
 }
@@ -509,6 +514,68 @@
   justify-content: center;
   display: flex;
   
+}
+
+.counter-enem.bg-light.rounded li h6 {
+    color: #015fc9e6 !important; /* texto vermelho */
+}
+
+#universidade-info {
+  border: 1px solid #015fc9e6;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.modal-enem {
+    display: none; 
+    position: fixed;
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-enem-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    position: relative;
+}
+
+.modal-enem-close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-enem-close:hover {
+    color: black;
+}
+
+.modal-enem table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.modal-enem th, .modal-enem td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.modal-enem th {
+    background-color: #f2f2f2;
 }
 /*** Enem Score Page Header End ***/
 

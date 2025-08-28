@@ -11,7 +11,75 @@
     };
     spinner(0);
     
-    
+//Enem Score Universitie Information Start
+
+const universidadesNotas = {
+    "Universidade Federal De Pernambuco (UFPE)": [
+        ["Curso", "Modalidade", "Nota de Corte"],
+        ["Medicina", "Ampla Concorrência", 790],
+        ["Engenharia Civil", "Ampla Concorrência", 720],
+        ["Direito", "Ampla Concorrência", 700]
+    ],
+    "Universidade Federal Rural De Pernambuco (UFRPE)": [
+        ["Curso", "Modalidade", "Nota de Corte"],
+        ["Medicina Veterinária", "Ampla Concorrência", 740],
+        ["Engenharia Agronômica", "Ampla Concorrência", 680],
+        ["Zootecnia", "Ampla Concorrência", 650]
+    ],
+    "Universidade Federal Do Vale Do São Francisco (UNIVASF)": [
+        ["Curso", "Modalidade", "Nota de Corte"],
+        ["Engenharia Civil", "Ampla Concorrência", 640],
+        ["Enfermagem", "Ampla Concorrência", 610]
+    ]
+};
+
+
+const modal = document.getElementById("modal-enem");
+const modalTitle = document.getElementById("modal-university-title");
+const modalTable = document.getElementById("modal-table-container");
+const closeModal = document.querySelector(".modal-enem-close");
+
+
+document.querySelectorAll(".universities").forEach(li => {
+    li.addEventListener("click", function() {
+        const uniName = li.textContent.trim();
+        modalTitle.textContent = uniName;
+
+
+        const notas = universidadesNotas[uniName];
+        if (notas) {
+            let tableHTML = "<table>";
+            notas.forEach((row, i) => {
+                tableHTML += "<tr>";
+                row.forEach(cell => {
+                    tableHTML += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
+                });
+                tableHTML += "</tr>";
+            });
+            tableHTML += "</table>";
+            modalTable.innerHTML = tableHTML;
+        } else {
+            modalTable.innerHTML = "<p>Sem dados disponíveis</p>";
+        }
+
+        modal.style.display = "block";
+    });
+});
+
+
+closeModal.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+//Enem Scor Universitie Information End
+
     // Initiate the wowjs
     new WOW().init();
     
@@ -150,6 +218,7 @@ function search(){
   }
 }
 
+
 //Enem Score Page Search End
 
 // Anima slides quando entram na tela
@@ -169,3 +238,4 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(slide);
   });
 });
+
