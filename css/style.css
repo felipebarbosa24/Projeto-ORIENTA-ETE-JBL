@@ -539,6 +539,11 @@
     background: var(--bs-dark);
     color: var(--bs-white);
 }
+
+
+.feature-item{
+    min-height: 450px;
+}
 /*** Feature End ***/
 
 
