@@ -527,6 +527,27 @@
 }
 /*** Single Page Hero Header End ***/
 
+/*** About Us Page Hero Header Start ***/
+.about-us {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/about-us-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.about-us .breadcrumb {
+    position: relative;
+}
+
+.about-us .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/*** About Us Page Hero Header End ***/
+
 /*** School Mural Page Hero Header Start ***/
 .school-mural {
     position: relative;
