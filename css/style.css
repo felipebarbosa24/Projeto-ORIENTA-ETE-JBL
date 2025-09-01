@@ -16,6 +16,7 @@
 .back-to-top {
     position: fixed;
     right: 30px;  
+    right: 30px;  
     bottom: 30px;
     transition: 0.5s;
     z-index: 99;
@@ -405,11 +406,10 @@
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
+/*** Single Page Hero Header End ***/
+
 
 /*** Vocational Test Page Start ***/
-
-
-
 .vocational .vocational-item {
     border-radius: 10px;
     background: var(--bs-white);
@@ -486,7 +486,100 @@
     min-height: 450px
 }
 
+.vocational-button {
+    background-color: #F5AE00;
+    color: #082E53 !important;
+    font-size: 20px;
+}
 
+.vocational-button:hover {
+    background-color: #082E53 !important;
+    color: #fff !important;
+}
+.vocational-bg{
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/vocational-page-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*** Vocational Test Page End ***/
+
+
+/*** Vocational Test Page Start ***/
+.vocational .vocational-item {
+    border-radius: 10px;
+    background: var(--bs-white);
+    transition: 0.5s;
+}
+
+.vocational .vocational-item:hover {
+    background: var(--bs-primary);
+}
+
+.vocational .vocational-item .vocational-icon {
+    position: relative;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-light);
+}
+
+.vocational .vocational-item:hover .vocational-icon i {
+    z-index: 9;
+}
+
+.vocational .vocational-item .vocational-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-dark);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.vocational .vocational-item:hover .vocational-icon::after {
+    height: 100%;
+}
+
+.vocational .vocational-item .vocational-icon {
+    color: var(--bs-primary);
+}
+
+.vocational .vocational-item .vocational-icon,
+.vocational .vocational-item h4,
+.vocational .vocational-item p {
+    transition: 0.5s;
+}
+
+.vocational .vocational-item:hover .vocational-icon {
+    color: var(--bs-white);
+}
+.vocational .vocational-item:hover h4,
+.vocational .vocational-item:hover p {
+    color: var(--bs-white);
+}
+
+.vocational .vocational-item:hover a.btn {
+    background: var(--bs-white);
+    color: var(--bs-primary);
+}
+
+.vocational .vocational-item:hover a.btn:hover {
+    background: var(--bs-dark);
+    color: var(--bs-white);
+}
+
+.vocational-item{
+    min-height: 450px
+}
 
 .vocational-button {
     background-color: #F5AE00;
@@ -504,8 +597,6 @@
     background-size: cover;
     background-position: center;
 }
-
-
 /*** Vocational Test Page End ***/
 
 
@@ -525,6 +616,7 @@
     color: var(--bs-white);
 }
 /*** Single Page Hero Header End ***/
+
 
 /*** School Mural Page Hero Header Start ***/
 .school-mural {
@@ -797,8 +889,13 @@
 .feature-item{
     min-height: 450px;
 }
+
+.feature-item{
+    min-height: 450px;
+}
 ***/
 /*** Feature End ***/
+
 
 /*** About Start ***/
 .about {
@@ -1194,7 +1291,6 @@
 }
 
 /* Exclusivo para o team.html*/
-
 #nosso-time-html {
     margin-top: 48px;
 }
