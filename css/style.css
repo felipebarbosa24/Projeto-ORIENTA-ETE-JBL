@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 
 /*** Spinner Start ***/
 #spinner {
@@ -588,22 +591,37 @@
 
 /* --- Botão --- */
 .carrer-plan-page .career-button {
-  background-color: #F5AE00;     /* mesmo laranja usado no vocational-button */
-  color: #082E53 !important;     /* texto azul escuro para contraste */
+  background-color: #F5AE00;
+  color: #082E53 !important;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   transition: all 0.3s ease;
   margin-top: 48px;
-  height: 75px;
   align-content: center;
-  width: 350px;
+  width: 300px;
 }
 
 .carrer-plan-page .career-button:hover {
-  background-color: #082E53 !important; /* inverte cores no hover */
+  background-color: #082E53 !important;
   color: #fff !important;
 }
+
+.bg-career-plan .breadcrumb .breadcrumb-item a {
+    color: #fff !important;   /* links brancos */
+}
+
+.bg-career-plan .breadcrumb .breadcrumb-item.active {
+    color: var(--bs-primary) !important;  /* último item azul */
+}
+
+@media (max-width: 576px) {
+  .carrer-plan-page .career-button {
+    width: auto;
+    display: inline-block;
+  }
+}
+    
 
 /*** Career Plan Page End ***/
 
