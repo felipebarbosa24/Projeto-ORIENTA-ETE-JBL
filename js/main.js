@@ -1,3 +1,24 @@
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const cards = document.querySelectorAll('#study-container .col-12');
+
+    searchInput.addEventListener('input', function() {
+        const filter = searchInput.value.toLowerCase();
+
+        cards.forEach(card => {
+            const title = card.querySelector('.plan-card h2').textContent.toLowerCase();
+            if (title.includes(filter)) {
+                card.style.display = 'block'; // mostra o card
+            } else {
+                card.style.display = 'none'; // esconde o card
+            }
+        });
+    });
+});
+
+
 (function ($) {
     "use strict";
 
