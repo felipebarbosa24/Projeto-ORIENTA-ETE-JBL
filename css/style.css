@@ -594,10 +594,10 @@ body {
   background-color: #F5AE00;
   color: #082E53 !important;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   border: none;
   transition: all 0.3s ease;
-  margin-top: 48px;
+  margin-top: 40px;
   align-content: center;
   width: 300px;
 }
