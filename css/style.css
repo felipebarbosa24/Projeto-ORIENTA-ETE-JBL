@@ -814,7 +814,6 @@
 /*** Enem Score Page End ***/
 
 /*** Feature Start ***/
-/***
 .feature .feature-item {
     border-radius: 10px;
     background: var(--bs-white);
@@ -893,7 +892,7 @@
 .feature-item{
     min-height: 450px;
 }
-***/
+
 /*** Feature End ***/
 
 
