@@ -1644,6 +1644,15 @@
         color: #015ec9;
         text-align: left;
     }
+    
+    .table-food tbody tr td:first-child {
+    background: linear-gradient(135deg, #015ec9, #027cf0);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 /* Food Menu End */
 
