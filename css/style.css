@@ -602,6 +602,14 @@
 }
 /*** Vocational Test Page End ***/
 
+.bg-breadcrumb .breadcrumb {
+    position: relative;
+}
+
+.bg-breadcrumb .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/*** Single Page Hero Header End ***/
 
 /*** Vocational Test Page Start ***/
 .vocational .vocational-item {
@@ -706,14 +714,103 @@
     background-size: cover;
 }
 
-.bg-breadcrumb .breadcrumb {
-    position: relative;
+/* Estilo exclusivo para o FAQ End */
+
+
+
+/*** Career Plan Page Start ***/
+
+
+
+/* --- Banner --- */
+.carrer-plan-page .bg-career-plan {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-plano-de-carreira.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px;
 }
 
-.bg-breadcrumb .breadcrumb .breadcrumb-item a {
-    color: var(--bs-white);
+/* --- Imagem --- */
+.career-alternate .career-image img {
+  max-width: 100%;
+  border-radius: 12px;
 }
-/*** Single Page Hero Header End ***/
+
+/* --- Cards --- */
+.career-alternate .career-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  color: #000;
+}
+
+/* --- Texto do título dentro dos cards --- */
+.career-alternate .career-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+/* --- Ícone dos cards --- */
+.career-alternate .career-card i {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--bs-primary);
+}
+
+.career-alternate .career-card:hover {
+  background: var(--bs-primary);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.career-alternate .career-card:hover h5,
+.career-alternate .career-card:hover i {
+  color: #fff !important;
+}
+
+/* --- Botão --- */
+.carrer-plan-page .career-button {
+  background-color: #F5AE00;
+  color: #082E53 !important;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+  align-content: center;
+  width: 300px;
+}
+
+.carrer-plan-page .career-button:hover {
+  background-color: #082E53 !important;
+  color: #fff !important;
+}
+
+.bg-career-plan .breadcrumb .breadcrumb-item a {
+    color: #fff !important;   /* links brancos */
+}
+
+.bg-career-plan .breadcrumb .breadcrumb-item.active {
+    color: var(--bs-primary) !important;  /* último item azul */
+}
+
+@media (max-width: 576px) {
+  .carrer-plan-page .career-button {
+    width: auto;
+    display: inline-block;
+  }
+}
+    
+
+/*** Career Plan Page End ***/
+
+
 
 /*** About Us Page Hero Header Start ***/
 .about-us {
