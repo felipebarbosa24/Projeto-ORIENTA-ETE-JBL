@@ -17,6 +17,7 @@
     position: fixed;
     right: 30px;  
     right: 30px;  
+    right: 30px;  
     bottom: 30px;
     transition: 0.5s;
     z-index: 99;
@@ -407,8 +408,10 @@
     transition: 0.5s;
 }
 /*** Single Page Hero Header End ***/
+/*** Single Page Hero Header End ***/
 
 
+/*** Vocational Test Page Start ***/
 /*** Vocational Test Page Start ***/
 .vocational .vocational-item {
     border-radius: 10px;
@@ -504,6 +507,109 @@
 }
 /*** Vocational Test Page End ***/
 
+
+/*** Vocational Test Page Start ***/
+.vocational .vocational-item {
+    border-radius: 10px;
+    background: var(--bs-white);
+    transition: 0.5s;
+}
+
+.vocational .vocational-item:hover {
+    background: var(--bs-primary);
+}
+
+.vocational .vocational-item .vocational-icon {
+    position: relative;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-light);
+}
+
+.vocational .vocational-item:hover .vocational-icon i {
+    z-index: 9;
+}
+
+.vocational .vocational-item .vocational-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-dark);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.vocational .vocational-item:hover .vocational-icon::after {
+    height: 100%;
+}
+
+.vocational .vocational-item .vocational-icon {
+    color: var(--bs-primary);
+}
+
+.vocational .vocational-item .vocational-icon,
+.vocational .vocational-item h4,
+.vocational .vocational-item p {
+    transition: 0.5s;
+}
+
+.vocational .vocational-item:hover .vocational-icon {
+    color: var(--bs-white);
+}
+.vocational .vocational-item:hover h4,
+.vocational .vocational-item:hover p {
+    color: var(--bs-white);
+}
+
+.vocational .vocational-item:hover a.btn {
+    background: var(--bs-white);
+    color: var(--bs-primary);
+}
+
+.vocational .vocational-item:hover a.btn:hover {
+    background: var(--bs-dark);
+    color: var(--bs-white);
+}
+
+.vocational-item{
+    min-height: 450px
+}
+
+.vocational-button {
+    background-color: #F5AE00;
+    color: #082E53 !important;
+    font-size: 20px;
+}
+
+.vocational-button:hover {
+    background-color: #082E53 !important;
+    color: #fff !important;
+}
+.vocational-bg{
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/vocational-page-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*** Vocational Test Page End ***/
+
+.bg-breadcrumb .breadcrumb {
+    position: relative;
+}
+
+.bg-breadcrumb .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/*** Single Page Hero Header End ***/
 
 /*** Vocational Test Page Start ***/
 .vocational .vocational-item {
@@ -608,15 +714,124 @@
     background-size: cover;
 }
 
-.bg-breadcrumb .breadcrumb {
+/* Estilo exclusivo para o FAQ End */
+
+
+
+/*** Career Plan Page Start ***/
+
+
+
+/* --- Banner --- */
+.carrer-plan-page .bg-career-plan {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-plano-de-carreira.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px;
+}
+
+/* --- Imagem --- */
+.career-alternate .career-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* --- Cards --- */
+.career-alternate .career-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  color: #000;
+}
+
+/* --- Texto do título dentro dos cards --- */
+.career-alternate .career-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+/* --- Ícone dos cards --- */
+.career-alternate .career-card i {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--bs-primary);
+}
+
+.career-alternate .career-card:hover {
+  background: var(--bs-primary);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.career-alternate .career-card:hover h5,
+.career-alternate .career-card:hover i {
+  color: #fff !important;
+}
+
+/* --- Botão --- */
+.carrer-plan-page .career-button {
+  background-color: #F5AE00;
+  color: #082E53 !important;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+  align-content: center;
+  width: 300px;
+}
+
+.carrer-plan-page .career-button:hover {
+  background-color: #082E53 !important;
+  color: #fff !important;
+}
+
+.bg-career-plan .breadcrumb .breadcrumb-item a {
+    color: #fff !important;   /* links brancos */
+}
+
+.bg-career-plan .breadcrumb .breadcrumb-item.active {
+    color: var(--bs-primary) !important;  /* último item azul */
+}
+
+@media (max-width: 576px) {
+  .carrer-plan-page .career-button {
+    width: auto;
+    display: inline-block;
+  }
+}
+    
+
+/*** Career Plan Page End ***/
+
+
+
+/*** About Us Page Hero Header Start ***/
+.about-us {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/about-us-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.about-us .breadcrumb {
     position: relative;
 }
 
-.bg-breadcrumb .breadcrumb .breadcrumb-item a {
+.about-us .breadcrumb .breadcrumb-item a {
     color: var(--bs-white);
 }
-/*** Single Page Hero Header End ***/
-
+/*** About Us Page Hero Header End ***/
 
 /*** School Mural Page Hero Header Start ***/
 .school-mural {
@@ -660,7 +875,28 @@
 }
 /*** Our Contact Page Hero Header End ***/
 
-/*** Enem Score Page Start ***/
+/*** Our Contact Page Hero Header Start ***/
+.our-contact {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/our-contact-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.our-contact .breadcrumb {
+    position: relative;
+}
+
+.our-contact .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/*** Our Contact Page Hero Header End ***/
+
+/*** Enem Score Page Header Start ***/
 .enem-score {
     position: relative;
     overflow: hidden;
@@ -889,11 +1125,8 @@
     min-height: 450px;
 }
 
-.feature-item{
-    min-height: 450px;
-}
-
 /*** Feature End ***/
+
 
 
 /*** About Start ***/
