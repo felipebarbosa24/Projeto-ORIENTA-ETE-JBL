@@ -1527,14 +1527,10 @@
 
 /* header Start */
 .food-menu-img {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(rgba(1, 94, 201, 0.62), rgba(0, 0, 0, 0.2)), url(../img/food-menu-background.png);
-    background-position: center center;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/food-menu-background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 60px 0 60px 0;
-    transition: 0.5s;
+    background-position: center;
 }
 
 .food-menu-img .breadcrumb {
