@@ -2103,6 +2103,25 @@
     padding-right: 0;
   }
 }
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .no-wrap {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .no-wrap {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
 /* Food Menu End */
 
 /*** Food Menu Page End ***/
