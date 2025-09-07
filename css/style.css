@@ -708,7 +708,7 @@
 
 /* Estilo exclusivo para o FAQ */
 .faq-page .bg-breadcrumb {
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-faq.png);
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/faq-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -724,7 +724,7 @@
 
 /* --- Banner --- */
 .carrer-plan-page .bg-career-plan {
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-plano-de-carreira.png);
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/career-plan-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1538,7 +1538,7 @@
 
 /* Estilo exclusivo para o team.html */
 .team-page .bg-breadcrumb {
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-nosso-time.png);
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/our-team-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
