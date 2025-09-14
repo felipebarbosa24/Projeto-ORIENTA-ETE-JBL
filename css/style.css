@@ -977,6 +977,13 @@
     color: #015fc9e6 !important; /* texto vermelho */
 }
 
+.our-app {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/our-app-page-banner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #universidade-info {
   border: 1px solid #015fc9e6;
   border-radius: 10px;
@@ -1858,6 +1865,44 @@
 }
 
 /*** Study plan end ***/
+
+
+/*** Our App start ***/
+.our-app-box img {
+
+    max-height: 50vh;
+    object-fit: contain;
+
+
+
+}
+
+.our-app-res{
+    display: none ;
+}
+
+
+
+
+
+@media (max-width:1200px) {
+    .our-app-box img {
+        max-height: 40vh;
+
+    }
+    .our-app-def{
+        display: none;
+    }
+
+
+
+    .our-app-res{
+    display: block;
+}
+
+}
+
+/*** Our App end ***/
 
 
 
