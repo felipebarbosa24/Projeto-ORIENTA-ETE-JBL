@@ -2130,10 +2130,14 @@
 
 /* header Start */
 .class-schedule-img {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/class-schedule-page-background.png);
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
 }
 
 .class-schedule-img .breadcrumb {
