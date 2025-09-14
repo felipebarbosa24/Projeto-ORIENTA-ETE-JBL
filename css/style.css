@@ -767,7 +767,7 @@
 
 /* Estilo exclusivo para o FAQ */
 .faq-page .bg-breadcrumb {
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-faq.png);
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/faq-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -783,7 +783,7 @@
 
 /* --- Banner --- */
 .carrer-plan-page .bg-career-plan {
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-plano-de-carreira.png);
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/career-plan-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1597,7 +1597,7 @@
 
 /* Estilo exclusivo para o team.html */
 .team-page .bg-breadcrumb {
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/head-nosso-time.png);
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/our-team-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1706,6 +1706,218 @@
     z-index: 9;
 }
 /*** Contact End ***/
+
+/*** Study plan start ***/
+
+
+.study-plan {
+    margin-top: -3rem;
+}
+
+.study-plan .study-plan-item {
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.study-plan .study-plan-item:hover {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .1);
+}
+
+.study-plan .study-plan-item:hover .study-plan-content {
+    background: var(--bs-white);
+}
+
+.study-plan .study-plan-item .study-plan-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.study-plan .study-plan-item .study-plan-img img {
+    transition: 0.5s;
+}
+
+.study-plan .study-plan-item:hover .study-plan-img img {
+    transform: scale(1.2);
+}
+
+.study-plan .study-plan-item .study-plan-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(1, 95, 201, .2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.study-plan .study-plan-item:hover .study-plan-img::after {
+    height: 100%;
+}
+
+.study-plan .study-plan-item .study-plan-img .study-plan-categiry {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 10px;
+    display: inline-flex;
+    color: var(--bs-white);
+    background: var(--bs-primary);
+    z-index: 9;
+}
+
+.study-plan .study-plan-item .study-plan-content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-light);
+}
+
+.study-plan .study-plan-item .study-plan-content a.btn {
+    color: var(--bs-dark);
+}
+
+.study-plan .study-plan-item:hover .study-plan-content a.btn:hover {
+    color: var(--bs-primary);
+}
+
+
+.plan-study {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 40px auto;
+    justify-items: center;
+}
+
+.plan-card {
+    width: 100%;
+    max-width: 390px;  
+    height: 320px;    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    transition: 0.3s;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-card:hover {
+    scale: 1.02;
+}
+
+.plan-card h2 {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #0072BB;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 25px;
+    border-radius: 10px 10px 0 0;
+}
+
+.plan-a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 10px;
+    height: 80px;
+}
+
+.plan-a img {
+    width: 40%;
+    max-height: 80px;
+    object-fit: contain;
+    padding: 4px;
+}
+
+.plan-a a {
+    color: #fff;
+    background-color: #64B75A;
+    padding: 7px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.plan-b {
+    background-color: #0072BB;
+    color: #fff;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ #search-input::placeholder {
+    font-size: 18px; 
+    color: #474747; 
+
+}
+
+   .input-group.w-50 {
+        width: 50% !important;
+        max-width: 100%;
+        border: solid #797979 2px;
+        border-radius: 10px;
+    }
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    .plan-study {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .input-group.w-50 {
+        width: 90% !important;
+        max-width: 100%;
+    }
+
+ #search-input::placeholder {
+    font-size: 20px; 
+    color: #474747;
+}
+
+}
+
+@media (max-width: 800px) {
+    .plan-study {
+        grid-template-columns: 1fr;
+    }
+    .plan-card {
+        max-width: 90vw;
+        height: auto; 
+    }
+
+    .plan-a a{
+        font-size: 22px;
+    }
+}
+
+.study-bg{
+        background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/study-plan-header-banner.png) ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+
+}
+
+/*** Study plan end ***/
+
 
 
 /*** Footer Start ***/
@@ -1823,3 +2035,152 @@
   transform: translateY(0);
   animation: fadeUp 0.6s ease forwards;
 }
+
+/*** Food Menu Page Start ***/
+
+/* header Start */
+.food-menu-img {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/food-menu-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.food-menu-img .breadcrumb {
+    position: relative;
+}
+
+.food-menu-img .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/* header End */
+
+/* Food Menu Start */
+
+.heading-food {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 800;
+    color: #015ec9;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.subheading-food {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 35px;
+    font-style: italic;
+}
+
+.table-container-food {
+    padding: 0 8%;
+    margin: 40px auto 0;
+}
+
+.table-food {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.table-food thead {
+    background: linear-gradient(135deg, #015ec9, #027cf0);
+}
+
+.table-food thead tr th {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table-food tbody tr td {
+    font-size: 14px;
+    color: #333;
+    background-color: #f9fbff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e6f0;
+    transition: background 0.3s ease;
+}
+
+.table-food tbody tr:nth-child(even) td {
+    background-color: #eef4ff;
+}
+
+.table-food tbody tr:hover td {
+    background-color: #dce9ff;
+}
+
+@media (max-width: 768px) {
+    .table-food thead {
+        display: none;
+    }
+    .table-food, .table-food tbody, .table-food tr, .table-food td {
+        display: block;
+        width: 100%;
+    }
+    .table-food tr {
+        margin-bottom: 15px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    }
+    .table-food tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+    }
+    .table-food td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: 600;
+        color: #015ec9;
+        text-align: left;
+    }
+    
+    .table-food tbody tr td:first-child {
+    background: linear-gradient(135deg, #015ec9, #027cf0);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .no-wrap {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .no-wrap {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+/* Food Menu End */
+
+/*** Food Menu Page End ***/
