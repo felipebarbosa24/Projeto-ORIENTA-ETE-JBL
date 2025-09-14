@@ -26,7 +26,8 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
+    var $headerCarousel = $(".header-carousel");
+    $headerCarousel.owlCarousel({
         animateOut: 'fadeOut',
         items: 1,
         margin: 0,
@@ -36,13 +37,71 @@
         dots: true,
         loop: true,
         nav : true,
+        // ícones iniciais (serão ajustados dinamicamente abaixo conforme posição)
         navText : [
-            '<i class="bi bi-arrow-right"></i>',
-            '<i class="bi bi-arrow-left"></i>'
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
         ],
     });
 
-    // testimonial carousel
+    // Função que ajusta os handlers e os ícones dos botões do header-carousel
+    function setupHeaderNav() {
+        // busca os botões gerados pelo Owl
+        var $navPrev = $headerCarousel.find('.owl-prev');
+        var $navNext = $headerCarousel.find('.owl-next');
+
+        if ($navPrev.length === 0 || $navNext.length === 0) return;
+
+        // determina qual botão está mais à esquerda na tela
+        var prevLeft = ($navPrev.offset() && $navPrev.offset().left) ? $navPrev.offset().left : Infinity;
+        var nextLeft = ($navNext.offset() && $navNext.offset().left) ? $navNext.offset().left : Infinity;
+
+        var $leftBtn = prevLeft < nextLeft ? $navPrev : $navNext;
+        var $rightBtn = prevLeft < nextLeft ? $navNext : $navPrev;
+
+        // remove event handlers antigos (os ligados pelo Owl)
+        try {
+            $navPrev.off('click touchstart');
+            $navNext.off('click touchstart');
+        } catch (e) {
+            // ignore se algo falhar no off
+        }
+
+        // adiciona handlers claros: clique no botão da esquerda => prev, clique na direita => next
+        $leftBtn.on('click.headerNav', function (e) {
+            e.preventDefault();
+            $headerCarousel.trigger('prev.owl.carousel');
+        });
+        $rightBtn.on('click.headerNav', function (e) {
+            e.preventDefault();
+            $headerCarousel.trigger('next.owl.carousel');
+        });
+
+        // atualiza os ícones visuais para combinar com a posição
+        $leftBtn.html('<i class="bi bi-arrow-left"></i>');
+        $rightBtn.html('<i class="bi bi-arrow-right"></i>');
+    }
+
+    // chama quando o carousel for inicializado/refrescado
+    $headerCarousel.on('initialized.owl.carousel refreshed.owl.carousel', function () {
+        // pequeno timeout para garantir que o DOM e estilos foram aplicados
+        setTimeout(setupHeaderNav, 20);
+    });
+
+    // tentativa imediata (caso já esteja inicializado)
+    setTimeout(setupHeaderNav, 50);
+
+    // reajusta após redimensionamento (debounce)
+    var resizeTimer;
+    $(window).on('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            setupHeaderNav();
+        }, 150);
+    });
+
+
+    // testimonial carousel (mantive com comportamento padrão)
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
@@ -52,8 +111,8 @@
         margin: 25,
         nav : true,
         navText : [
-            '<i class="fa fa-arrow-right"></i>',
-            '<i class="fa fa-arrow-left"></i>'
+            '<i class="fa fa-arrow-left"></i>',
+            '<i class="fa fa-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
@@ -109,123 +168,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal-enem");
   const modalTitle = document.getElementById("modal-university-title");
   const modalTable = document.getElementById("modal-table-container");
-  const closeModal = document.querySelector(".modal-enem-close");
+  const closeModal = document.getElementById("modal-enem-close");
 
-  if (modal && modalTitle && modalTable && closeModal) {
-    document.querySelectorAll(".universities").forEach(li => {
-      li.addEventListener("click", () => {
-        const uniName = li.textContent.trim();
-        modalTitle.textContent = uniName;
+  document.querySelectorAll(".enem-score-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const universidade = btn.getAttribute("data-university");
+      modalTitle.textContent = universidade;
 
-        const notas = universidadesNotas[uniName];
-        if (notas) {
-          let tableHTML = "<table>";
-          notas.forEach((row, i) => {
-            tableHTML += "<tr>";
-            row.forEach(cell => {
-              tableHTML += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
-            });
-            tableHTML += "</tr>";
+      const notas = universidadesNotas[universidade];
+      if (notas) {
+        let tableHTML = "<table class='table table-striped'><thead><tr>";
+        notas[0].forEach(header => {
+          tableHTML += `<th>${header}</th>`;
+        });
+        tableHTML += "</tr></thead><tbody>";
+        for (let i = 1; i < notas.length; i++) {
+          tableHTML += "<tr>";
+          notas[i].forEach(cell => {
+            tableHTML += `<td>${cell}</td>`;
           });
-          tableHTML += "</table>";
-          modalTable.innerHTML = tableHTML;
-        } else {
-          modalTable.innerHTML = "<p>Sem dados disponíveis</p>";
+          tableHTML += "</tr>";
         }
-
-        modal.style.display = "block";
-      });
-    });
-
-    closeModal.onclick = () => modal.style.display = "none";
-    window.onclick = (event) => {
-      if (event.target === modal) modal.style.display = "none";
-    };
-  }
-});
-
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
-
-})(jQuery);
-
-// Inicializa o carrossel Swiper para a seção "Nosso Time"
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30, // espaçamento entre slides
-  autoplay: {
-    delay: 5000, // troca automática a cada 5s
-    disableOnInteraction: false, // continua após interação
-  },
-  speed: 800, // velocidade da transição
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true, // permite clicar nas bolinhas
-  },
-  navigation: {
-    nextEl: ".swiper-button-next", // seta direita
-    prevEl: ".swiper-button-prev", // seta esquerda
-  },
-  loop: false, // não repete infinito
-  loopFillGroupWithBlank: false,
-  breakpoints: {
-    0: { // mobile
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      centeredSlides: false
-    },
-    769: { // desktop
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      centerInsufficientSlides: true // centraliza último slide se faltar
-    }
-  }
-});
-
-// Enem Score Page Search Start
-
-function search(){
-  let input = document.getElementById('searchbar').value
-  input = input.toLowerCase()
-  let x = document.getElementsByClassName('universities')
-
-  for(i = 0; i < x.length; i++){
-    if(!x[i].innerHTML.toLowerCase().includes(input)){
-      x[i].style.display = "none"
-    }else{
-      x[i].style.display = "list-item"
-    }
-  }
-}
-
-
-//Enem Score Page Search End
-
-// Anima slides quando entram na tela
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible'); // aplica classe visível
-        observer.unobserve(entry.target); // anima apenas uma vez
+        tableHTML += "</tbody></table>";
+        modalTable.innerHTML = tableHTML;
       }
-    });
-  }, { threshold: 0.2 }); // só dispara quando 20% visível
 
-  // Aplica o observador a todos os slides da seção
-  document.querySelectorAll('#team-container .swiper-slide').forEach(slide => {
-    slide.classList.add('animate-on-scroll'); // classe inicial
-    observer.observe(slide);
+      modal.style.display = "block";
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
   });
 });
-//Enem Scor Universitie Information End
+    //Enem Score Universitie Information End
+
+})(jQuery);
