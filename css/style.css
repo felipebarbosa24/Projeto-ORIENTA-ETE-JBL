@@ -2125,3 +2125,24 @@
 /* Food Menu End */
 
 /*** Food Menu Page End ***/
+
+/*** Class Schedule Page Start***/
+
+/* header Start */
+.class-schedule-img {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/class-schedule-page-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.class-schedule-img .breadcrumb {
+    position: relative;
+}
+
+.class-schedule-img .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/* header End */
+
+/*** Class Schedule Page End***/
