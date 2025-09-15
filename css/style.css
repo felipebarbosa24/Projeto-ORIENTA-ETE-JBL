@@ -2149,4 +2149,135 @@
 }
 /* header End */
 
+/* Class Schedule Start */
+
+/* Class Schedule */
+
+.heading-schedule {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 800;
+    color: #015ec9;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.subheading-schedule {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 35px;
+    font-style: italic;
+}
+
+.table-container-schedule {
+    padding: 0 8%;
+    margin: 40px auto 0;
+}
+
+.table-schedule {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.table-schedule thead {
+    background: linear-gradient(135deg, #015ec9, #027cf0);
+}
+
+.table-schedule thead tr th {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table-schedule tbody tr td {
+    font-size: 14px;
+    color: #333;
+    background-color: #f9fbff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e6f0;
+    transition: background 0.3s ease;
+}
+
+.table-schedule tbody tr:nth-child(even) td {
+    background-color: #eef4ff;
+}
+
+.table-schedule tbody tr:hover td {
+    background-color: #dce9ff;
+}
+
+@media (max-width: 768px) {
+    .table-schedule thead {
+        display: none;
+    }
+    .table-schedule, .table-schedule tbody, .table-schedule tr, .table-schedule td {
+        display: block;
+        width: 100%;
+    }
+    .table-schedule tr {
+        margin-bottom: 15px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    }
+    .table-schedule tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+    }
+    .table-schedule td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: 600;
+        color: #015ec9;
+        text-align: left;
+    }
+
+    .table-schedule tbody tr td:first-child {
+        background: linear-gradient(135deg, #015ec9, #027cf0);
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .no-wrap {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .no-wrap {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+
+/* Class Schedule Start */
+
 /*** Class Schedule Page End***/

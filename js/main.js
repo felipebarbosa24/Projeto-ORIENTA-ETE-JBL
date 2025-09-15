@@ -250,3 +250,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //Enem Scor Universitie Information End
+
+//Class Schedule Search Start
+
+function searchclass() {
+    let input = document.getElementById('searchbar').value.toUpperCase();
+    let tables = document.querySelectorAll('.table-container-schedule');
+
+    tables.forEach(function(table) {
+        let heading = table.querySelector('.heading-schedule');
+        if (heading) {
+            let text = heading.textContent || heading.innerText;
+            if (text.toUpperCase().indexOf(input) > -1 || input === "") {
+                table.style.display = "";
+            } else {
+                table.style.display = "none";
+            }
+        }
+    });
+}
+
+//Class Schedule Search End
