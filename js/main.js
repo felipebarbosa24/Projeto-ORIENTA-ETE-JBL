@@ -257,11 +257,22 @@ function searchclass() {
     let input = document.getElementById('searchbar').value.toUpperCase();
     let tables = document.querySelectorAll('.table-container-schedule');
 
+    const synonyms = {
+        "ETE": "ESCOLA TÉCNICA ESTADUAL",
+        "ESCOLA TÉCNICA ESTADUAL": "ETE"
+    };
+
+    if (synonyms[input]) {
+        input = synonyms[input];
+    }
+
     tables.forEach(function(table) {
         let heading = table.querySelector('.heading-schedule');
         if (heading) {
             let text = heading.textContent || heading.innerText;
-            if (text.toUpperCase().indexOf(input) > -1 || input === "") {
+            let textUpper = text.toUpperCase();
+
+            if (textUpper.indexOf(input) > -1 || input === "") {
                 table.style.display = "";
             } else {
                 table.style.display = "none";
