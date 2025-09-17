@@ -45,25 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
     // Header carousel
     var $headerCarousel = $(".header-carousel");
     $headerCarousel.owlCarousel({
-        animateOut: 'fadeOut',
         items: 1,
         margin: 0,
         stagePadding: 0,
         autoplay: true,
-        smartSpeed: 500,
+        smartSpeed: 600,       // tempo da transição em ms
+        slideTransition: 'linear', // transição de slide contínua
         dots: true,
         loop: true,
         nav : true,
-        // ícones iniciais (serão ajustados dinamicamente abaixo conforme posição)
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
         navText : [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
     });
+
 
     // Função que ajusta os handlers e os ícones dos botões do header-carousel
     function setupHeaderNav() {
