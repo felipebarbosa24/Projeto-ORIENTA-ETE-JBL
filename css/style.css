@@ -1902,6 +1902,15 @@
 
 }
 
+
+
+@media (max-width:400px) {
+    .our-app-box a{
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
 /*** Our App end ***/
 
 
