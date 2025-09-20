@@ -897,6 +897,7 @@
 /*** Our Contact Page Hero Header End ***/
 
 /*** Enem Score Page Header Start ***/
+
 .enem-score {
     position: relative;
     overflow: hidden;
@@ -947,6 +948,9 @@
   
   transition: 0.3s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  display: block;
+  margin: -15px auto 20px auto;
 }
 
 #searchbar:focus {

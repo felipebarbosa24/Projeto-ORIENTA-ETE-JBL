@@ -259,7 +259,11 @@ function searchclass() {
 
     const synonyms = {
         "ETE": "ESCOLA TÉCNICA ESTADUAL",
-        "ESCOLA TÉCNICA ESTADUAL": "ETE"
+        "ESCOLA TÉCNICA ESTADUAL": "ETE",
+        "E": "ESCOLA",
+        "ET": "ESCOLA TÉCNICA",
+        "ESCOLA": "E",
+        "ESCOLA TÉCNICA": "ET"
     };
 
     if (synonyms[input]) {
