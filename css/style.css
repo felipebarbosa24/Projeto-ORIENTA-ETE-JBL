@@ -269,154 +269,566 @@
 /*** Navbar End ***/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*** Carousel Hero Header Start ***/
+
+/* Container geral */
+#carousel-hero {
+  position: relative;
+}
+
+/* posição dos botões */
+.header-carousel .owl-nav button.owl-prev {
+  left: 15px;
+}
+.header-carousel .owl-nav button.owl-next {
+  right: 15px;
+}
+
+/* hover */
+.header-carousel .owl-nav button.owl-prev:hover,
+.header-carousel .owl-nav button.owl-next:hover {
+  background-color: #00ffae;  /* cor ao passar o mouse */
+  color: #015fc9;
+}
+
+/* -------- SLIDE 1 -------- */
+#carousel-slide-1 {
+  background-color: #0d6efd; /* fallback */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#carousel-slide-1 .carousel-img img {
+  display: block;
+  width: 30%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#carousel-slide-1 h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  
+  width: 100%;
+  text-align: left;
+}
+
+#carousel-slide-1 p {
+  color: #e0e0e0;
+  text-align: left;
+}
+
+#carousel-slide-1 a.btn {
+  background-color: transparent;
+  color: #fff;
+  border: 4px solid #fff;
+}
+
+/* -------- SLIDE 2 -------- */
+
+#carousel-slide-2 a#slide2-btn2 {
+  background-color: transparent;
+  color: #fff;
+  border: 4px solid #fff;
+}
+
+#carousel-slide-2 {
+  background-color: #015fc9; /* fallback */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* PC (>=768px) */
+@media (min-width: 768px) {
+  #carousel-slide-2 {
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+                url("../img/pc-background-slide2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Mobile (<=767px) */
+@media (max-width: 767px) {
+  #carousel-slide-2 {
+    background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
+                url("../img/mobile-background-slide2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+#carousel-slide-2 .carousel-img img {
+  width: 35%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 40px;
+}
+
+#carousel-slide-2 h4 {
+  color: #00ffae;
+}
+
+#carousel-slide-2 h1 {
+  font-size: 3.2rem;
+  color: #fff;
+  text-align: center;
+}
+
+#carousel-slide-2 p {
+  color: #ddd;
+  text-align: center;
+}
+
+#carousel-slide-2 a.btn {
+  background-color: #fff;
+  color: #015fc9;
+}
+
+/* -------- SLIDE 3 (copiado do estilo do Slide 1) -------- */
+#carousel-slide-3 {
+  background-color: #0d6efd; /* fallback */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* mantém o texto verticalmente centralizado dentro do slide */
+#carousel-slide-3 .carousel-caption {
+  display: flex;
+  align-items: center;
+  min-height: 650px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* tipografia e botões (mesma intenção do Slide 1) */
+#carousel-slide-3 h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  width: 100%;
+  text-align: right;
+}
+
+#carousel-slide-3 h4,
+#carousel-slide-3 p {
+  color: #e0e0e0;
+  text-align: right;
+}
+
+#carousel-slide-3 a.btn {
+  background-color: transparent;
+  color: #fff;
+  border: 4px solid #fff;
+}
+
+/* background real com a imagem ete.png */
+@media (min-width: 768px) {
+  #carousel-slide-3 {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("../img/ete.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* mobile: mantém a imagem de fundo mas com menos overlay */
+@media (max-width: 767px) {
+  #carousel-slide-3 {
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../img/ete.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* conteúdo no topo, não centralizado verticalmente */
+  #carousel-slide-3 .carousel-caption {
+    padding-top: 40px;
+    padding-bottom: 350px;
+    text-align: center; /* centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;     /* garante centralização horizontal */
+    justify-content: flex-start; /* joga o conteúdo pro topo */
+  }
+
+  #carousel-slide-3 h4,
+  #carousel-slide-3 h1,
+  #carousel-slide-3 p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  #carousel-slide-3 .d-flex {
+    justify-content: center; /* centraliza botões */
+  }
+}
+
+/* -------- SLIDE 4 -------- */
+#carousel-slide-4 {
+  background-color: #0d6efd; /* fallback */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#carousel-slide-4 .carousel-img img {
+  display: block;
+  width: 30%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#carousel-slide-4 h4 {
+  color: #0d6efd;
+}
+
+#carousel-slide-4 h1 {
+  font-size: 2.8rem;
+  color: #0d6efd;
+  width: 100%;
+  text-align: right; /* desktop: texto à direita */
+}
+
+#carousel-slide-4 p {
+  color: #0d6efd;
+  text-align: right; /* desktop: texto à direita */
+}
+
+#carousel-slide-4 a.btn {
+  background-color: transparent;
+  color: #0d6efd;
+  border: 4px solid #0d6efd;
+}
+
+/* background pc para slide 4 (>=768px) */
+@media (min-width: 768px) {
+  #carousel-slide-4 {
+    background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url("../img/pc-background-slide4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* no desktop, mantém o comportamento lado-a-lado se houver imagem + texto */
+  #carousel-slide-4 .carousel-caption {
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* mobile para slide 4 (<=767px) - conteúdo sobe para o topo e é centralizado horizontalmente */
+@media (max-width: 767px) {
+  #carousel-slide-4 {
+    background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url("../img/mobile-background-slide4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* conteúdo no topo (não centralizado verticalmente), mas centralizado horizontalmente */
+  #carousel-slide-4 .carousel-caption {
+    padding-top: 40px;
+    padding-bottom: 350px;
+    text-align: center;       /* centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* joga o conteúdo pro topo */
+  }
+
+  #carousel-slide-4 h4,
+  #carousel-slide-4 h1,
+  #carousel-slide-4 p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center; /* garante centralização no mobile */
+  }
+
+  /* centraliza botões no mobile */
+  #carousel-slide-4 .d-flex {
+    justify-content: center;
+  }
+}
+
+
+/* -------- Navegação -------- */
+#carousel-hero .owl-nav .owl-prev,
+#carousel-hero .owl-nav .owl-next {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: var(--bs-light);
+  color: var(--bs-primary);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+#carousel-hero .owl-nav .owl-prev:hover,
+#carousel-hero .owl-nav .owl-next:hover {
+  box-shadow: inset 0 0 100px 0 var(--bs-secondary);
+  color: var(--bs-white);
+}
 
 /* controla o tamanho das imagens do banner */
 .header-carousel .carousel-img img {
-    width: 30%;       /* largura em % ou px */
-    max-width: 450px; /* largura máxima */
-    height: auto;     /* mantém proporção */
-    margin: 0 auto;   /* centraliza */
-    display: block;
+  width: 30%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .header-carousel .header-carousel-item {
-    height: 700px;
+  height: 700px;
 }
 
 .header-carousel .owl-nav .owl-prev,
 .header-carousel .owl-nav .owl-next {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    background: var(--bs-light);
-    color: var(--bs-primary);
-    font-size: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: var(--bs-light);
+  color: var(--bs-primary);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
 }
 
 .header-carousel .owl-nav .owl-prev {
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 30px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 30px;
 }
+
 .header-carousel .owl-nav .owl-next {
-    bottom: 30px;
-    right: 50%;
-    transform: translateX(-50%);
-    margin-right: 30px;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(-50%);
+  margin-right: 30px;
 }
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    box-shadow: inset 0 0 100px 0 var(--bs-secondary);
-    color: var(--bs-white);
+  box-shadow: inset 0 0 100px 0 var(--bs-secondary);
+  color: var(--bs-white);
 }
 
 .header-carousel .header-carousel-item .carousel-caption {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .2);
-    display: flex;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
 }
 
+/* Padrão geral */
+.header-carousel .header-carousel-item .carousel-caption {
+  background: rgba(0, 0, 0, 0.0); /* fallback */
+}
+
+/* Intensidade do background individual */
+#carousel-slide-1 .carousel-caption {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+#carousel-slide-2 .carousel-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100%;         
+  padding-top: 0;
+  padding-bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#carousel-slide-3 .carousel-caption {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+#carousel-slide-4 .carousel-caption {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+#carousel-slide-2 .carousel-caption .d-flex {
+  display: inline-flex;
+  margin-bottom: 0 !important;
+}
+
+/* efeito máscara */
 .carousel-img {
-    mask-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 1) 80%, 
+  mask-image: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0) 100%);
 }
 
-@media (min-width: 992px) {
-    .header-carousel .header-carousel-item {
-        height: 650px;
-    }
+/* -------- RESPONSIVIDADE -------- */
+@media (min-width: 768px) {
+  /* background pc para slide 1 */
+  #carousel-slide-1 {
+    background-image: url("../img/pc-background-slide1.png");
+  }
 
-    .header-carousel .owl-nav .owl-next {
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -45px;
-    }
+  /* background pc para slide 2 (ete.png) */
+  #carousel-slide-2 {
+    background-image: url("../img/pc-background-slide2.png");
+  }
 
-    .header-carousel .owl-nav .owl-prev {
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 45px;
-    }
+  .header-carousel .header-carousel-item {
+    height: 650px;
+  }
+
+  .header-carousel .owl-nav .owl-next {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -45px;
+  }
+
+  .header-carousel .owl-nav .owl-prev {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 45px;
+  }
+
+    #carousel-slide-2 .carousel-caption {
+    flex-direction: row;   /* lado a lado */
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 991px) {
+  .header-carousel .header-carousel-item:nth-child(2) .carousel-img img {
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+  }
 
-    .header-carousel .header-carousel-item:nth-child(2) .carousel-img img {
-        padding-bottom: 80px;    /* ajusta o espaço abaixo da imagem do slide 2 */
-        box-sizing: border-box;  /* garante que o padding seja considerado corretamente */
-        display: block;
-        margin: 0 auto;
-    }
+  .header-carousel .header-carousel-item .carousel-caption {
+    padding-top: 45px;
+  }
 
-    
-    .header-carousel .header-carousel-item .carousel-caption {
-        padding-top: 45px;
-    }
+  .header-carousel .header-carousel-item {
+    height: 1300px;
+  }
 
-    .header-carousel .header-carousel-item {
-        height: 1300px;
-    }
+  .header-carousel .owl-nav .owl-next {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -45px;
+  }
 
-    .header-carousel .owl-nav .owl-next {
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -45px;
-    }
+  .header-carousel .owl-nav .owl-prev {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 45px;
+  }
 
-    .header-carousel .owl-nav .owl-prev {
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 45px;
-    }
+  .slide-3-estudos {
+    background: #015fc9;
+  }
 }
 
 @media (max-width: 767px) {
-    .header-carousel .header-carousel-item {
-        height: 950px;
-    }
+  /* background mobile para slide 1 */
+  #carousel-slide-1 {
+    background-image: url("../img/mobile-background-slide1.png");
+  }
 
-    .card {
-        width: 90%;
-        margin: 0 auto 20px;
-    }
+  /* background mobile para slide 2 (ete.png) */
+  #carousel-slide-2 {
+    background-image: url("../img/mobile-background-slide2.png");
+  }
 
-    .header-carousel .owl-nav .owl-next {
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -45px;
-    }
+  .header-carousel .header-carousel-item {
+    height: 950px;
+  }
 
-    .header-carousel .owl-nav .owl-prev {
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 45px;
-    }
-}
+  .card {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
 
-/* Responsivo - no mobile a imagem volta ao normal */
-@media (max-width: 991px) {
-  .slide-3-estudos {
-    background: #015fc9;
+  .header-carousel .owl-nav .owl-next {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -45px;
+  }
+
+  .header-carousel .owl-nav .owl-prev {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 45px;
+  }
+
+  #carousel-slide-1 .carousel-caption {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 350px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #carousel-slide-1 h4,
+  #carousel-slide-1 h1,
+  #carousel-slide-1 p {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  #carousel-slide-1 .d-flex {
+    justify-content: flex-start;
+  }
+
+  .mySwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -431,7 +843,19 @@
   color: #015fc9 !important;
   background-color: #fff !important;
 }
+
 /*** Carousel Hero Header End ***/
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*** Single Page Hero Header Start ***/
@@ -1561,12 +1985,6 @@
 }
 
 /* Centraliza slides no mobile */
-@media (max-width: 768px) {
-  .mySwiper .swiper-slide {
-    display: flex;
-    justify-content: center;
-  }
-}
 
 /* Exclusivo para o team.html*/
 #nosso-time-html {
