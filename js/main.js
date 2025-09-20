@@ -254,35 +254,60 @@ document.addEventListener("DOMContentLoaded", function () {
 //Class Schedule Search Start
 
 function searchclass() {
-    let input = document.getElementById('searchbar').value.toUpperCase();
-    let tables = document.querySelectorAll('.table-container-schedule');
+  const raw = document.getElementById('searchbar').value || '';
 
-    const synonyms = {
-        "ETE": "ESCOLA TÉCNICA ESTADUAL",
-        "ESCOLA TÉCNICA ESTADUAL": "ETE",
-        "E": "ESCOLA",
-        "ET": "ESCOLA TÉCNICA",
-        "ESCOLA": "E",
-        "ESCOLA TÉCNICA": "ET"
-    };
+  const normalize = (str) =>
+    str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toUpperCase()
+      .replace(/[^0-9A-Z\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
 
-    if (synonyms[input]) {
-        input = synonyms[input];
+  const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  const expansions = {
+    'ETE': 'ESCOLA TECNICA ESTADUAL',
+    'ET': 'ESCOLA TECNICA'
+  };
+
+  const stopwords = new Set(['DE','DA','DO','DOS','DAS','E','O','A','EM','NA','NO','COM','POR','PELA','PELO']);
+
+  // prepara input
+  let input = normalize(raw);
+
+  for (const key in expansions) {
+    input = input.replace(new RegExp('\\b' + escapeRegExp(key) + '\\b', 'g'), expansions[key]);
+  }
+
+  let tokens = input.split(' ').filter(Boolean)
+    .filter(t => t.length > 1 && !stopwords.has(t));
+
+  const tables = document.querySelectorAll('.table-container-schedule');
+
+  if (tokens.length === 0) {
+    tables.forEach(t => t.style.display = '');
+    return;
+  }
+
+  tables.forEach(table => {
+    const headingEl = table.querySelector('.heading-schedule');
+    if (!headingEl) {
+      table.style.display = 'none';
+      return;
     }
 
-    tables.forEach(function(table) {
-        let heading = table.querySelector('.heading-schedule');
-        if (heading) {
-            let text = heading.textContent || heading.innerText;
-            let textUpper = text.toUpperCase();
+    let heading = normalize(headingEl.textContent || headingEl.innerText);
 
-            if (textUpper.indexOf(input) > -1 || input === "") {
-                table.style.display = "";
-            } else {
-                table.style.display = "none";
-            }
-        }
-    });
+    for (const key in expansions) {
+      heading = heading.replace(new RegExp('\\b' + escapeRegExp(key) + '\\b', 'g'), expansions[key]);
+    }
+
+    const matched = tokens.every(tok => heading.indexOf(tok) !== -1);
+
+    table.style.display = matched ? '' : 'none';
+  });
 }
 
 //Class Schedule Search End
