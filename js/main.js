@@ -230,6 +230,65 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-    //Enem Score Universitie Information End
+//Enem Scor Universitie Information End
 
-})(jQuery);
+//Class Schedule Search Start
+
+function searchclass() {
+  const raw = document.getElementById('searchbar').value || '';
+
+  const normalize = (str) =>
+    str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toUpperCase()
+      .replace(/[^0-9A-Z\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  const expansions = {
+    'ETE': 'ESCOLA TECNICA ESTADUAL',
+    'ET': 'ESCOLA TECNICA'
+  };
+
+  const stopwords = new Set(['DE','DA','DO','DOS','DAS','E','O','A','EM','NA','NO','COM','POR','PELA','PELO']);
+
+  // prepara input
+  let input = normalize(raw);
+
+  for (const key in expansions) {
+    input = input.replace(new RegExp('\\b' + escapeRegExp(key) + '\\b', 'g'), expansions[key]);
+  }
+
+  let tokens = input.split(' ').filter(Boolean)
+    .filter(t => t.length > 1 && !stopwords.has(t));
+
+  const tables = document.querySelectorAll('.table-container-schedule');
+
+  if (tokens.length === 0) {
+    tables.forEach(t => t.style.display = '');
+    return;
+  }
+
+  tables.forEach(table => {
+    const headingEl = table.querySelector('.heading-schedule');
+    if (!headingEl) {
+      table.style.display = 'none';
+      return;
+    }
+
+    let heading = normalize(headingEl.textContent || headingEl.innerText);
+
+    for (const key in expansions) {
+      heading = heading.replace(new RegExp('\\b' + escapeRegExp(key) + '\\b', 'g'), expansions[key]);
+    }
+
+    const matched = tokens.every(tok => heading.indexOf(tok) !== -1);
+
+    table.style.display = matched ? '' : 'none';
+  });
+}
+
+//Class Schedule Search End
