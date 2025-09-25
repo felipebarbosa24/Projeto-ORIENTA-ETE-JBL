@@ -706,6 +706,24 @@
 /*** Vocational Test Page End ***/
 
 
+/*** 404 page Start ***/
+
+@media (max-width: 500px) {
+    .center-404-buttons {
+        justify-content: center !important;
+        gap: 20px;
+    }
+
+    .center-404-buttons a{
+        width: 90%;
+        margin: 5px 0;
+    }
+}
+
+/*** 404 page End ***/
+
+
+
 /* Estilo exclusivo para o FAQ */
 .faq-page .bg-breadcrumb {
     background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/faq-background.png);
