@@ -268,21 +268,6 @@
 }
 /*** Navbar End ***/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*** Carousel Hero Header Start ***/
 
 /* Container geral */
@@ -314,7 +299,6 @@
   position: relative;
 }
 
-/* mantém o texto verticalmente centralizado dentro do slide */
 #carousel-slide-1 .carousel-caption {
   display: flex;
   align-items: center;
@@ -323,7 +307,6 @@
   padding-bottom: 0;
 }
 
-/* tipografia e botões (mesma intenção do Slide 1) */
 #carousel-slide-1 h1 {
   font-size: 2.8rem;
   color: #fff;
@@ -344,7 +327,6 @@
   width: 200px;
 }
 
-/* background real com a imagem ete.png */
 @media (min-width: 768px) {
   #carousel-slide-1 {
     background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("../img/ete.png");
@@ -354,7 +336,6 @@
   }
 }
 
-/* mobile: mantém a imagem de fundo mas com menos overlay */
 @media (max-width: 767px) {
   #carousel-slide-1 {
     background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("../img/ete.png");
@@ -363,7 +344,6 @@
     background-repeat: no-repeat;
   }
 
-  /* conteúdo no topo, não centralizado verticalmente */
   #carousel-slide-1 .carousel-caption {
     padding-top: 40px;
     padding-bottom: 350px;
@@ -444,11 +424,18 @@
 }
 
 #carousel-slide-2 a.btn:hover {
-    background-color: #ffffff;   /* fundo branco */
-    color: #0d6efd;             /* texto azul */
+    background-color: #ffffff;
+    color: #0d6efd;
     border-color: #ffffff;
     transform: scale(1.05);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 767px){
+    #carousel-slide-2 .carousel-caption .col-lg-7 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 /* -------- SLIDE 3 -------- */
@@ -488,7 +475,6 @@
     background-repeat: no-repeat;
   }
 
-  /* 🔹 Ajuste: conteúdo sobe no mobile, igual aos outros slides */
   #carousel-slide-3 .carousel-caption {
     padding-top: 40px;
     padding-bottom: 350px;
@@ -510,6 +496,13 @@
   #carousel-slide-3 .d-flex {
     justify-content: right;
   }
+
+  #carousel-slide-3 a.btn {
+  background-color: #fff;
+  color: #015fc9;
+  border: 4px solid #015fc9;
+  width: 325px;
+}
 }
 
 #carousel-slide-3 .carousel-img img {
@@ -540,7 +533,7 @@
   color: #015fc9;
   border: 4px solid #015fc9;
   width: 325px;
-  margin: auto;
+  margin: 0;
 }
 
 #carousel-slide-3 h1,
@@ -549,17 +542,17 @@
   text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 
-#carousel-slide-3 a.btn:hover {
-    background-color: #015fc9;  /* fundo azul */
-    color: #ffffff;             /* texto branco */
-    border-color: #015fc9;
+#carousel-slide-3 a#slide3-btn2:hover {
+    background-color: white;
+    color: #015fc9;
+    border-color: white;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
 
 /* -------- SLIDE 4 -------- */
 #carousel-slide-4 {
-  background-color: #0d6efd; /* fallback */
+  background-color: #0d6efd;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -581,12 +574,12 @@
   font-size: 2.8rem;
   color: #0d6efd;
   width: 100%;
-  text-align: right; /* desktop: texto à direita */
+  text-align: right;
 }
 
 #carousel-slide-4 p {
   color: #0d6efd;
-  text-align: right; /* desktop: texto à direita */
+  text-align: right;
 }
 
 #carousel-slide-4 a.btn {
@@ -605,7 +598,6 @@
     background-repeat: no-repeat;
   }
 
-  /* no desktop, mantém o comportamento lado-a-lado se houver imagem + texto */
   #carousel-slide-4 .carousel-caption {
     display: flex;
     align-items: center;
@@ -624,7 +616,6 @@
     background-repeat: no-repeat;
   }
 
-  /* conteúdo no topo (não centralizado verticalmente), mas centralizado horizontalmente */
   #carousel-slide-4 .carousel-caption {
     padding-top: 40px;
     padding-bottom: 350px;
@@ -639,10 +630,9 @@
   #carousel-slide-4 p {
     margin-top: 5px;
     margin-bottom: 15px;
-    text-align: center; /* garante centralização no mobile */
+    text-align: center;
   }
 
-  /* centraliza botões no mobile */
   #carousel-slide-4 .d-flex {
     justify-content: center;
   }
@@ -655,8 +645,8 @@
 }
 
 #carousel-slide-4 a.btn:hover {
-    background-color: #0d6efd;  /* fundo azul */
-    color: #ffffff;             /* texto branco */
+    background-color: #0d6efd;
+    color: #ffffff;
     border-color: #0d6efd;
     transform: scale(1.05);
     transition: all 0.3s ease;
@@ -820,7 +810,7 @@
   }
 
   #carousel-slide-2 .carousel-caption {
-    flex-direction: row;   /* lado a lado */
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
   }
@@ -893,9 +883,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* conteúdo sempre no topo */
-    padding-top: 40px;           /* distância uniforme do topo */
-    padding-bottom: 350px;       /* espaço inferior para não cortar */
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 350px;
     text-align: center;
     gap: 15px;
   }
@@ -922,19 +912,6 @@
 }
 
 /*** Carousel Hero Header End ***/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
