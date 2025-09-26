@@ -708,11 +708,62 @@
 
 /*** 404 page Start ***/
 
-@media (max-width: 500px) {
-    .center-404-buttons {
-        justify-content: center !important;
-        gap: 20px;
+
+   .center-404-buttons a{
+        width: 45%;
+        padding: 20px 0 !important ;
+        margin: 40px 0;
     }
+
+    .page-404 h1{
+        font-size: 60px     ;
+    }
+
+    .page-404 h4{
+        font-size: 20px;
+    }
+
+    .img-404{
+        justify-content: start;
+    }
+
+  
+
+@media (max-width:1000px) {
+    .page-404 h1, .page-404 h4{
+                text-align: center !important;
+
+    }
+
+         .center-404-buttons {
+        margin-top: 10px;
+        justify-content: center !important;
+    }  
+
+    .img-404{
+        justify-content: center !important;
+    }
+
+    
+}
+
+
+@media (max-width:770px) {
+
+.center-404-buttons{
+    margin-top: 50px;
+}
+    
+    .center-404-buttons a{
+        margin: 0 10px;
+        width: 40%;
+    }
+
+
+}
+
+@media (max-width: 530px) {
+ 
 
     .center-404-buttons a{
         width: 90%;
