@@ -1073,6 +1073,10 @@
     white-space: nowrap;
 }
 
+.download-button {
+    white-space: nowrap;
+}
+
 @media (min-width: 577px) {
     .icon-download {
         height: 60px;
@@ -1082,6 +1086,9 @@
 @media (max-width: 576px) {
     .icon-download {
         height: 30px;
+    }
+    .download-title {
+        white-space: normal;
     }
 }
 
