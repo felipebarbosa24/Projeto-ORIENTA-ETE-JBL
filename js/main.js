@@ -1,10 +1,10 @@
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search-input');
     const cards = document.querySelectorAll('#study-container .col-12');
 
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         const filter = searchInput.value.toLowerCase();
 
         cards.forEach(card => {
@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1);
     };
     spinner(0);
-    
+
+
     // Initiate the wowjs
     new WOW().init();
-    
+
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -56,11 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
         slideTransition: 'linear', // transição de slide contínua
         dots: true,
         loop: true,
-        nav : true,
+        nav: true,
         mouseDrag: true,
         touchDrag: true,
         pullDrag: true,
-        navText : [
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
@@ -132,104 +133,176 @@ document.addEventListener('DOMContentLoaded', function() {
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="fa fa-arrow-left"></i>',
             '<i class="fa fa-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:2
+            1200: {
+                items: 2
             }
         }
     });
+})(jQuery);
 
 
-    // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 5,
-        time: 2000
-    });
+// Facts counter
+$('[data-toggle="counter-up"]').counterUp({
+    delay: 5,
+    time: 2000
+});
 
-    //Enem Score Universitie Information Start
+//Enem Score Universitie Information Start
 
-document.addEventListener("DOMContentLoaded", () => {
-  // ---- Modal Universidades ----
+function initEnemModal() {
   const universidadesNotas = {
-      "Universidade Federal De Pernambuco (UFPE)": [
-          ["Curso", "Modalidade", "Nota de Corte"],
-          ["Medicina", "Ampla Concorrência", 790],
-          ["Engenharia Civil", "Ampla Concorrência", 720],
-          ["Direito", "Ampla Concorrência", 700]
-      ],
-      "Universidade Federal Rural De Pernambuco (UFRPE)": [
-          ["Curso", "Modalidade", "Nota de Corte"],
-          ["Medicina Veterinária", "Ampla Concorrência", 740],
-          ["Engenharia Agronômica", "Ampla Concorrência", 680],
-          ["Zootecnia", "Ampla Concorrência", 650]
-      ],
-      "Universidade Federal Do Vale Do São Francisco (UNIVASF)": [
-          ["Curso", "Modalidade", "Nota de Corte"],
-          ["Engenharia Civil", "Ampla Concorrência", 640],
-          ["Enfermagem", "Ampla Concorrência", 610]
-      ]
+    "Universidade Federal De Pernambuco (UFPE)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Medicina", "Ampla Concorrência", 790],
+      ["Engenharia Civil", "Ampla Concorrência", 720],
+      ["Direito", "Ampla Concorrência", 700]
+    ],
+    "Universidade Federal Rural De Pernambuco (UFRPE)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Medicina Veterinária", "Ampla Concorrência", 740],
+      ["Engenharia Agronômica", "Ampla Concorrência", 680],
+      ["Zootecnia", "Ampla Concorrência", 650]
+    ],
+    "Universidade Federal Do Vale Do São Francisco (UNIVASF)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Engenharia Civil", "Ampla Concorrência", 640],
+      ["Enfermagem", "Ampla Concorrência", 610]
+    ]
   };
 
   const modal = document.getElementById("modal-enem");
   const modalTitle = document.getElementById("modal-university-title");
   const modalTable = document.getElementById("modal-table-container");
-  const closeModal = document.getElementById("modal-enem-close");
+  const closeModal = document.querySelector(".modal-enem-close");
 
-  document.querySelectorAll(".enem-score-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const universidade = btn.getAttribute("data-university");
-      modalTitle.textContent = universidade;
+  if (!modal || !modalTitle || !modalTable || !closeModal) return;
 
-      const notas = universidadesNotas[universidade];
+  document.querySelectorAll(".universities").forEach(li => {
+    li.addEventListener("click", () => {
+      const uniName = li.textContent.trim();
+      modalTitle.textContent = uniName;
+
+      const notas = universidadesNotas[uniName];
       if (notas) {
-        let tableHTML = "<table class='table table-striped'><thead><tr>";
-        notas[0].forEach(header => {
-          tableHTML += `<th>${header}</th>`;
-        });
-        tableHTML += "</tr></thead><tbody>";
-        for (let i = 1; i < notas.length; i++) {
+        let tableHTML = "<table>";
+        notas.forEach((row, i) => {
           tableHTML += "<tr>";
-          notas[i].forEach(cell => {
-            tableHTML += `<td>${cell}</td>`;
+          row.forEach(cell => {
+            tableHTML += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
           });
           tableHTML += "</tr>";
-        }
-        tableHTML += "</tbody></table>";
+        });
+        tableHTML += "</table>";
         modalTable.innerHTML = tableHTML;
+      } else {
+        modalTable.innerHTML = "<p>Sem dados disponíveis</p>";
       }
 
       modal.style.display = "block";
     });
   });
 
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  closeModal.onclick = () => modal.style.display = "none";
+  window.onclick = event => {
+    if (event.target === modal) modal.style.display = "none";
+  };
+}
 
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
+initEnemModal();
+//Enem Score Universitie Information End
+
+//Class Schedule Search Start
+
+function searchclass() {
+  const raw = document.getElementById('searchbar').value || '';
+
+  const normalize = (str) =>
+    str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toUpperCase()
+      .replace(/[^0-9A-Z\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  const expansions = {
+    'ETE': 'ESCOLA TECNICA ESTADUAL',
+    'ET': 'ESCOLA TECNICA'
+  };
+
+  const stopwords = new Set(['DE','DA','DO','DOS','DAS','E','O','A','EM','NA','NO','COM','POR','PELA','PELO']);
+
+  // prepara input
+  let input = normalize(raw);
+
+  for (const key in expansions) {
+    input = input.replace(new RegExp('\\b' + escapeRegExp(key) + '\\b', 'g'), expansions[key]);
+  }
+
+  let tokens = input.split(' ').filter(Boolean)
+    .filter(t => t.length > 1 && !stopwords.has(t));
+
+  const tables = document.querySelectorAll('.table-container-schedule');
+
+  if (tokens.length === 0) {
+    tables.forEach(t => t.style.display = '');
+    return;
+  }
+
+  tables.forEach(table => {
+    const headingEl = table.querySelector('.heading-schedule');
+    if (!headingEl) {
+      table.style.display = 'none';
+      return;
     }
-  });
-});
-    //Enem Score Universitie Information End
 
-})(jQuery);
+    let heading = normalize(headingEl.textContent || headingEl.innerText);
+
+    for (const key in expansions) {
+      heading = heading.replace(new RegExp('\\b' + escapeRegExp(key) + '\\b', 'g'), expansions[key]);
+    }
+
+    const matched = tokens.every(tok => heading.indexOf(tok) !== -1);
+
+    table.style.display = matched ? '' : 'none';
+  });
+}
+
+//Class Schedule Search End
+
+// Enem Score Page Search Start
+
+function search(){
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase()
+  let x = document.getElementsByClassName('universities')
+
+  for(i = 0; i < x.length; i++){
+    if(!x[i].innerHTML.toLowerCase().includes(input)){
+      x[i].style.display = "none"
+    }else{
+      x[i].style.display = "list-item"
+    }
+  }
+}
