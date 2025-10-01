@@ -1073,6 +1073,18 @@
     white-space: nowrap;
 }
 
+@media (min-width: 577px) {
+    .icon-download {
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .icon-download {
+        height: 30px;
+    }
+}
+
 /*** Download Page Hero Header End ***/
 
 /*** Feature Start ***/
