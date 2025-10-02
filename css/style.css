@@ -1481,6 +1481,17 @@
 }
 /*** Our Contact Page Hero Header End ***/
 
+
+
+
+
+
+
+
+
+
+
+
 /*** Enem Score Page Header Start ***/
 
 .enem-score {
@@ -1495,7 +1506,7 @@
 }
 
 .enem-item-content {
-  border: 1px solid #b1b1b1; /* borda vermelha de 3px */
+  border: 2px solid #b1b1b1; /* borda vermelha de 3px */
   border-radius: 15px;       /* arredondamento maior que o padrão */
 }
 
@@ -1535,7 +1546,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
   display: block;
-  margin: -15px auto 20px auto;
+  margin: -5px auto 20px auto;
 }
 
 #searchbar:focus {
@@ -1544,7 +1555,9 @@
 }
 
 .counter-enem li {
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .counter-enem ul {
@@ -1554,15 +1567,34 @@
 }
 
 .faculdades-title {
-  gap: 15px;
+  gap: 10px;
   margin-left: -30px;
   justify-content: center;
   display: flex;
+  color: #015fc9e6;
+  font-size: 1.7em;
   
 }
 
 .counter-enem.bg-light.rounded li h6 {
-    color: #015fc9e6 !important; /* texto vermelho */
+    margin: auto;
+    margin-top: 10px;
+    color: #015fc9e6 !important;
+    border: 2.5px solid #015fc9e6;
+    border-radius: 13px;
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.counter-enem.bg-light.rounded li h6:hover {
+    color: #FFFFFF !important;
+    background-color: #015fc9e6;
 }
 
 .our-app {
@@ -1596,7 +1628,7 @@
     margin: 10% auto;
     padding: 20px;
     border-radius: 10px;
-    max-width: 700px;
+    max-width: 90vw;
     position: relative;
 }
 
@@ -1643,6 +1675,16 @@
     margin: 50px auto;
 }
 /*** Enem Score Page Header End ***/
+
+
+
+
+
+
+
+
+
+
 
 /*** Feature Start ***/
 /***
