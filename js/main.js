@@ -46,6 +46,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+       // Back to top button
+   $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').fadeIn('slow');
+    } else {
+        $('.back-to-top').fadeOut('slow');
+    }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+
     // Header carousel
     var $headerCarousel = $(".header-carousel");
     $headerCarousel.owlCarousel({
@@ -306,3 +319,35 @@ function search(){
     }
   }
 }
+
+// Inicializa o carrossel Swiper para a seção "Nosso Time"
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30, // espaçamento entre slides
+  autoplay: {
+    delay: 5000, // troca automática a cada 5s
+    disableOnInteraction: false, // continua após interação
+  },
+  speed: 800, // velocidade da transição
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true, // permite clicar nas bolinhas
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", // seta direita
+    prevEl: ".swiper-button-prev", // seta esquerda
+  },
+  loop: false, // não repete infinito
+  loopFillGroupWithBlank: false,
+  breakpoints: {
+    0: { // mobile
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      centeredSlides: false
+    },
+    769: { // desktop
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      centerInsufficientSlides: true // centraliza último slide se faltar
+    }
+  }
+});
