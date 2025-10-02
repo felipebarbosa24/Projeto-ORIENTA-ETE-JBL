@@ -1092,6 +1092,13 @@
     }
 }
 
+@media (max-width: 400px) {
+    .download-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /*** Download Page Hero Header End ***/
 
 /*** Feature Start ***/
