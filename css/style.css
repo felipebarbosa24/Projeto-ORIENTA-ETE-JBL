@@ -1644,6 +1644,58 @@
 }
 /*** Enem Score Page Header End ***/
 
+/*** Download Page Hero Header Start ***/
+.download-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/download-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.download-bg .breadcrumb {
+    position: relative;
+}
+
+.download-bg .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+.download-title {
+    white-space: nowrap;
+}
+
+.download-button {
+    white-space: nowrap;
+}
+
+@media (min-width: 577px) {
+    .icon-download {
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .icon-download {
+        height: 30px;
+    }
+    .download-title {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 400px) {
+    .download-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*** Download Page Hero Header End ***/
+
 /*** Feature Start ***/
 /***
 .feature .feature-item {
