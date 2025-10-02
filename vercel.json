@@ -1,20 +1,21 @@
 {
   "rewrites": [
-    { "source": "/início", "destination": "/index.html" },
-    { "source": "/sobre-nós", "destination": "/about.html" },
+    { "source": "/inicio", "destination": "/index.html" },
+    { "source": "/sobre-nos", "destination": "/about.html" },
     { "source": "/contato", "destination": "/contact.html" },
     { "source": "/nosso-time", "destination": "/team.html" },
     { "source": "/plano-de-carreira", "destination": "/career-plan.html" },
     { "source": "/duvidas", "destination": "/FAQ.html" },
     { "source": "/download", "destination": "/download.html" },
-    { "source": "/página-em-construção", "destination": "/404.html" },
+    { "source": "/pagina-em-construcao", "destination": "/404.html" },
     { "source": "/notas-de-corte-enem", "destination": "/enem-score.html" },
-    { "source": "/cardápio-escolar", "destination": "/food-menu.html" },
+    { "source": "/cardapio-escolar", "destination": "/food-menu.html" },
     { "source": "/plano-de-estudos", "destination": "/study-plan.html" },
     { "source": "/teste-vocacional", "destination": "/vocational-test.html" },
     { "source": "/mural-escolar", "destination": "/school-mural.html" },
-    { "source": "/nossa-presença", "destination": "/testimonial.html" },
-    { "source": "/serviços", "destination": "/service.html" },
+    { "source": "/horario-escolar", "destination": "/class-schedule.html" },
+    { "source": "/nossa-presenca", "destination": "/testimonial.html" },
+    { "source": "/servicos", "destination": "/service.html" },
     { "source": "/recursos", "destination": "/feature.html" }
   ]
 }
