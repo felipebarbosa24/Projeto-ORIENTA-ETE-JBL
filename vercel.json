@@ -13,9 +13,6 @@
     { "source": "/plano-de-estudos", "destination": "/study-plan.html" },
     { "source": "/teste-vocacional", "destination": "/vocational-test.html" },
     { "source": "/mural-escolar", "destination": "/school-mural.html" },
-    { "source": "/horario-escolar", "destination": "/class-schedule.html" },
-    { "source": "/nossa-presenca", "destination": "/testimonial.html" },
-    { "source": "/servicos", "destination": "/service.html" },
-    { "source": "/recursos", "destination": "/feature.html" }
+    { "source": "/horario-escolar", "destination": "/class-schedule.html" }
   ]
 }
