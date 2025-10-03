@@ -13,6 +13,7 @@
     { "source": "/plano-de-estudos", "destination": "/study-plan.html" },
     { "source": "/teste-vocacional", "destination": "/vocational-test.html" },
     { "source": "/mural-escolar", "destination": "/school-mural.html" },
+    { "source": "/nosso-app", "destination": "/our-app.html" },
     { "source": "/horario-escolar", "destination": "/class-schedule.html" }
   ]
 }
