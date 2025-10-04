@@ -2448,6 +2448,129 @@
 
 /*** Study plan end ***/
 
+/*** Study Plan Modal Start ***/
+.study-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.study-modal-content {
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    max-height: 80vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translate(-50%, -50%) scale(0.8); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translate(-50%, -50%) scale(1); 
+        opacity: 1; 
+    }
+}
+
+.study-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #ff4444;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.study-modal-close:hover {
+    color: #cc0000;
+    transform: scale(1.1);
+}
+
+.study-modal-body {
+    padding: 40px 35px 30px;
+    height: 100%;
+}
+
+.study-modal-body h3 {
+    color: #0072BB;
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.study-modal-body p {
+    color: #333;
+    line-height: 1.7;
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .study-modal-content {
+        width: 95%;
+        max-width: 90vw;
+        margin: 0;
+    }
+    
+    .study-modal-body {
+        padding: 30px 25px 20px;
+    }
+    
+    .study-modal-body h3 {
+        font-size: 22px;
+    }
+    
+    .study-modal-body p {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .study-modal-body {
+        padding: 25px 20px 15px;
+    }
+    
+    .study-modal-body h3 {
+        font-size: 20px;
+    }
+    
+    .study-modal-body p {
+        font-size: 15px;
+    }
+}
+/*** Study Plan Modal End ***/
 
 /*** Our App start ***/
 .our-app-box img {
