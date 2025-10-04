@@ -15,6 +15,22 @@ O site foi desenvolvido com:
 - **JavaScript (ES6+)**  
 - **Bootstrap 5**  
 
+## ⚙️ Como Executar o Projeto
+
+### 1. Clonar o repositório
+```bash
+git clone https://github.com/felipebarbosa24/Projeto-ORIENTA-ETE-JBL
+```
+
+### 2. Instalar Deploy Local Vercel
+```bash
+npm install -g vercel
+```
+### 3. Executar o Projeto
+```bash
+vercel dev
+```
+
 ## 🌟 Sobre o Aplicativo ORIENTA  
 
 O **App ORIENTA** é uma plataforma centralizada que reúne **informativos da escola, mundo acadêmico, avisos da gestão e do grêmio estudantil**.  Além disso, conta com uma área dedicada ao aluno, oferecendo:  
