@@ -198,7 +198,92 @@ function initEnemModal() {
     "Universidade Federal Do Vale Do São Francisco (UNIVASF)": [
       ["Curso", "Modalidade", "Nota de Corte"],
       ["Engenharia Civil", "Ampla Concorrência", 640],
-      ["Enfermagem", "Ampla Concorrência", 610]
+      ["Enfermagem", "Ampla Concorrência", 610],
+      ["Medicina", "Ampla Concorrência", 860]
+    ],
+      "Universidade De Pernambuco (UPE)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Medicina", "Ampla Concorrência", 860],
+      ["Odontologia", "Ampla Concorrência", 796],
+      ["Engenharia de Software", "Ampla Concorrência", 710]
+    ],
+    "Universidade Federal Do Ceará (UFC)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Ciência da Computação", "Ampla Concorrência", 767],
+      ["Medicina", "Ampla Concorrência", 804],
+      ["Administração", "Ampla Concorrência", 690]
+    ],
+    "Universidade Federal Da Bahia (UFBA)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Educação Física", "Ampla Concorrência", 672],
+      ["Medicina", "Ampla Concorrência", 938],
+      ["Psicologia", "Ampla Concorrência", 846]
+    ],
+    "Universidade Federal Do Rio Grande Do Norte (UFRN)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Direito", "Ampla Concorrência", 830],
+      ["Medicina", "Ampla Concorrência", 927],
+      ["Sistemas de Informação", "Ampla Concorrência", 799]
+    ],
+      "Universidade Federal Do Maranhão (UFMA)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Odontologia", "Ampla Concorrência", 735],
+      ["Direito", "Ampla Concorrência", 726],
+      ["Medicina", "Ampla Concorrência", 840]
+    ],
+    "Universidade Federal Do Piauí (UFPI)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Engenharia Civil", "Ampla Concorrência", 718],
+      ["Medicina", "Ampla Concorrência", 805],
+      ["Arquitetura e Urbanismo", "Ampla Concorrência", 707]
+    ],
+    "Universidade Federal De Sergipe (UFS)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Medicina", "Ampla Concorrência", 798],
+      ["Ciência da Computação", "Ampla Concorrência", 759],
+      ["Direito", "Ampla Concorrência", 772]
+    ],
+    "Universidade De São Paulo (USP)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Biomedicina", "Ampla Concorrência", 799],
+      ["Direito", "Ampla Concorrência", 780],
+      ["Engenharia Química", "Ampla Concorrência", 772]
+    ],
+    "Universidade Federal Do Rio De Janeiro (UFRJ)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Medicina", "Ampla Concorrência", 831],
+      ["Odontologia", "Ampla Concorrência", 803],
+      ["Engenharia de Computação e Informação", "Ampla Concorrência", 813]
+    ],
+    "Universidade Federal De Minas Gerais (UFMG)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Engenharia Aeroespacial", "Ampla Concorrência", 790],
+      ["Ciência da Computação", "Ampla Concorrência", 789],
+      ["Medicina", "Ampla Concorrência", 812]
+    ],
+    "Universidade De Brasília (UnB)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Ciências Naturais", "Ampla Concorrência", 541],
+      ["Engenharia Mecânica", "Ampla Concorrência", 770],
+      ["Medicina", "Ampla Concorrência", 819]
+    ],
+    "Universidade Federal De Santa Catarina (UFSC)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Ciência da Computação", "Ampla Concorrência", 809],
+      ["Medicina", "Ampla Concorrência", 823],
+      ["Engenharia Aeroespacial", "Ampla Concorrência", 796]
+    ],
+    "Universidade Federal Do Rio Grande Do Sul (UFRGS)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Teatro", "Ampla Concorrência", 793],
+      ["Medicina", "Ampla Concorrência", 793],
+      ["Biotecnologia", "Ampla Concorrência", 769]
+    ],
+    "Universidade Federal Do Paraná (UFPR)": [
+      ["Curso", "Modalidade", "Nota de Corte"],
+      ["Publicidade e Propaganda", "Ampla Concorrência", 778],
+      ["Direito", "Ampla Concorrência", 774],
+      ["Medicina", "Ampla Concorrência", 814]
     ]
   };
 
