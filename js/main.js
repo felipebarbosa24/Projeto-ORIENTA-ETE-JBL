@@ -234,213 +234,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })(jQuery);
 
-// Study Plan Modal Functionality
-function initStudyPlanModal() {
-    var modal = document.getElementById('study-plan-modal');
-    var modalTitle = document.getElementById('modal-title');
-    var modalContent = document.getElementById('modal-content');
-    var closeBtn = document.querySelector('.study-modal-close');
-    
-    // Dados dos planos de estudo com matérias organizadas
-    var studyPlansData = {
-        'SSA': {
-            title: 'SSA - Sistema Seriado de Avaliação',
-            subjects: [
-                'Matemática e suas Tecnologias',
-                'Linguagens e Códigos',
-                'Ciências Humanas',
-                'Ciências da Natureza',
-                'Redação',
-                'Língua Estrangeira (Inglês/Espanhol)',
-                'Física, Química e Biologia',
-                'História e Geografia'
-            ]
+new Swiper('.card-wrapper', {
+    loop: true,
+    spaceBetween: 30,
+
+    // Pagination bullets
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
         },
-        'ENEM': {
-            title: 'ENEM - Exame Nacional do Ensino Médio',
-            subjects: [
-                'Matemática e suas Tecnologias',
-                'Linguagens, Códigos e suas Tecnologias',
-                'Ciências Humanas e suas Tecnologias',
-                'Ciências da Natureza e suas Tecnologias',
-                'Redação',
-                'Interpretação de Textos',
-                'Raciocínio Lógico-Matemático',
-                'Atualidades'
-            ]
+        768: {
+            slidesPerView: 2
         },
-        'Fuvest': {
-            title: 'FUVEST - Fundação Universitária para o Vestibular',
-            subjects: [
-                'Matemática',
-                'Português e Literatura',
-                'Física',
-                'Química',
-                'Biologia',
-                'História',
-                'Geografia',
-                'Língua Estrangeira (Inglês)',
-                'Redação'
-            ]
-        },
-        'Unicamp': {
-            title: 'UNICAMP - Universidade Estadual de Campinas',
-            subjects: [
-                'Matemática',
-                'Português',
-                'Literatura Brasileira',
-                'Física',
-                'Química',
-                'Biologia',
-                'História',
-                'Geografia',
-                'Inglês',
-                'Redação'
-            ]
-        },
-        'Unesp': {
-            title: 'UNESP - Universidade Estadual Paulista',
-            subjects: [
-                'Matemática',
-                'Língua Portuguesa',
-                'Literatura',
-                'Física',
-                'Química',
-                'Biologia',
-                'História',
-                'Geografia',
-                'Língua Estrangeira',
-                'Filosofia e Sociologia',
-                'Redação'
-            ]
-        },
-        'UFPR': {
-            title: 'UFPR - Universidade Federal do Paraná',
-            subjects: [
-                'Matemática',
-                'Português',
-                'Literatura',
-                'Física',
-                'Química',
-                'Biologia',
-                'História',
-                'Geografia',
-                'Língua Estrangeira',
-                'Artes e Educação Física',
-                'Redação'
-            ]
-        },
-        'ESA': {
-            title: 'ESA - Escola de Sargentos das Armas',
-            subjects: [
-                'Matemática',
-                'Português',
-                'História do Brasil',
-                'Geografia do Brasil',
-                'Física',
-                'Química',
-                'Biologia',
-                'Inglês',
-                'Redação',
-                'Conhecimentos Específicos Militares'
-            ]
-        },
-        'EsPCEx': {
-            title: 'EsPCEx - Escola Preparatória de Cadetes do Exército',
-            subjects: [
-                'Matemática',
-                'Português',
-                'História',
-                'Geografia',
-                'Física',
-                'Química',
-                'Biologia',
-                'Inglês',
-                'Redação',
-                'Conhecimentos Gerais'
-            ]
-        },
-        'Colégio Naval': {
-            title: 'Colégio Naval',
-            subjects: [
-                'Matemática',
-                'Português',
-                'Ciências (Física, Química, Biologia)',
-                'História',
-                'Geografia',
-                'Inglês',
-                'Redação',
-                'Desenho Geométrico',
-                'Testes de Aptidão'
-            ]
-        },
-        'ITA': {
-            title: 'ITA - Instituto Tecnológico de Aeronáutica',
-            subjects: [
-                'Matemática (Avançada)',
-                'Física (Avançada)',
-                'Química (Avançada)',
-                'Português',
-                'Inglês',
-                'Geometria Analítica',
-                'Cálculo Diferencial e Integral',
-                'Álgebra Linear',
-                'Redação Técnica'
-            ]
+        1024: {
+            slidesPerView: 3
         }
-    };
-
-
-    var detailButtons = document.querySelectorAll('.plan-card .plan-a a');
-    
-    for (var i = 0; i < detailButtons.length; i++) {
-        detailButtons[i].addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            var card = this.closest('.plan-card');
-            var planTitle = card.querySelector('h2').textContent.trim();
-            
-            if (studyPlansData[planTitle]) {
-                modalTitle.textContent = studyPlansData[planTitle].title;
-                
-
-                var subjectsList = '<ul class="subjects-list">';
-                for (var j = 0; j < studyPlansData[planTitle].subjects.length; j++) {
-                    subjectsList += '<li>' + studyPlansData[planTitle].subjects[j] + '</li>';
-                }
-                subjectsList += '</ul>';
-                
-                modalContent.innerHTML = subjectsList;
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
-        });
     }
+});
 
+const showPopup = document.querySelector(".show-popup");
+const popupContainer = document.querySelector(".popup-container");
+const closeBtn = document.querySelector(".close-popup-btn");
 
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-
-
-    window.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === 'block') {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
+showPopup.onclick = () => {
+    popupContainer.classList.add('active');
 }
 
-
-if (document.getElementById('study-plan-modal')) {
-    document.addEventListener('DOMContentLoaded', initStudyPlanModal);
+closeBtn.onclick = () => {
+    popupContainer.classList.remove('active');
 }

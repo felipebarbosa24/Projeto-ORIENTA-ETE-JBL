@@ -2368,7 +2368,7 @@
     padding: 4px;
 }
 
-.plan-a a {
+.plan-a button {
     color: #fff;
     background-color: #64B75A;
     padding: 7px 25px;
@@ -2376,6 +2376,7 @@
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
+    border: none;
 }
 
 .plan-b {
@@ -2447,130 +2448,6 @@
 }
 
 /*** Study plan end ***/
-
-/*** Study Plan Modal Start ***/
-.study-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.study-modal-content {
-    position: absolute;
-    background-color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 900px;
-    height: auto;
-    max-height: 80vh;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: slideIn 0.3s ease;
-    overflow: hidden;
-}
-
-@keyframes slideIn {
-    from { 
-        transform: translate(-50%, -50%) scale(0.8); 
-        opacity: 0; 
-    }
-    to { 
-        transform: translate(-50%, -50%) scale(1); 
-        opacity: 1; 
-    }
-}
-
-.study-modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: #ff4444;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.study-modal-close:hover {
-    color: #cc0000;
-    transform: scale(1.1);
-}
-
-.study-modal-body {
-    padding: 40px 35px 30px;
-    height: 100%;
-}
-
-.study-modal-body h3 {
-    color: #0072BB;
-    font-size: 26px;
-    margin-bottom: 25px;
-    text-align: center;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 15px;
-}
-
-.study-modal-body p {
-    color: #333;
-    line-height: 1.7;
-    font-size: 15px;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    max-width: 350px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .study-modal-content {
-        width: 95%;
-        max-width: 90vw;
-        margin: 0;
-    }
-    
-    .study-modal-body {
-        padding: 30px 25px 20px;
-    }
-    
-    .study-modal-body h3 {
-        font-size: 22px;
-    }
-    
-    .study-modal-body p {
-        font-size: 16px;
-        text-align: left;
-    }
-}
-
-@media (max-width: 480px) {
-    .study-modal-body {
-        padding: 25px 20px 15px;
-    }
-    
-    .study-modal-body h3 {
-        font-size: 20px;
-    }
-    
-    .study-modal-body p {
-        font-size: 15px;
-    }
-}
-/*** Study Plan Modal End ***/
 
 /*** Our App start ***/
 .our-app-box img {
@@ -3040,3 +2917,315 @@
 /* Class Schedule Start */
 
 /*** Class Schedule Page End***/
+
+/*** Study-plan Popup Start***/
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.popup-box {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: scale(0);
+    transition: transform 0.4s ease 0.25s;
+    max-width: 60vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-container.active .popup-box {
+    transform: scale(1);
+}
+
+.popup-box .close-popup-btn {
+    width: 20%;
+    height: 45px;
+    background-color: #015ec9;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    cursor: pointer;
+    font-size: 18px;
+    color: #f2f2f2;
+    font-weight: 500;
+    margin-top: 20px;
+    display: block;
+    margin: 20px auto 0;
+
+}
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+    display: block;
+    background: #fff;
+    padding: 18px;
+    user-select: none;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #5372F0;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-list .card-link .badge {
+    color: #5372F0;
+    width: fit-content;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    font-weight: 500;
+    background: #DDE4FF;
+    margin: 16px 0 18px;
+}
+
+.card-list .card-link .badge-designer {
+    color: #B22485;
+    background: #F7DFF5;
+}
+
+.card-list .card-link .badge-developer {
+    color: #5372F0;
+    background: #DDE4FF;
+}
+
+.card-list .card-link .badge-marketer {
+    color: #B25A2B;
+    background: #FFE3D2;
+}
+
+.card-list .card-link .badge-gamer {
+    color: #205C20;
+    background: #D6F8D6;
+}
+
+.card-list .card-link .badge-editor {
+    color: #856404;
+    background: #fff3cd;
+}
+
+.card-list .card-link .card-title {
+    color: #000;
+    font-size: 1.19rem;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372F0;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #5372F0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #5372F0;
+    margin-top: -35px;
+}
+
+/* Ajustes para o container do Swiper */
+.container.swiper {
+    width: 100%;
+    position: relative;
+}
+
+.card-list.swiper-wrapper {
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Ajustes para as setas de navegação */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px !important;
+    color: #5372F0;
+    font-weight: bold;
+}
+
+.swiper-button-prev {
+    left: 0px !important;
+}
+
+.swiper-button-next {
+    right: 0px !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #5372F0;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    color: white;
+}
+
+/* Paginação do Swiper */
+.swiper-pagination {
+    bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 6px !important;
+}
+
+/* Responsive media query code for small screens */
+@media (max-width: 768px) {
+    .popup-container {
+        padding: 10px;
+    }
+    
+    .popup-box {
+        padding: 15px;
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+    
+    .card-wrapper {
+        margin: 0 auto 25px;
+        padding: 20px 5px;
+    }
+    
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+    
+    .card-list .card-item .card-link {
+        padding: 15px;
+    }
+    
+    .card-list .card-link .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-container {
+        padding: 5px;
+    }
+    
+    .popup-box {
+        padding: 12px;
+    }
+    
+    .card-wrapper {
+        padding: 15px 0;
+    }
+    
+    .card-list .card-item .card-link {
+        padding: 12px;
+    }
+    
+    .card-list .card-link .badge {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        margin: 12px 0 14px;
+    }
+    
+    .card-list .card-link .card-title {
+        font-size: 1rem;
+    }
+    
+    .popup-box .close-popup-btn {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/*** Study-plan Popup End***/
