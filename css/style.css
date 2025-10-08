@@ -98,7 +98,7 @@
 }
 
 
-/*** Topbar Start ***/ 
+/*** Topbar Start ***/
 .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -400,7 +400,7 @@
 #carousel-slide-2 h1 {
   font-size: 2.8rem;
   color: #fff;
-  
+ 
   width: 100%;
   text-align: left;
 }
@@ -750,7 +750,7 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  min-height: 100%;         
+  min-height: 100%;        
   padding-top: 40px;
   padding-bottom: 0;
   background: rgba(0, 0, 0, 0.0);
@@ -1243,7 +1243,7 @@
         justify-content: start;
     }
 
-  
+ 
 
 @media (max-width:1000px) {
     .page-404 h1, .page-404 h4{
@@ -1260,7 +1260,7 @@
         justify-content: center !important;
     }
 
-    
+   
 }
 
 
@@ -1269,7 +1269,7 @@
 .center-404-buttons{
     margin-top: 50px;
 }
-    
+   
     .center-404-buttons a{
         margin: 0 10px;
         width: 40%;
@@ -1391,7 +1391,7 @@
     display: inline-block;
   }
 }
-    
+   
 
 /*** Career Plan Page End ***/
 
@@ -1523,14 +1523,14 @@
   padding: 12px 20px;
   width: calc(100% - 40px);
   max-width: 460px;
-  
+ 
   font-size: 16px;
   color: #333;
-  
+ 
   border: 2px solid #ddd;
   border-radius: 25px;
   outline: none;
-  
+ 
   transition: 0.3s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
@@ -1558,7 +1558,7 @@
   margin-left: -30px;
   justify-content: center;
   display: flex;
-  
+ 
 }
 
 .counter-enem.bg-light.rounded li h6 {
@@ -1580,15 +1580,15 @@
 }
 
 .modal-enem {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 9999; 
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.5); 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-enem-content {
@@ -2387,15 +2387,15 @@
     font-weight: 500;
     font-size: 16px;
     text-align: left;
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
  #search-input::placeholder {
-    font-size: 18px; 
-    color: #474747; 
+    font-size: 18px;
+    color: #474747;
 
 }
 
@@ -2409,7 +2409,7 @@
 /* Responsividade */
 @media (max-width: 1000px) {
     .plan-study {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .input-group.w-50 {
@@ -2418,7 +2418,7 @@
     }
 
  #search-input::placeholder {
-    font-size: 20px; 
+    font-size: 20px;
     color: #474747;
 }
 
@@ -2430,7 +2430,7 @@
     }
     .plan-card {
         max-width: 90vw;
-        height: auto; 
+        height: auto;
     }
 
     .plan-a a{
@@ -2443,7 +2443,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        
+       
 
 }
 
@@ -2729,7 +2729,7 @@
         color: #015ec9;
         text-align: left;
     }
-    
+   
     .table-food tbody tr td:first-child {
     background: linear-gradient(135deg, #015ec9, #027cf0);
     color: #fff;
@@ -2945,7 +2945,7 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transform: scale(0);
     transition: transform 0.4s ease 0.25s;
-    max-width: 50vw;
+    max-width: 65vw;
     max-height: 80vh;
     overflow-y: auto;
     width: 100%;
@@ -3186,30 +3186,30 @@
     .popup-container {
         padding: 10px;
     }
-    
+   
     .popup-box {
         padding: 15px;
         max-width: 95vw;
         max-height: 85vh;
     }
-    
+   
     .card-wrapper {
         margin: 0 auto 25px;
         padding: 20px 5px;
     }
-    
+   
     .card-wrapper .swiper-slide-button {
         display: none;
     }
-    
+   
     .card-list .card-item .card-link {
         padding: 15px;
     }
-    
+   
     .card-list .card-link .card-title {
         font-size: 1.1rem;
     }
-    
+   
     .swiper-pagination-bullet {
         width: 10px !important;
         height: 10px !important;
@@ -3220,29 +3220,29 @@
     .popup-container {
         padding: 5px;
     }
-    
+   
     .popup-box {
         padding: 12px;
     }
-    
+   
     .card-wrapper {
         padding: 15px 0;
     }
-    
+   
     .card-list .card-item .card-link {
         padding: 12px;
     }
-    
+   
     .card-list .card-link .badge {
         font-size: 0.85rem;
         padding: 6px 12px;
         margin: 12px 0 14px;
     }
-    
+   
     .card-list .card-link .card-title {
         font-size: 1rem;
     }
-    
+   
     .popup-box .close-popup-btn {
         height: 40px;
         font-size: 16px;
@@ -3308,9 +3308,11 @@
 #container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 350px;
-    padding-left: 67px;
+    position: relative;
+    width: 100%;
+    max-width: 650px; /* limite máximo, se quiser manter proporção */
+    height: auto; /* altura se adapta ao conteúdo */
+    aspect-ratio: 13 / 6; /* mantém a proporção semelhante a 650x300 */
 }
 
 .accordion-study {
@@ -3404,6 +3406,7 @@
 }
 
 .container-scroll {
+    overflow-y: hidden;
     margin-top: 40px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -3417,7 +3420,29 @@
     mask-image: linear-gradient(to bottom, transparent, black 20px, black calc(100% - 20px), transparent);
     mask-repeat: no-repeat;
     mask-clip: content-box;
+    /* esconde a scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge antigos */
     mask-composite: intersect;
+    margin-left: 16%;
+}
+
+@media (max-width: 2169.33px) {
+    .container-scroll {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .container-scroll {
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-scroll {
+        margin-left: 20;
+    }
 }
 
 .materias-principal {
@@ -3425,12 +3450,7 @@
    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .materias-principal {
-        padding-left: 0;
-        text-align: center;
-    }
-}
+
 
 .playlists-h3 {
     text-align: center;
@@ -3438,10 +3458,11 @@
 
   .container-res {
     position: relative;
-    width: 650px;
-    height: 300px;
+    width: 100%;
+    max-width: 650px; /* limite máximo, se quiser manter proporção */
+    height: auto; /* altura se adapta ao conteúdo */
+    aspect-ratio: 13 / 6; /* mantém a proporção semelhante a 650x300 */
     margin: 20px auto;
-    border: 1px solid #ccc;
   }
 
   .box {
@@ -3455,15 +3476,16 @@
     align-items: center;
     font-size: 24px;
     color: #fff;
+    overflow-y: auto;
   }
 
-  .box1 { 
+  .box1 {
     background-color: #ffffff;
     border-radius: 30px;
     border-color: #dbdbdb;
 }
 
-  .box2 { 
+  .box2 {
     background-color: #ffffff;
     border-radius: 30px;
     border-color: #dbdbdb;
@@ -3475,6 +3497,7 @@
 
 .res-block {
   display: flex;
+  padding-top: 70px;
   flex-direction: column; /* Mantém container abaixo dos botões */
   align-items: center;
   gap: 0px;
@@ -3503,11 +3526,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
+    overflow: hidden;
+    gap: 20px;
 }
 
 .box ul {
     list-style: none;
-    color: #015ec9;
+    color: #5f5f5f;
+    padding: 0;
+    font-size: 20px;
 }
 
+@media (max-width: 480px) {
+    .aolado-res {
+        display: block;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow: hidden;
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+    .box {
+    position: relative;
+    width: 100%;
+    max-width: 650px; /* limite máximo, se quiser manter proporção */
+    height: auto; /* altura se adapta ao conteúdo */
+    aspect-ratio: 13 / 6; /* mantém a proporção semelhante a 650x300 */
+    margin: 20px auto;
+    overflow-y: auto;
+    }
+
+}
 /*** Study-plan Popup End***/
