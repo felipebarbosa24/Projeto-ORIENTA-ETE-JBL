@@ -276,3 +276,25 @@ showPopup.onclick = () => {
 closeBtn.onclick = () => {
     popupContainer.classList.remove('active');
 }
+
+const accordions = document.querySelectorAll('.accordion-study');
+
+accordions.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+        const body = accordion.querySelector('.accordion-body');
+        body.classList.toggle('active');
+    })
+})
+
+  const div1 = document.getElementById('div1-res');
+  const div2 = document.getElementById('div2-res');
+
+  document.getElementById('showDiv1-res').addEventListener('click', () => {
+    div1.classList.add('active');
+    div2.classList.remove('active');
+  });
+
+  document.getElementById('showDiv2-res').addEventListener('click', () => {
+    div1.classList.remove('active');
+    div2.classList.add('active');
+  });
