@@ -1481,17 +1481,6 @@
 }
 /*** Our Contact Page Hero Header End ***/
 
-
-
-
-
-
-
-
-
-
-
-
 /*** Enem Score Page Header Start ***/
 
 .enem-score {
@@ -1519,7 +1508,6 @@
 }
 
 .counter-enem.bg-light.rounded {
-  height: 450px;
   overflow-y: scroll;
   max-width: 500px;
   height: 850px;
@@ -1672,8 +1660,22 @@
     display: block;
     max-width: 80%;
     height: auto;
-    margin: 40px 0px;
+    margin: 40px 0;
 }
+
+@media (min-width: 1200px){
+    .sisu-img{
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 767px){
+
+.counter-enem.bg-light.rounded {
+    height: auto;
+}
+}
+
 /*** Enem Score Page Header End ***/
 
 /*** Download Page Hero Header Start ***/

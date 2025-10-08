@@ -187,30 +187,45 @@ function initEnemModal() {
       ["Curso", "Modalidade", "Nota de Corte"],
       ["Medicina", "Ampla Concorrência", 790],
       ["Engenharia Civil", "Ampla Concorrência", 720],
+      ["Sistemas de Informação", "Ampla Concorrência", 802],
+      ["Ciência da Computação", "Ampla Concorrência", 801],
+      ["Odontologia", "Ampla Concorrência", 751],
       ["Direito", "Ampla Concorrência", 700]
     ],
     "Universidade Federal Rural De Pernambuco (UFRPE)": [
       ["Curso", "Modalidade", "Nota de Corte"],
       ["Medicina Veterinária", "Ampla Concorrência", 740],
       ["Engenharia Agronômica", "Ampla Concorrência", 680],
+      ["Ciência da Computação", "Ampla Concorrência", 739],
+      ["Engenharia de Computação", "Ampla Concorrência", 696],
+      ["Sistemas de Informação", "Ampla Concorrência", 693],
       ["Zootecnia", "Ampla Concorrência", 650]
     ],
     "Universidade Federal Do Vale Do São Francisco (UNIVASF)": [
       ["Curso", "Modalidade", "Nota de Corte"],
       ["Engenharia Civil", "Ampla Concorrência", 640],
       ["Enfermagem", "Ampla Concorrência", 610],
+      ["Engenharia de Computação", "Ampla Concorrência", 847],
+      ["Farmácia", "Ampla Concorrência", 754],
+      ["Psicologia", "Ampla Concorrência", 768],
       ["Medicina", "Ampla Concorrência", 860]
     ],
       "Universidade De Pernambuco (UPE)": [
       ["Curso", "Modalidade", "Nota de Corte"],
       ["Medicina", "Ampla Concorrência", 860],
       ["Odontologia", "Ampla Concorrência", 796],
+      ["Direito", "Ampla Concorrência", 806],
+      ["Psicologia", "Ampla Concorrência", 712],
+      ["Enfermagem", "Ampla Concorrência", 698],
       ["Engenharia de Software", "Ampla Concorrência", 710]
     ],
     "Universidade Federal Do Ceará (UFC)": [
       ["Curso", "Modalidade", "Nota de Corte"],
       ["Ciência da Computação", "Ampla Concorrência", 767],
       ["Medicina", "Ampla Concorrência", 804],
+      ["Direito", "Ampla Concorrência", 775],
+      ["Filosofia", "Ampla Concorrência", 764],
+      ["Engenharia de Computação", "Ampla Concorrência", 759],
       ["Administração", "Ampla Concorrência", 690]
     ],
     "Universidade Federal Da Bahia (UFBA)": [
