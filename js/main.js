@@ -286,18 +286,23 @@ accordions.forEach(accordion => {
     })
 })
 
-  const div1 = document.getElementById('div1-res');
-  const div2 = document.getElementById('div2-res');
+document.querySelectorAll('.res-block').forEach(block => {
+  const div1 = block.querySelector('.div1-res');
+  const div2 = block.querySelector('.div2-res');
+  const btn1 = block.querySelector('.showDiv1-res');
+  const btn2 = block.querySelector('.showDiv2-res');
 
-  document.getElementById('showDiv1-res').addEventListener('click', () => {
+  btn1.addEventListener('click', () => {
     div1.classList.add('active');
     div2.classList.remove('active');
   });
 
-  document.getElementById('showDiv2-res').addEventListener('click', () => {
+  btn2.addEventListener('click', () => {
     div1.classList.remove('active');
     div2.classList.add('active');
   });
+});
+
 
 
   
