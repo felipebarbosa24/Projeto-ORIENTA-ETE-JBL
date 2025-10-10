@@ -298,3 +298,17 @@ accordions.forEach(accordion => {
     div1.classList.remove('active');
     div2.classList.add('active');
   });
+
+
+  
+
+  
+  function mostrarPoup(vestibular){
+    console.log("funcionando")
+
+    document.getElementById(vestibular).classList.toggle("active")
+
+
+  }
+
+
