@@ -1578,6 +1578,9 @@
     align-items: center;
     justify-content: center;
     transition: .2s;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
 }
 
 .counter-enem.bg-light.rounded li h6:hover {
@@ -1673,6 +1676,10 @@
 
 .counter-enem.bg-light.rounded {
     height: auto;
+}
+
+.counter-enem .bg-light.rounded li h6 {
+    max-width: 100%;
 }
 }
 
