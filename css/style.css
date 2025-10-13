@@ -1495,7 +1495,7 @@
 }
 
 .enem-item-content {
-  border: 1px solid #b1b1b1; /* borda vermelha de 3px */
+  border: 2px solid #b1b1b1; /* borda vermelha de 3px */
   border-radius: 15px;       /* arredondamento maior que o padrão */
 }
 
@@ -1508,10 +1508,9 @@
 }
 
 .counter-enem.bg-light.rounded {
-  height: 450px;
   overflow-y: scroll;
   max-width: 500px;
-  height: 450px;
+  height: 850px;
   overflow-y: scroll;
   margin: 0 auto;
   padding: 20px;
@@ -1535,7 +1534,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
   display: block;
-  margin: -15px auto 20px auto;
+  margin: -5px auto 20px auto;
 }
 
 #searchbar:focus {
@@ -1544,7 +1543,9 @@
 }
 
 .counter-enem li {
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .counter-enem ul {
@@ -1554,15 +1555,37 @@
 }
 
 .faculdades-title {
-  gap: 15px;
+  gap: 10px;
   margin-left: -30px;
   justify-content: center;
   display: flex;
+  color: #015fc9e6;
+  font-size: 1.7em;
   
 }
 
 .counter-enem.bg-light.rounded li h6 {
-    color: #015fc9e6 !important; /* texto vermelho */
+    margin: auto;
+    margin-top: 10px;
+    color: #015fc9e6 !important;
+    border: 2.5px solid #015fc9e6;
+    border-radius: 13px;
+    width: 450px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+.counter-enem.bg-light.rounded li h6:hover {
+    color: #FFFFFF !important;
+    background-color: #015fc9e6;
 }
 
 .our-app {
@@ -1588,7 +1611,7 @@
     width: 100%;
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.5); 
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-enem-content {
@@ -1596,7 +1619,7 @@
     margin: 10% auto;
     padding: 20px;
     border-radius: 10px;
-    max-width: 700px;
+    max-width: 90vw;
     position: relative;
 }
 
@@ -1638,10 +1661,28 @@
 
 .sisu-img {
     display: block;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    margin: 50px auto;
+    margin: 40px 0;
 }
+
+@media (min-width: 1200px){
+    .sisu-img{
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 767px){
+
+.counter-enem.bg-light.rounded {
+    height: auto;
+}
+
+.counter-enem .bg-light.rounded li h6 {
+    max-width: 100%;
+}
+}
+
 /*** Enem Score Page Header End ***/
 
 /*** Download Page Hero Header Start ***/
