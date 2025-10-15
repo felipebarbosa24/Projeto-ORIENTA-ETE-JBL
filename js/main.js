@@ -474,7 +474,7 @@ new Swiper('.card-wrapper', {
         0: {
             slidesPerView: 1
         },
-        768: {git rebase -i HEAD~3
+        768: {
             slidesPerView: 2
         },
         1024: {
