@@ -3391,7 +3391,10 @@
     .accordion-body {
         font-size: 13px;
     }
+
 }
+
+
 
 @media (max-width: 480px) {
     #container {
@@ -3505,7 +3508,7 @@
     border-color: #dbdbdb;
 }
 
-  .active {
+  .boxactive {
     display: flex; /* Mostra a div ativa */
   }
 

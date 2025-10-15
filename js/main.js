@@ -293,13 +293,13 @@ document.querySelectorAll('.res-block').forEach(block => {
   const btn2 = block.querySelector('.showDiv2-res');
 
   btn1.addEventListener('click', () => {
-    div1.classList.add('active');
-    div2.classList.remove('active');
+    div1.classList.add('boxactive');
+    div2.classList.remove('boxactive');
   });
 
   btn2.addEventListener('click', () => {
-    div1.classList.remove('active');
-    div2.classList.add('active');
+    div1.classList.remove('boxactive');
+    div2.classList.add('boxactive');
   });
 });
 
