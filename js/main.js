@@ -451,7 +451,6 @@ function searchclass() {
 
 //Class Schedule Search End
 
-})(jQuery);
 
 new Swiper('.card-wrapper', {
     loop: true,
@@ -475,7 +474,7 @@ new Swiper('.card-wrapper', {
         0: {
             slidesPerView: 1
         },
-        768: {
+        768: {git rebase -i HEAD~3
             slidesPerView: 2
         },
         1024: {
