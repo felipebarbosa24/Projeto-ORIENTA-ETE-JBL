@@ -89,53 +89,51 @@
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
-    <section class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="https://projeto-orienta.vercel.app" class="navbar-brand p-0">
-                    <img class="logo-header" src="img/logo-header.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="index.html" class="nav-item nav-link">Início</a>
-                        <a href="team.html" class="nav-item nav-link">Nosso Time</a>
-                        <a href="about.html" class="nav-item nav-link">Sobre nós</a>
-                        <!--<a href="service.html" class="nav-item nav-link">Serviços</a>-->
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                <span class="dropdown-toggle">Funcionalidades</span>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a href="vocational-test.html" class="dropdown-item">Teste Vocacional</a>
-                                <a href="career-plan.html" class="dropdown-item">Plano de Carreira</a>
-                                <a href="study-plan.html" class="dropdown-item">Plano de Estudos</a>
-                                <a href="enem-score.html" class="dropdown-item">Notas de Corte ENEM</a>
-                                <a href="school-mural.html" class="dropdown-item">Mural Escolar</a>
-                                <a href="class-schedule.html" class="dropdown-item">Meu Horário de Aulas</a>
-                                <a href="food-menu.html" class="dropdown-item">Cardápio de Alimentação</a>
+            <section class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light"> 
+                        <a href="/inicio" class="navbar-brand p-0">
+                            <img class="logo-header" src="img/logo-header.png" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="navbar-nav mx-0 mx-lg-auto">
+                                <a href="/inicio" class="nav-item nav-link">Início</a>
+                                <a href="/nosso-time" class="nav-item nav-link">Nosso Time</a>
+                                <a href="/sobre-nos" class="nav-item nav-link">Sobre nós</a>
+                                <a href="/nosso-app" class="nav-item nav-link">Nosso App</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                        <span class="dropdown-toggle">Funcionalidades</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="/teste-vocacional" class="dropdown-item">Teste Vocacional</a>
+                                        <a href="/plano-de-carreira" class="dropdown-item">Plano de Carreira</a>
+                                        <a href="/plano-de-estudos" class="dropdown-item">Plano de Estudos</a>
+                                        <a href="/notas-de-corte-enem" class="dropdown-item">Notas de Corte ENEM</a>
+                                        <a href="/mural-escolar" class="dropdown-item">Mural Escolar</a>
+                                        <a href="/horario-escolar" class="dropdown-item">Meu Horário de Aulas</a>
+                                        <a href="/cardapio-escolar" class="dropdown-item">Cardápio de Alimentação</a>
+                                    </div>
+                                </div>
+                                <a href="/contato" class="nav-item nav-link">Contato</a>
+                                <a href="/duvidas" class="nav-item nav-link">Dúvidas?</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contato</a>
-                        <a href="FAQ.html" class="nav-item nav-link">Dúvidas?</a>
-                        <a href="download.html" class="nav-item nav-link">Download</a>
-                    </div>
+                        <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                            <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                <img src="img/perfil.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <div class="d-flex flex-column ms-3">
+                                <span>Claúdio Dantas</span>
+                                <a href="id"><span class="text-dark">ID: 0127447890</span></a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-                <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                    <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
-                        data-wow-delay=".9s">
-                        <img src="img/perfil.jpg" class="img-fluid rounded-circle">
-                    </a>
-                    <div class="d-flex flex-column ms-3">
-                        <span>Claúdio Dantas</span>
-                        <a href="id"><span class="text-dark">ID: 0127447890</span></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </section>
+            </section>
     <!-- Navbar & Hero End -->
 
     <!-- Modal Search Start -->
@@ -165,7 +163,7 @@
         <div class="container text-center py-5" style="max-width: 900px;">
             <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Teste Vocacional</h4>
             <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/inicio">Início</a></li>
                 <li class="breadcrumb-item"><a href="#">Páginas</a></li>
                 <li class="breadcrumb-item active text-primary">Teste Vocacional</li>
             </ol>
@@ -452,7 +450,7 @@
                 <div class="row g-5 justify-content-center">
                     <div class="col-md-6 col-lg-6 col-xl-5">
                         <div class="footer-item">
-                            <a href="index.html"
+                            <a href="/inicio"
                                 class="p-0 d-flex align-items-center justify-content-center justify-content-xl-start">
                                 <img src="img/logo-footer.png" alt="Logo ORIENTA" class="img-fluid me-2"
                                     style="max-height:48px; width:auto;">
@@ -463,27 +461,20 @@
                                 certa, cada aluno pode escrever sua
                                 própria trajetória de sucesso!</p>
                             <div class="footer-btn d-flex justify-content-left">
-                                <a class="btn btn-md-square rounded-circle me-3"
-                                    href="https://www.linkedin.com/company/projeto-orienta/" target="_blank"
-                                    rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-md-square rounded-circle me-3"
-                                    href="https://github.com/projeto-orienta" target="_blank" rel="noopener"><i
-                                        class="fab fa-github"></i></a>
-                                <a class="btn btn-md-square rounded-circle me-3"
-                                    href="https://www.instagram.com/projeto_orienta/" target="_blank" rel="noopener"><i
-                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-md-square rounded-circle me-3" href="https://www.linkedin.com/company/projeto-orienta/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-md-square rounded-circle me-3" href="https://github.com/projeto-orienta" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                                <a class="btn btn-md-square rounded-circle me-3" href="https://www.instagram.com/projeto_orienta/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item">
                             <h4 class="text-white mb-4">Links Úteis</h4>
-                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Início</a>
-                            <a href="team.html"><i class="fas fa-angle-right me-2"></i> Nosso Time </a>
-                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> Sobre Nós </a>
-                            <a href="feature.html"><i class="fas fa-angle-right me-2"></i> Funcionalidades</a>
-                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contato</a>
-                            <a href="FAQ.html"><i class="fas fa-angle-right me-2"></i> Dúvidas</a>
+                            <a href="/inicio" ><i class="fas fa-angle-right me-2"></i> Início</a>
+                            <a href="/nosso-time" ><i class="fas fa-angle-right me-2"></i> Nosso Time </a>
+                            <a href="/sobre-nos" ><i class="fas fa-angle-right me-2"></i> Sobre Nós </a>
+                            <a href="/contato" ><i class="fas fa-angle-right me-2"></i> Contato</a>
+                            <a href="/duvidas" ><i class="fas fa-angle-right me-2"></i> Dúvidas</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-4">
@@ -492,28 +483,22 @@
                             <div class="row g-3 justify-content-center">
                                 <div class="col-4">
                                     <div class="footer-instagram rounded" style="aspect-ratio: 1/1; overflow: hidden;">
-                                        <a href="https://www.instagram.com/projeto_orienta/" target="_blank"
-                                            rel="noopener">
-                                            <img src="img/instagram-1.png" class="img-fluid w-100 h-100"
-                                                style="object-fit: cover; aspect-ratio: 1/1;" alt="">
+                                        <a href="https://www.instagram.com/projeto_orienta/" target="_blank" rel="noopener">
+                                            <img src="img/instagram-1.png" class="img-fluid w-100 h-100" style="object-fit: cover; aspect-ratio: 1/1;" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="footer-instagram rounded" style="aspect-ratio: 1/1; overflow: hidden;">
-                                        <a href="https://www.instagram.com/projeto_orienta/" target="_blank"
-                                            rel="noopener">
-                                            <img src="img/instagram-2.png" class="img-fluid w-100 h-100"
-                                                style="object-fit: cover; aspect-ratio: 1/1;" alt="">
+                                        <a href="https://www.instagram.com/projeto_orienta/" target="_blank" rel="noopener">
+                                            <img src="img/instagram-2.png" class="img-fluid w-100 h-100" style="object-fit: cover; aspect-ratio: 1/1;" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="footer-instagram rounded" style="aspect-ratio: 1/1; overflow: hidden;">
-                                        <a href="https://www.instagram.com/projeto_orienta/" target="_blank"
-                                            rel="noopener">
-                                            <img src="img/instagram-3.png" class="img-fluid w-100 h-100"
-                                                style="object-fit: cover; aspect-ratio: 1/1;" alt="">
+                                        <a href="https://www.instagram.com/projeto_orienta/" target="_blank" rel="noopener">
+                                            <img src="img/instagram-3.png" class="img-fluid w-100 h-100" style="object-fit: cover; aspect-ratio: 1/1;" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -538,9 +523,7 @@
                                     </div>
                                     <div style="min-width: 0; max-width: 100%;">
                                         <h4 class="text-white">Fale Conosco</h4>
-                                        <p class="mb-0 text-break"
-                                            style="word-break:break-all;max-width:100vw;overflow-wrap:break-word;">
-                                            projetoorienta.etejbl@gmail.com</p>
+                                        <p class="mb-0 text-break" style="word-break:break-all;max-width:100vw;overflow-wrap:break-word;">projetoorienta.etejbl@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
