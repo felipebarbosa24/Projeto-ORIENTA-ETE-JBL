@@ -1,17 +1,5 @@
 
-/* Ajuste de espaçamento para listas dentro dos blocos de assuntos (container-res)
-     Aplica padding vertical de 30px e horizontal de 10px a todos os <li>
-     utilizado em múltiplas ocorrências de .container-res no HTML */
-.container-res ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
-.container-res ul li,
-.container-res .box li {
-    padding: 5px 10px;
-}
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -3027,6 +3015,27 @@
 
 /*** Study-plan Popup Start***/
 
+
+.container-res ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container-res ul li,
+.container-res .box li {
+    padding: 5px 10px;
+}
+
+.container-res div {
+    display: flex;
+    align-items: start;
+}
+
+.travaScrowll{
+    overflow-y: hidden;
+}
+
 .popup-container {
     position: fixed;
     top: 0;
@@ -3049,14 +3058,21 @@
     background: #f2f2f2;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transform: scale(0);
     transition: transform 0.4s ease 0.25s;
     max-width: 65vw;
-    max-height: 80vh;
+    max-height: 60vh;
     overflow-y: auto;
     width: 100%;
     box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.popup-box::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 .popup-container.active {
@@ -3289,6 +3305,14 @@
     margin: 0 6px !important;
 }
 
+@media (max-width:1000px) {
+
+    .popup-box{
+        min-width: 90%;
+    }
+    
+}
+
 @media (max-width: 768px) {
     .popup-container {
         padding: 10px;
@@ -3323,7 +3347,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .popup-container {
         padding: 5px;
     }
@@ -3353,6 +3377,11 @@
     .popup-box .close-popup-btn {
         height: 40px;
         font-size: 16px;
+    }
+    
+    .container-scroll , .container-scroll div{
+        min-width:95%;
+        
     }
 }
 
@@ -3489,7 +3518,7 @@
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     #container {
         width: 100%;
         padding: 0 10px;
@@ -3549,7 +3578,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .container-scroll {
         margin-left: 20;
     }
@@ -3617,7 +3646,21 @@
 /* Novo container para os botões */
 .buttons-res {
   display: flex;
-  gap: 90px; /* Espaço entre os botões */
+  gap: 10px; /* Espaço entre os botões */
+}
+
+@media (max-width:1000px) {
+    .buttons-res{
+        flex-direction: column;
+    }
+    .buttons-res button{
+        min-width: 400px
+    }
+    .res-block{
+        padding-top: 20px;
+    }
+
+
 }
 
 .res-block button {
@@ -3648,7 +3691,7 @@
     font-size: 20px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .aolado-res {
         display: block;
     justify-content: center;
@@ -3661,9 +3704,9 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .box {
-    position: relative;
+    position: none;
     width: 100%;
     max-width: 650px; /* limite máximo, se quiser manter proporção */
     height: auto; /* altura se adapta ao conteúdo */

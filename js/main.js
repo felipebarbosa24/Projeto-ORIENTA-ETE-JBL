@@ -530,6 +530,7 @@ document.querySelectorAll('.res-block').forEach(block => {
     console.log("funcionando")
 
     document.getElementById(vestibular).classList.toggle("active")
+    document.body.classList.toggle("travaScrowll")
 
 
   }
