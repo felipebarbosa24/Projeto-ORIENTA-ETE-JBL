@@ -3766,4 +3766,8 @@
     border-radius: 8px;
 }
 
+.box ul{
+    width: 100%;
+}
+
 /*** Study-plan Popup End***/
