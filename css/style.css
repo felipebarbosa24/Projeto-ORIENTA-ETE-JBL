@@ -3716,4 +3716,54 @@
     }
 
 }
+
+
+.container-res .box {
+        display: none;
+    }
+
+    .container-res .box.boxactive {
+        display: flex; /* Mostra a div ativa */
+    }
+    
+    .container-close{
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+        margin: 0 auto;
+
+}
+
+.container-close img {
+    aspect-ratio: 1/1;
+    width: 80px;
+    cursor: pointer;
+}
+
+.accordion-study,
+.res-block,
+.container-scroll {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.res-block {
+    margin-top: 40px;
+}
+
+@media (max-width:768px) {
+    .container-close {
+        padding: 12px;
+    }
+}
+
+.buttons-res button{
+    border-radius: 8px;
+}
+
+.box{
+    border-radius: 8px;
+}
+
 /*** Study-plan Popup End***/
