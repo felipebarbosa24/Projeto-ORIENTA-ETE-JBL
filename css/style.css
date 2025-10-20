@@ -222,8 +222,7 @@
 @media (min-width: 992px) {
     .navbar {
         padding: 20px 0;
-        max-width: 1000px;
-        margin: auto;
+        max-width: 1085px;
     }
 
     .navbar .nav-btn {
