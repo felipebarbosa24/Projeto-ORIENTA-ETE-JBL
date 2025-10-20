@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // accordions
     popup.querySelectorAll('.accordion-study').forEach(accordion => {
       accordion.addEventListener('click', () => {
-        const body = accordion.querySelector('.accordion-body');
+        const body = accordion.querySelector('.accordion-body-study');
         if (body) body.classList.toggle('active');
       });
     });
