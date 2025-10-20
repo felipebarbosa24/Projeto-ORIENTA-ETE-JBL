@@ -222,7 +222,7 @@ function initEnemModal() {
       ["Ciências Biológicas", "Ampla Concorrência", 654],
       ["Computação", "Ampla Concorrência", 650],
       ["Ciências Econômicas", "Ampla Concorrência", 651],
-      ["Gastronomia", "Ampla Concorrência", 646],
+      ["Gastronomia", "Ampla Concorrência", 646], 
       ["História", "Ampla Concorrência", 643],
       ["Letras - Português e Inglês", "Ampla Concorrência", 643],
       ["Matemática", "Ampla Concorrência", 643],
@@ -452,88 +452,113 @@ function searchclass() {
 //Class Schedule Search End
 
 
-new Swiper('.card-wrapper', {
+if (typeof Swiper !== 'undefined' && document.querySelector('.card-wrapper')) {
+  new Swiper('.card-wrapper', {
     loop: true,
     spaceBetween: 30,
 
     // Pagination bullets
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
     },
 
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     // Responsive breakpoints
     breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        }
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
     }
-});
-
-const showPopup = document.querySelector(".show-popup");
-const popupContainer = document.querySelector(".popup-container");
-const closeBtn = document.querySelector(".close-popup-btn");
-
-showPopup.onclick = () => {
-    popupContainer.classList.add('active');
+  });
 }
+// Popup and accordion: scoped, defensive implementation
+document.addEventListener('DOMContentLoaded', function () {
+  const popupContainers = Array.from(document.querySelectorAll('.popup-container'));
+  if (popupContainers.length === 0) return; // nada a fazer
 
-closeBtn.onclick = () => {
-    popupContainer.classList.remove('active');
-}
-
-const accordions = document.querySelectorAll('.accordion-study');
-
-accordions.forEach(accordion => {
-    accordion.addEventListener('click', () => {
+  // Bind accordions and res-block controls inside each popup container
+  popupContainers.forEach(popup => {
+    // accordions
+    popup.querySelectorAll('.accordion-study').forEach(accordion => {
+      accordion.addEventListener('click', () => {
         const body = accordion.querySelector('.accordion-body');
-        body.classList.toggle('active');
-    })
-})
+        if (body) body.classList.toggle('active');
+      });
+    });
 
-document.querySelectorAll('.res-block').forEach(block => {
-  const div1 = block.querySelector('.div1-res');
-  const div2 = block.querySelector('.div2-res');
-  const btn1 = block.querySelector('.showDiv1-res');
-  const btn2 = block.querySelector('.showDiv2-res');
+    // res-block tabs (assuntos recorrentes/essenciais)
+    popup.querySelectorAll('.res-block').forEach(block => {
+      const div1 = block.querySelector('.div1-res');
+      const div2 = block.querySelector('.div2-res');
+      if (!div1 || !div2) return;
 
-  btn1.addEventListener('click', () => {
-    div1.classList.add('boxactive');
-    div2.classList.remove('boxactive');
+      block.querySelectorAll('.showDiv1-res').forEach(btn1 => {
+        btn1.addEventListener('click', () => {
+          div1.classList.add('boxactive');
+          div2.classList.remove('boxactive');
+        });
+      });
+
+      block.querySelectorAll('.showDiv2-res').forEach(btn2 => {
+        btn2.addEventListener('click', () => {
+          div1.classList.remove('boxactive');
+          div2.classList.add('boxactive');
+        });
+      });
+    });
+
+    // close button inside popup
+    const closeBtn = popup.querySelector('.close-popup-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        popup.classList.remove('active');
+        document.body.classList.remove('travaScrowll');
+      });
+    }
   });
 
-  btn2.addEventListener('click', () => {
-    div1.classList.remove('boxactive');
-    div2.classList.add('boxactive');
+  // Generic openers (buttons/links with class .show-popup). They may have data-target or href="#id".
+  document.querySelectorAll('.show-popup').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
+
+      let targetId = trigger.getAttribute('data-target') || trigger.dataset.target;
+      if (!targetId) {
+        const href = trigger.getAttribute('href');
+        if (href && href.startsWith('#')) targetId = href.slice(1);
+      }
+
+      let popupEl = targetId ? document.getElementById(targetId) : null;
+      if (!popupEl) {
+        // fallback: find closest popup-container inside the same card/block, or use first popup on page
+        popupEl = trigger.closest('.card')?.querySelector('.popup-container')
+          || trigger.closest('.res-block')?.querySelector('.popup-container')
+          || popupContainers[0] || null;
+      }
+
+      if (popupEl) {
+        popupEl.classList.add('active');
+        document.body.classList.add('travaScrowll');
+      }
+    });
   });
 });
 
-
-
-  
-
-  
-  function mostrarPoup(vestibular){
-    console.log("funcionando")
-
-    document.getElementById(vestibular).classList.toggle("active")
-    document.body.classList.toggle("travaScrowll")
-
-
-  }
+// Global helper used in inline HTML (keeps backwards compatibility)
+function mostrarPoup(vestibular){
+  const el = document.getElementById(vestibular);
+  if (!el) return;
+  const nowActive = el.classList.toggle('active');
+  if (nowActive) document.body.classList.add('travaScrowll');
+  else document.body.classList.remove('travaScrowll');
+}
 
 
 // Enem Score Page Search Start
@@ -552,8 +577,9 @@ function search(){
   }
 }
 
-// Inicializa o carrossel Swiper para a seção "Nosso Time"
-var swiper = new Swiper(".mySwiper", {
+// Inicializa o carrossel Swiper para a seção "Nosso Time" (só se Swiper e elemento existirem)
+if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
+  var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30, // espaçamento entre slides
   autoplay: {
     delay: 5000, // troca automática a cada 5s
@@ -582,4 +608,5 @@ var swiper = new Swiper(".mySwiper", {
       centerInsufficientSlides: true // centraliza último slide se faltar
     }
   }
-});
+  });
+}
