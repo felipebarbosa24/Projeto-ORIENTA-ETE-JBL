@@ -3056,7 +3056,7 @@
 
 .popup-box {
     background: #f2f2f2;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transform: scale(0);
@@ -3064,6 +3064,7 @@
     max-width: 65vw;
     max-height: 60vh;
     overflow-y: auto;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     -ms-overflow-style: none;
@@ -3319,9 +3320,9 @@
     }
    
     .popup-box {
-        padding: 15px;
+        padding: 0 15px 15px 15px;
         max-width: 95vw;
-        max-height: 85vh;
+        max-height: 75vh;
     }
    
     .card-wrapper {
@@ -3350,10 +3351,6 @@
 @media (max-width: 768px) {
     .popup-container {
         padding: 5px;
-    }
-   
-    .popup-box {
-        padding: 12px;
     }
    
     .card-wrapper {
@@ -3714,6 +3711,7 @@
     margin: 20px auto;
     overflow-y: auto;
     }
+   
 
 }
 
@@ -3727,19 +3725,25 @@
     }
     
     .container-close{
-    
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         margin: 0 auto;
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 0;
+        z-index: 40; 
+        padding: 8px 12px; 
+        background: rgb(242, 242, 242);
+        backdrop-filter: blur(2px);
+    }
 
-}
-
-.container-close img {
-    aspect-ratio: 1/1;
-    width: 80px;
-    cursor: pointer;
-}
+    .container-close img {
+        aspect-ratio: 1/1;
+        width: 48px; 
+        cursor: pointer;
+        display: block;
+    }
 
 .accordion-study,
 .res-block,
@@ -3755,6 +3759,12 @@
 @media (max-width:768px) {
     .container-close {
         padding: 12px;
+        
+    }
+
+    .container-close img {
+        width: 30px;
+
     }
 }
 
