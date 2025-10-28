@@ -21,12 +21,19 @@
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="lib/animate/animate.min.css" />
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Linking Google fonts for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <!-- Linking SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -211,7 +218,7 @@
                         <h2>SSA</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-ssa-logo.png" alt="logo SSA">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('ssa')" class="show-popup">Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>O vestibular seriado para ingresso na UPE funciona em três etapas, correspondentes aos
@@ -226,7 +233,7 @@
                         <h2>ENEM</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-enem-logo.png" alt="logo ENEM">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('enem')" >Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>O ENEM é o exame nacional do ensino médio, aplicado em todo o país, servindo como porta
@@ -244,7 +251,7 @@
                         <h2>Fuvest</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-fuvest-logo.png" alt="FUVEST logo">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('fuvest')">Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>A Fuvest é o vestibular da Universidade de São Paulo, uma das maiores e mais concorridas
@@ -262,7 +269,7 @@
                         <h2>Unicamp</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-unicamp-logo.png" alt="UNICAMP logo">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('unicamp')">Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>O vestibular da Unicamp seleciona alunos para a Universidade Estadual de Campinas,
@@ -281,7 +288,7 @@
                         <h2>Unesp</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-unesp-logo.png" alt="UNESP logo">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('unesp')">Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>A Unesp realiza seu próprio vestibular para selecionar estudantes em mais de 30 cidades
@@ -299,7 +306,7 @@
                         <h2>UFPR</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-ufpr-logo.png" alt="UFPR logo">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('ufpr')" >Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>A Universidade Federal do Paraná aplica vestibular tradicional e é uma das mais antigas
@@ -318,7 +325,7 @@
                         <h2>ESA</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-esa-logo.png" alt="ESA logo">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('esa')" >Ver Detalhes</button>
                         </div>
 
                         <div class="plan-b">
@@ -338,7 +345,7 @@
                         <h2>EsPCEx</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-espcex-logo.png" alt="EsPCeX logo">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('espcex')" >Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>A Escola Preparatória de Cadetes do Exército prepara jovens para seguirem carreira como
@@ -356,7 +363,7 @@
                         <h2>Colégio Naval</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-naval-logo.png" alt="logo Escola Naval">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('colegio_naval')" >Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>O Colégio Naval é a porta de entrada para a carreira de oficiais da Marinha do Brasil.
@@ -372,7 +379,7 @@
                         <h2>ITA</h2>
                         <div class="plan-a">
                             <img src="img/study-plan-ita-logo.png" alt="logo ITA">
-                            <div><a href="">Ver Detalhes</a></div>
+                            <button onclick="mostrarPoup('ita')" >Ver Detalhes</button>
                         </div>
                         <div class="plan-b">
                             <p>A Academia da Força Aérea forma oficiais aviadores, intendentes e de infantaria da Força
@@ -396,6 +403,858 @@
 
 
 
+<!-- CÓDIGO ABAIXO REFERENTE AO POPUP DO SSA -->
+<div class="popup-container" id="ssa">
+  <div class="popup-box">
+    <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('ssa')"  alt="">
+    </div>
+    
+    <!-- Accordion -->
+    <div class="aolado-res">
+      <div class="container-scroll">
+        <div id="container">
+          <h3 class="materias-principal">Matérias</h3>
+
+          <!-- REDAÇÃO -->
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 3 - Redação</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                A Redação do SSA exige produção dissertativo-argumentativa formal, coerente e coesa. 
+                Temas sociais, culturais e éticos são comuns. O candidato deve apresentar repertório sociocultural, argumentação consistente e clareza de ideias.
+              </p>
+            </div>
+          </div>
+
+          <!-- MATEMÁTICA -->
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 1 - Matemática</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Matemática SSA 1 foca em funções, álgebra básica, progressões, geometria plana e estatística. 
+                Interpretação de gráficos e resolução de problemas contextualizados são recorrentes.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 2 - Matemática</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 2 aprofunda geometria analítica, trigonometria, probabilidade e funções compostas. 
+                Questões de raciocínio lógico e cálculo aplicado são frequentes.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 3 - Matemática</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 3 traz problemas complexos envolvendo análise combinatória, funções avançadas e integração de tópicos da Matemática.
+              </p>
+            </div>
+          </div>
+
+          <!-- QUÍMICA -->
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 1 - Química</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Química SSA 1 aborda química geral: ligações químicas, soluções e reações simples. Interpretação de gráficos e experimentos é frequente.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 2 - Química</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 2 inclui estequiometria, termoquímica, propriedades de compostos orgânicos e inorgânicos. Questões exigem raciocínio quantitativo.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 3 - Química</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 3 apresenta química avançada: eletroquímica, reações complexas e química ambiental. Interpretação de gráficos e análise de fenômenos são cobradas.
+              </p>
+            </div>
+          </div>
+
+          <!-- FÍSICA -->
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 1 - Física</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Física SSA 1 foca em mecânica básica: movimento, forças, energia e trabalho. Questões incluem gráficos e problemas contextualizados.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 2 - Física</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 2 aborda termologia, óptica e dinâmica mais complexa. A interpretação de situações-problema é essencial.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 3 - Física</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 3 exige resolução de problemas integrando mecânica, óptica e eletricidade. Questões avançadas e experimentais são frequentes.
+              </p>
+            </div>
+          </div>
+
+          <!-- BIOLOGIA -->
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 1 - Biologia</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Biologia SSA 1 aborda citologia, botânica e fisiologia básica. Questões interpretam gráficos e diagramas de experimentos.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 2 - Biologia</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 2 aprofunda genética, evolução e bioenergética. Interpretação de dados e análise experimental são exigidas.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 3 - Biologia</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                SSA 3 enfatiza ecologia, microbiologia e zoologia, com foco em análise de gráficos, tabelas e experimentos.
+              </p>
+            </div>
+          </div>
+
+          <!-- PORTUGUÊS -->
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 1 - Português</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Português SSA 1 exige interpretação de textos variados, compreensão gramatical e análise de gêneros como crônicas e artigos.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 2 - Português</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Português SSA 2 foca em interpretação crítica e gramática contextualizada. A análise de figuras de linguagem é recorrente.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-study">
+            <button class="accordion-header-study">
+              <span>SSA 3 - Português</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="accordion-body-study">
+              <p>
+                Português SSA 3 combina análise literária, interpretação avançada de textos e conhecimento de escolas literárias e obras obrigatórias.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Assuntos recorrentes e essenciais -->
+      <div class="res-block">
+        <div class="buttons-res">
+          <button class="showDiv1-res">Assuntos Recorrentes</button>
+          <button class="showDiv2-res">Assuntos Essenciais</button>
+        </div>
+
+        <div class="container-res">
+          <!-- ASSUNTOS RECORRENTES -->
+          <div class="box box1 boxactive div1-res">
+            <ul>
+              <li>Funções e álgebra básica</li>
+              <li>Progressões e estatística</li>
+              <li>Geometria plana e analítica</li>
+              <li>Trigonometria</li>
+              <li>Probabilidade e combinatória</li>
+              <li>Interpretação de gráficos e tabelas</li>
+              <li>Física básica aplicada à Matemática</li>
+              <li>Gramática contextualizada</li>
+              <li>Intertextualidade e gêneros textuais</li>
+              <li>Figuras de linguagem</li>
+              <li>Análise de obras literárias</li>
+              <li>Redação dissertativo-argumentativa</li>
+            </ul>
+          </div>
+
+          <!-- ASSUNTOS ESSENCIAIS -->
+          <div class="box box2 div2-res">
+            <ul>
+              <li>Funções e gráficos avançados</li>
+              <li>Geometria analítica e espacial</li>
+              <li>Raciocínio lógico e problemas contextualizados</li>
+              <li>Probabilidade e estatística aplicada</li>
+              <li>Gramática normativa e semântica</li>
+              <li>Gêneros textuais — crônicas, artigos e ensaios</li>
+              <li>Leitura crítica de textos literários</li>
+              <li>Escolas literárias principais</li>
+              <li>Redação com argumentação consistente</li>
+              <li>Resolução de problemas integrando áreas da Matemática</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- fim do aolado-res -->
+
+
+            
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para o SSA</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=LhW_Ee3Wkms&list=PLV0EWHqaQpbktBOumjoKyzuU1nnfaKvl3" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/LhW_Ee3Wkms?si=ZH2hHEKLuiNAeh68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Português</p>
+                        <h2 class="card-title">Português ssa1. Estudo de português</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=E3zVeRobV0g&list=PL5I8JjrkcSnjQUevoIPc8qo1mxd5iofZ-" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/E3zVeRobV0g?si=A7fjgChC0-rYGGHj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Matemática</p>
+                        <h2 class="card-title">SSA 01 - Matemática - 2024</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=Fq2jtW5q9hY&list=PL0Ya0FGeq7mNMrgLb9khSOOoDPD86kHpO" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Fq2jtW5q9hY?si=VhZIGLw1PuF5lCGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-historia">História</p>
+                        <h2 class="card-title">História SSA 1</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=YELFZQIlfJY&list=PLHX2vuGqw4jMhYuYDavQJY-2zXP7uWjcX" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/YELFZQIlfJY?si=xWOJkD4lUo0p4GbS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Química</p>
+                        <h2 class="card-title">SSA 1 Química</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=D99GKisz9Gg&list=PLnSBosF-VJyOnuyzUDvI5UvK-Yh8RCl5t" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/D99GKisz9Gg?si=QG0SZ9eC_mq5hdze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Geografia</p>
+                        <h2 class="card-title">SSA 2- geografia</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button onclick="mostrarPoup('ssa')" class="close-popup-btn">Fechar</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DO ENEM-->
+
+    <div  class="popup-container" id="enem">
+        <div class="popup-box">
+
+              <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('enem')"  alt="">
+    </div>
+                
+                <!-- Accordion  -->
+                <div class="aolado-res">
+                <div class="container-scroll">
+                <div id="container">
+                <h3 class="materias-principal">Matérias</h3>
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Redação
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                             No Aprova Total, a Redação do ENEM é abordada como um componente à parte das competências: a plataforma oferece estratégias, correções e análise de temas atuais. 
+A prova exige domínio da norma culta, coerência e coesão, argumentação com repertório sociocultural e interlocução com o tema contemporâneo. Os temas de atualidades, ética, meio ambiente, cidadania, desigualdade etc. são frequentemente usados como contextos para os textos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Matemática
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Matemática no ENEM exige domínio de matemática básica, estatística, geometria plana e espacial, funções e interpretação algébrica. Segundo o Aprova Total, os assuntos que mais aparecem são polígonos regulares, círculo e circunferência, áreas de figuras planas e perímetro nas questões de geometria plana.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Química
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Química aborda conteúdos de química inorgânica, orgânica e físico-química, além de temas interdisciplinares como química ambiental. No relatório do Aprova Total, os assuntos mais recorrentes são moléculas e propriedades, seguido por estequiometria, propriedades de compostos orgânicos, separação de misturas e funções inorgânicas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Biologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Em Biologia, segundo o Aprova Total, o tema de maior incidência é Ecologia (cerca de 27 % das questões), seguido de temas como fisiologia humana, botânica, citologia, bioenergética, evolução, zoologia, microbiologia e genética.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            História
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Na disciplina de História, os assuntos com mais incidência no ENEM, segundo o Aprova Total, incluem Brasil Colônia, Idade Moderna, Tempo Presente, Estado Novo / Populismo e Idade Média.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Português
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Língua Portuguesa exige interpretação de textos, conhecimentos de gêneros textuais (reportagens, crônicas, artigos, charges etc.), intertextualidade, uso da gramática integrada ao sentido do texto e as relações entre texto e contexto. 
+Nos relatórios do Aprova Total, os gêneros textuais têm alta incidência, assim como gramática — concordância, regência, crase, pontuação e figuras de linguagem — aparecem dentro de questões interpretativas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Inglês
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de língua inglesa ocorre no primeiro dia do Enem, ou seja, no mesmo dia da redação. Ela contém 5 questões de múltipla escolha. As questões são de interpretação de diferentes gêneros textuais (poemas, cartoons, notícias, romance etc.) e raramente de aspecto gramatical isolado. A prova de Inglês apresenta tanto a linguagem verbal quanto a não verbal — textos sincréticos. A questão quando se relaciona com algum aspecto linguístico pode ser de vocabulário, por exemplo.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+            <div class="buttons-res">
+                <button class="showDiv1-res">Assuntos Recorrentes</button>
+                <button class="showDiv2-res">Assuntos Essenciais</button>
+            </div>
+            <div class="container-res">
+                <div class="box box1 boxactive div1-res">
+                    <ul>
+                    <li>Zoologia</li>
+                    <li>Microbiologia</li>
+                    <li>Genética</li>
+                    <li>Meio ambiente</li>
+                    <li>Estudo da matéria</li>
+                    <li>Equilíbrio químico</li>
+                    <li>Termologia</li>
+                    <li>Trabalho e energia</li>
+                    <li>Óptica</li>
+                    <li>Dinâmica</li>
+                    <li>Sequências e progressões</li>
+                    <li>Geometria plana</li>
+                    <li>Brasil monárquico</li>
+                    <li>Idade contemporânea</li>
+                    <li>Guerras e conflitos do século XX</li>
+                    <li>Espaço urbano</li>
+                    <li>Espaço brasileiro</li>
+                    <li>Morfologia</li>
+                    <li>Texto e contexto</li>
+                    <li>Modernismo</li>
+                    <li>Literatura contemporânea</li>
+                    </ul>
+                </div>
+                <div class="box box2 div2-res">
+                    <ul>
+                    <li>Funções</li>
+                    <li>Idade Moderna</li>
+                    <li>Brasil Colônia</li>
+                    <li>Geopolítica</li>
+                    <li>Espaço agrário</li>
+                    <li>Movimentos sociais</li>
+                    <li>Cultura e sociedade</li>
+                    <li>Filosofia política</li>
+                    <li>Filosofia moderna</li>
+                    <li>Gêneros textuais</li>
+                    <li>Gramática e interpretação</li>
+                    <li>Escolas literárias</li>
+                    <li>Introdução à literatura</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para o ENEM</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=J1FWk53P-yY&list=PL8vXuI6zmpdiy2Xhd1Tn4_q974HxDUzox" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/J1FWk53P-yY?si=t3_2DEuUxvvR7zL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Português</p>
+                        <h2 class="card-title">Português | Enem - Funções da Linguagem | CURSO GRATUITO</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=MA_ZrgV2xws&list=PL8Sb1J47vKz5roPScagXaUkk-maGYZy4c" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/MA_ZrgV2xws?si=WqY2XcIf44jfEqwt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Matemática</p>
+                        <h2 class="card-title">🏆 TUDO DE MATEMÁTICA PARA O ENEM - Aula completa Mestres do ENEM</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=EDZVqcvffgQ&list=PLMra4G0-Z7pMYLE-D-ptnHt1IW_Y1hn8H" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/EDZVqcvffgQ?si=UMIwUNTb1NRoglb1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-historia">História</p>
+                        <h2 class="card-title">HISTÓRIA GERAL #8 FEUDALISMO</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=XelhuppF-D4&list=PL8Sb1J47vKz7VYQxr3IoEsi6sF7eudvc3" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/XelhuppF-D4?si=dbAT00GSNz1Gzxq3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Química</p>
+                        <h2 class="card-title">🧑‍🔬⏰ 3 ANOS EM 3 HORAS!! Super Química Revisão para o ENEM 2025</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=OgD1BYLaMMA&list=PL8vXuI6zmpdhJ59r8q7B7OYpSJpLi7c6c" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/D99GKisz9Gg?si=QG0SZ9eC_mq5hdze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Geografia</p>
+                        <h2 class="card-title">Geografia | ENEM - Introdução à Geografia e à Formação da Sociedade I | CURSO GRATUITO COMPLETO</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=NOBaD0hCGYU&list=PL8Sb1J47vKz6CAVoJA-J3UCrhBT0HJbX4" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OgD1BYLaMMA?si=qFUhNU-JYdLAnrot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Biologia</p>
+                        <h2 class="card-title">🍀🤯 TODA A BIOLOGIA para o ENEM 2025: Revisão Completa 3 ANOS EM 4 HORAS!!</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=xvw3U9BTjGY&list=PL8Sb1J47vKz6YDhzxYiVDZWFAuAHs6_rp" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/xvw3U9BTjGY?si=LVUbUbessSKjlhe5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Física</p>
+                        <h2 class="card-title">⚡️🚀 MEGA AULÃO DE FÍSICA ENEM 2025 - Mestres do ENEM</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button onclick="mostrarPoup('enem')" class="close-popup-btn">Fechar</button>
+        </div>
+    </div>
+
+
+
+
+        <!-- CÓDIGO ABAIXO REFERENTE AO POPUP DA FUVEST -->
+        <div class="popup-container" id="fuvest">
+        <div class="popup-box">
+
+              <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('fuvest')"  alt="">
+    </div>
+            
+            <!-- Accordion -->
+            <div class="aolado-res">
+            <div class="container-scroll">
+                <div id="container">
+                <h3 class="materias-principal">Matérias</h3>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>Redação</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        A Redação da Fuvest exige dissertação argumentativa formal, com domínio da norma culta e argumentação sólida. 
+                        Diferente do ENEM, não há proposta de intervenção, e o tema costuma ser filosófico, social ou comportamental. 
+                        São valorizados a clareza de ideias, coesão e repertório sociocultural pertinente e original.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>Matemática</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        A prova de Matemática da Fuvest é conhecida pelo alto nível de dificuldade. 
+                        Envolve interpretação de problemas, geometria analítica, funções, trigonometria, progressões e probabilidade. 
+                        Questões de raciocínio lógico e contextualização matemática também são frequentes.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>Química</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        A prova de Química da Fuvest cobra domínio conceitual e cálculos precisos. 
+                        Os temas mais recorrentes incluem ligações químicas, soluções, eletroquímica, estequiometria, termoquímica e reações orgânicas. 
+                        Exige interpretação de gráficos e compreensão de fenômenos experimentais.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>Biologia</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        Biologia na Fuvest apresenta grande variedade temática, com foco em fisiologia humana, genética, citologia, ecologia e evolução. 
+                        O nível é alto e as questões priorizam interpretação de dados, gráficos e análise experimental.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>História</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        História na Fuvest enfatiza análise crítica, cronologia e contextualização de processos históricos. 
+                        São recorrentes temas de História do Brasil (Colônia, Império e República), Idade Moderna e Contemporânea, além de movimentos sociais e culturais.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>Geografia</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        Geografia na Fuvest foca em geopolítica, globalização, economia, urbanização e meio ambiente. 
+                        As questões exigem leitura de gráficos, mapas e tabelas, além de análise crítica de problemas socioambientais.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                    <span>Português e Literatura</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="accordion-body-study">
+                    <p>
+                        A Fuvest valoriza leitura e interpretação textual. 
+                        O candidato deve dominar gramática contextualizada, figuras de linguagem e análise de gêneros. 
+                        A literatura exige conhecimento das obras obrigatórias e das principais escolas literárias.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+                <div class="buttons-res">
+                <button class="showDiv1-res">Assuntos Recorrentes</button>
+                <button class="showDiv2-res">Assuntos Essenciais</button>
+                </div>
+
+                <div class="container-res">
+                <!-- ASSUNTOS RECORRENTES -->
+                <div class="box box1 boxactive div1-res">
+                    <ul>
+                    <li>Funções e gráficos</li>
+                    <li>Geometria analítica</li>
+                    <li>Trigonometria</li>
+                    <li>Probabilidade e estatística</li>
+                    <li>Termoquímica e eletroquímica</li>
+                    <li>Reações orgânicas</li>
+                    <li>Fisiologia humana</li>
+                    <li>Genética</li>
+                    <li>Ecologia</li>
+                    <li>Evolução</li>
+                    <li>Brasil Colônia e Império</li>
+                    <li>Idade Moderna</li>
+                    <li>Idade Contemporânea</li>
+                    <li>Geopolítica e globalização</li>
+                    <li>Urbanização e meio ambiente</li>
+                    <li>Obras literárias obrigatórias</li>
+                    <li>Escolas literárias</li>
+                    <li>Leitura e interpretação de texto</li>
+                    <li>Redação dissertativo-argumentativa</li>
+                    </ul>
+                </div>
+
+                <!-- ASSUNTOS ESSENCIAIS -->
+                <div class="box box2 div2-res">
+                    <ul>
+                    <li>Funções e suas aplicações</li>
+                    <li>Razões trigonométricas</li>
+                    <li>Vetores e retas no plano</li>
+                    <li>Cálculos estequiométricos</li>
+                    <li>Transformações químicas</li>
+                    <li>Ecossistemas e cadeias alimentares</li>
+                    <li>Divisão celular e genética mendeliana</li>
+                    <li>Brasil República</li>
+                    <li>Revoluções Burguesas</li>
+                    <li>Guerras Mundiais</li>
+                    <li>Globalização e blocos econômicos</li>
+                    <li>Obras literárias — leitura integral</li>
+                    <li>Modernismo e realismo</li>
+                    <li>Gramática contextualizada</li>
+                    <li>Dissertação com argumentação sólida</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+            
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para o FUVEST</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=ixfCsqn__Oo&list=PLJMVAAsCEY1344QTyAaeNX5eGTIkDqgx0" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ixfCsqn__Oo?si=s3-m6wLXjiHaZjuj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Português</p>
+                        <h2 class="card-title">FUVEST 2026 | Lista de leitura obrigatória | Livros Fuvest 2026</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=B-W-QlPcwvE&list=PLtjX2mCwXXQv0vXR8ekg3Y7eKk7NU7_Z2" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/B-W-QlPcwvE?si=efnhmiWCYNiNAJ-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                                        </div>
+                        <p class="badge badge-matematica">Matemática</p>
+                        <h2 class="card-title">A novidade que todos esperavam: LIÇÕES DE MATEMÁTICA (TRIGONOMETRIA)</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=xE5LjlSamYY&list=PLIK1tl-hqwm82k0o584dAbEU2FOkCM2PA" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/xE5LjlSamYY?si=3CRmg_P-Q9WN2Z9j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                        <p class="badge badge-historia">História</p>
+                        <h2 class="card-title">HISTÓRIA DO BRASIL |REDEMOCRATIZAÇÃO| FUVEST| DIRETAS JÁ!</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=Kg2bRhBvqho&list=PL0LfmDSptaT38We1nraedSCCriesRgS1u" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Kg2bRhBvqho?si=CKQr4wGxJwJMafS-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Química</p>
+                        <h2 class="card-title">[FUVEST 2010/Q61] "Os elementos químicos se relacionam de diferentes maneiras com os organismos..."</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=x7zQGhzmwhw&list=PLbOPqErYI9UZ5cmKx7aZbydRLc4GAaJCX" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/x7zQGhzmwhw?si=I8dz-9gF-lY42q4P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                        <p class="badge badge-geografia">Geografia</p>
+                        <h2 class="card-title">Revisão COMPLETA de Geografia para a FUVEST</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=nJznOl_EwgE&list=PLF9Qlw66uxKVkL5OH2mB8Pzx3Aawkx5jq" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/nJznOl_EwgE?si=7DxW5xOnjD7ljv0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>             </div>           <p class="badge badge-matematica">Física</p>
+                        <h2 class="card-title">Exercício Fuvest 2024 - Como ilustrado pela foto, o gerador de Van de Graaf, equipamento popular em</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button onclick="mostrarPoup('fuvest')" class="close-popup-btn">Fechar</button>
+        </div>
+    </div>
 
 
 
@@ -406,6 +1265,370 @@
 
 
 
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DA UNICAMP-->
+
+
+    <div class="popup-container" id="unicamp">
+        <div class="popup-box">
+
+              <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('unicamp')"  alt="">
+    </div>
+                
+                <!-- Accordion  -->
+                <div class="aolado-res">
+                <div class="container-scroll">
+                <div id="container">
+                <h3 class="materias-principal">Matérias</h3>
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Biologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Na prova da Unicamp, as diversas áreas da Biologia se conversam e, muitas vezes, diferentes assuntos podem estar presentes em uma mesma questão. Considere esse aspecto e domine os conceitos básicos!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Química
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova costuma trazer muitos gráficos, tabelas, imagens e diagramas. Eles são usados para contextualizar as perguntas, e é preciso saber interpretá-los para resolver as questões!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Física
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As questões de Física da Unicamp costumam ser bem diretas no que cobram, normalmente focando em aplicações do básico dos assuntos. A prova traz questões de cálculo e também questões conceituais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Matemática
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A Matemática na Unicamp é bem tradicional e não costuma trazer vários assuntos em uma única questão. Mas as questões vão além dos assuntos introdutórios, abordando tópicos mais avançados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            História
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As questões de História da Unicamp exigem interpretação de textos, fontes e imagens, e saber relacionar fatos do presente e do passado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Geografia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Geografia prioriza questões contextualizadas e costuma oferecer mapas, imagens e gráficos para auxiliar nas análises.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Sociologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Entre as temáticas, destacam-se desigualdades de raça, gênero e econômicas, além de estruturas sociais e suas influências nos indivíduos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Filosofia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Apesar de ter uma prevalência menor, é importante ficar atento na disciplina de Filosofia nesta prova. Ela costuma aparecer de maneira interdisciplinar junto de Geografia, História e Sociologia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Língua Portuguesa
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Língua Portuguesa pede um bom domínio das relações intertextuais e dos diferentes gêneros de texto, como reportagens e notícias, artigos de opinião, crônicas, charges, tirinhas, entre outros.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Literatura
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Para se dar bem na prova de Literatura da Unicamp, é preciso um amplo conhecimento das escolas literárias, bem como suas respectivas características, autores e obras.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Inglês
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Língua Inglesa exige habilidades em gramática e interpretação (90,2%) de diversos gêneros, como textos jornalísticos, científicos, veiculados na internet, literários e outros.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+            <div class="buttons-res">
+                <button class="showDiv1-res">Assuntos Recorrentes</button>
+                <button class="showDiv2-res">Assuntos Essenciais</button>
+            </div>
+            <div class="container-res">
+                <div class="box box1 boxactive div1-res">
+                    <ul>
+                    <li>Zoologia</li>
+                    <li>Microbiologia</li>
+                    <li>Genética</li>
+                    <li>Meio ambiente</li>
+                    <li>Estudo da matéria</li>
+                    <li>Equilíbrio químico</li>
+                    <li>Termologia</li>
+                    <li>Trabalho e energia</li>
+                    <li>Óptica</li>
+                    <li>Dinâmica</li>
+                    <li>Sequências e progressões</li>
+                    <li>Geometria plana</li>
+                    <li>Brasil monárquico</li>
+                    <li>Idade contemporânea</li>
+                    <li>Guerras e conflitos do século XX</li>
+                    <li>Espaço urbano</li>
+                    <li>Espaço brasileiro</li>
+                    <li>Estado e cidadania</li>
+                    <li>Teoria sociológica</li>
+                    <li>Sociologia brasileira</li>
+                    <li>Filosofia Antiga</li>
+                    <li>Mal e justiça</li>
+                    <li>Áreas da filosofia</li>
+                    <li>Introdução à língua portuguesa</li>
+                    <li>Morfologia</li>
+                    <li>Texto e contexto</li>
+                    <li>Modernismo</li>
+                    <li>Literatura contemporânea</li>
+                    <li>Poesia</li>
+                    </ul>
+                </div>
+                <div class="box box2 div2-res">
+                    <ul>
+                    <li>Ecologia</li>
+                    <li>Evolução</li>
+                    <li>Estequiometria</li>
+                    <li>Soluções</li>
+                    <li>Cinemática</li>
+                    <li>Eletrodinâmica</li>
+                    <li>Trigonometria</li>
+                    <li>Funções</li>
+                    <li>Idade moderna</li>
+                    <li>Brasil colônia</li>
+                    <li>Geopolítica</li>
+                    <li>Espaço agrário</li>
+                    <li>Movimentos sociais</li>
+                    <li>Cultura e sociedade</li>
+                    <li>Filosofia política</li>
+                    <li>Filosofia moderna</li>
+                    <li>Gêneros textuais</li>
+                    <li>Gramática e interpretação</li>
+                    <li>Escolas literárias</li>
+                    <li>Introdução à literatura</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para a Unicamp</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=ytIDRXBJtn0&list=PLBeDi4xHURWEhmeQT10hmaayRCShcB1dt" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ytIDRXBJtn0?si=a3csmOsX83kE8ngI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Biologia</p>
+                        <h2 class="card-title">UNICAMP 2025 - Em 1913 Alfred Sturtevant em seu estudo com Drosophila melanogaster (mosca-das-frutas</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=f3F2hprQHCY&list=PLaCJoNwqI4Ee_x7LkeQbFjwQy5oQYwcxL" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/f3F2hprQHCY?si=cxeB-f2b5II85ZJu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Matemática</p>
+                        <h2 class="card-title">Questões de matemática da UNICAMP - Revisão de matemática</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=8GH-5yQBVnY&list=PLF9Qlw66uxKXsLrjvIcJV0hHxA9vbhfrG" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8GH-5yQBVnY?si=hce_7kgfeTU1XSYJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Química</p>
+                        <h2 class="card-title">Exercício Unicamp 2024 - Logo ao reentrar na atmosfera terrestre, uma cápsula espacial passa a</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=D99GKisz9Gg&list=PLnSBosF-VJyOnuyzUDvI5UvK-Yh8RCl5t" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/D99GKisz9Gg?si=QG0SZ9eC_mq5hdze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Geografia</p>
+                        <h2 class="card-title">Estudo de geografia</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=oO1L183bw-Q" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/oO1L183bw-Q?si=w0_8_1nNHmrj763r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">História</p>
+                        <h2 class="card-title">Vestibular da Unicamp: Revisão de História Geral</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/_1xg35XOBTU" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/_1xg35XOBTU?si=1IBvlQ0BEvCKlNKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Sociologia</p>
+                        <h2 class="card-title">Hora da Verdade UNICAMP 2025 1ª FASE - Sociologia - Profa. Alê Lopes</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/R7VqV8yDjS8" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/R7VqV8yDjS8?si=NmyAJxqf77rjrQgX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Português</p>
+                        <h2 class="card-title">Semana Especial - O que mais cai na UNICAMP: Português</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/nl6sgeQBhzE" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/nl6sgeQBhzE?si=QQ6O3V_hx6bN3Z4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Literatura</p>
+                        <h2 class="card-title">Hora da Verdade UNICAMP 2025 1ª FASE - Literatura - Profa. Luana Signorelli</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="www.youtube.com/live/yE771Ig2c6A?si=Hx_6RL2c2Za3c4-O" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/yE771Ig2c6A?si=lR039GcZ29SffFRu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Inglês</p>
+                        <h2 class="card-title">O que Mais Cai em Inglês na UNICAMP</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>                    
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button  onclick="mostrarPoup('unicamp')" class="close-popup-btn">Fechar</button>
+        </div>
+    </div>
 
 
 
@@ -414,8 +1637,1773 @@
 
 
 
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DA UNESP-->
 
 
+    <div  class="popup-container" id="unesp">
+        <div class="popup-box">
+
+              <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('unesp')"  alt="">
+    </div>
+                
+                <!-- Accordion  -->
+                <div class="aolado-res">
+                <div class="container-scroll">
+                <div id="container">
+                <h3 class="materias-principal">Matérias</h3>
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Biologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Os temas abordados na prova de Biologia da Unesp são bastante diversificados e, muitas vezes, cobrados de forma interdisciplinar. Além disso, é comum que um mesmo tópico apareça várias vezes na avaliação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Química
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Além das questões tradicionais da disciplina, na prova de Química da Unesp você pode esbarrar em exercícios interdisciplinares, sobretudo com Matemática, Biologia e Física.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Física
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As questões de Física vão do básico ao avançado, sendo bem diversas, com questões conceituais e de cálculo. Mais uma vez, esteja preparado para questões interdisciplinares, que combinam Química, Geografia e Matemática.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Matemática
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Matemática cobra muitos exercícios aplicados e contextualizados, por isso, é importante ter tanto as definições, quanto as fórmulas na cabeça.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            História
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Assim como em outros vestibulares, a prova de História da Unesp segue o padrão de questões que relacionam diferentes assuntos e temporalidades. A Idade Moderna aparece no topo da incidência, com temas como grandes navegações, colonização da América e a presença europeia no continente africano.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Geografia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Geografia da Unesp requer domínio dos conceitos e dos processos geográficos. As questões costumam ser bem diversificadas e trazer imagens, mapas, tabelas e gráficos como apoio para as análises. Então, é essencial estar preparado e desenvolver a sua capacidade de interpretar esses recursos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Sociologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Entre as temáticas da Sociologia na Unesp, têm maior recorrência a política e a violência no Brasil e no mundo. A prova de 2023 teve um aumento considerável de questões sobre tais assuntos, se comparada aos últimos anos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Filosofia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Na prova de Filosofia da Unesp, as questões mais recorrentes são de conhecimentos gerais e filosofia da ciência. Atualidades e temas-base da Filosofia, como ética, também são fundamentais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Língua portuguesa
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As perguntas de Língua Portuguesa envolvem, em sua maioria, interpretação textual de diferentes gêneros, especialmente crônicas e tirinhas. É importante lembrar que é comum aparecer ainda análise gramatical em textos literários.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Literatura
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As questões de Literatura na Unesp envolvem a interpretação de poemas (enquadrados no gênero lírico) de forma abundante. E também abrangem as escolas literárias, especialmente suas características específicas e identificação nos textos e poemas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Inglês
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As questões de Língua Inglesa exigem muita leitura e interpretação de textos de diversos gêneros. Além disso, é interessante conhecer expressões idiomáticas, gramática e morfologia.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+            <div class="buttons-res">
+                <button class="showDiv1-res">Assuntos Recorrentes</button>
+                <button class="showDiv2-res">Assuntos Essenciais</button>
+            </div>
+            <div class="container-res">
+                <div class="box box1 boxactive div1-res">
+                    <ul>
+                    <li>Fisiologia humana</li>
+                    <li>Botânica</li>
+                    <li>Bioenergética</li>
+                    <li>Equilíbrio químico</li>
+                    <li>Soluções</li>
+                    <li>Estequiometria</li>
+                    <li>Óptica</li>
+                    <li>Termologia</li>
+                    <li>Dinâmica</li>
+                    <li>Geometria espacial</li>
+                    <li>Trigonometria</li>
+                    <li>Idade contemporânea</li>
+                    <li>Idade média</li>
+                    <li>Idade antiga</li>
+                    <li>Questões ambientais</li>
+                    <li>Espaço urbano</li>
+                    <li>Clima</li>
+                    <li>Sociologia política</li>
+                    <li>Cultura e sociedade</li>
+                    <li>As ciências sociais</li>
+                    <li>Psicanálise e teoria crítica</li>
+                    <li>Filosofia política</li>
+                    <li>Filosofia antiga</li>
+                    <li>Figuras de linguagem</li>
+                    <li>Gêneros textuais</li>
+                    <li>Conjunções</li>
+                    <li>Modernismo</li>
+                    <li>Literatura contemporânea</li>
+                    <li>Música brasileira</li>
+                    </ul>
+                </div>
+                <div class="box box2 div2-res">
+                    <ul>
+                    <li>Ecologia</li>
+                    <li>Genética</li>
+                    <li>Moléculas e propriedades</li>
+                    <li>Átomos</li>
+                    <li>Cinemática</li>
+                    <li>Eletrodinâmica</li>
+                    <li>Funções</li>
+                    <li>Geometria plana</li>
+                    <li>Idade moderna</li>
+                    <li>Brasil colônia</li>
+                    <li>Geopolítica</li>
+                    <li>Volta ao mundo</li>
+                    <li>Sociologia contemporânea</li>
+                    <li>Movimentos sociais</li>
+                    <li>Estética e ética</li>
+                    <li>Filosofia moderna</li>
+                    <li>Introdução à língua portuguesa</li>
+                    <li>Gramática e interpretação</li>
+                    <li>Introdução à literatura</li>
+                    <li>Escolas literárias</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para a Unesp</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=GXnQq4BzDcE&list=PLBeDi4xHURWGKMi79_1Hv-AZwFDG624yO" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/GXnQq4BzDcE?si=yCyJ6vRtpopp9oFZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Biologia</p>
+                        <h2 class="card-title">UNESP 2023 - 2a Fase - Questão 45 - Disfarçada de beija-flor mariposa pode evitar virar almoço</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/02eZJZOXzZ4" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/02eZJZOXzZ4?si=v0Qz7Uk86fcbPvMP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Química</p>
+                        <h2 class="card-title">Semana Especial: O que Mais Cai na UNESP: Química</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=dJyIul1M6pA&list=PLjasBCa_SUL-x0JfPRWUwneb4Bb20ZFg2" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Fq2jtW5q9hY?si=VhZIGLw1PuF5lCGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" Históallowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Física</p>
+                        <h2 class="card-title">🔵 FÍSICA / UNESP 2024 / QUESTÃO 76 / 1ª FASE / Uma pessoa estava parada com seu veículo em um...</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="www.youtube.com/live/Uc-Ses83GCg?si=W0XFxMIOfTZ7fWUt" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Uc-Ses83GCg?si=C58bWgVpF8exkMjz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Matemática</p>
+                        <h2 class="card-title">Semana Especial - O que Mais Cai na UNESP: Matemática</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/2EAlVWfS7M8" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/2EAlVWfS7M8?si=dO0Xwa45VjplLP4y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-historia">História</p>
+                        <h2 class="card-title">Semana Especial: O que Mais Cai na UNESP - História</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=w4Qk24W60mQ&list=PLh-pzm2_vyyz7dajDU2hjwSRzSbAdBx5Q" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/w4Qk24W60mQ?si=-F9Z7-HxgtjlWeJe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Geografia</p>
+                        <h2 class="card-title">Vestibular UNESP 2021 | FICOU MAIS FÁCIL SER APROVADO?</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/SEdy-tL0Nc4" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/SEdy-tL0Nc4?si=FbXfCbYvQ9UC1Hhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Sociologia</p>
+                        <h2 class="card-title">Semana Especial: O que Mais Cai na UNESP - Sociologia</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/U2MQkmhi3bM" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/U2MQkmhi3bM?si=JZFcddsXBMMePvb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-geografia">Filosofia</p>
+                        <h2 class="card-title">Reta final UNESP - Filosofia - Prof. Fernando Andrade</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/VMftIASCcYM" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/VMftIASCcYM?si=vuAczhP9hvJ_Kv-e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Português</p>
+                        <h2 class="card-title">Semana Especial: O que Mais Cai na UNESP - Português</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/live/Q_LJfGNswag" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Q_LJfGNswag?si=76lJnQyCOfvc9BB5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Inglês</p>
+                        <h2 class="card-title">Semana Especial - O que Mais Cai na UNESP: Inglês</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button onclick="mostrarPoup('unesp')" class="close-popup-btn">Fechar</button>
+        </div>
+    </div>
+
+
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DA UFPR-->
+
+
+        <div   class="popup-container" id="ufpr">
+        <div class="popup-box">
+
+              <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('ufpr')"  alt="">
+    </div>
+                
+                <!-- Accordion  -->
+                <div class="aolado-res">
+                <div class="container-scroll">
+                <div id="container">
+                <h3 class="materias-principal">Matérias</h3>
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Biologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Na 1ª fase, as diferentes áreas da Biologia se conectam, e é comum encontrar questões que envolvam mais de um tema. Por isso, é essencial dominar bem os conceitos básicos! Entre os assuntos que mais caem na UFPR, destaca-se a Ecologia, com ênfase nas relações ecológicas e nos impactos ambientais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Química
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova da UFPR costuma apresentar gráficos, tabelas, imagens e diagramas para contextualizar as perguntas, exigindo boa interpretação para resolvê-las. Além disso, as questões costumam ter textos introdutórios e comandos bastante diretos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Física
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Em geral, Física na UFPR trazem mais questões de cálculo do que as conceituais. No entanto, isso não significa que você deva deixar de lado a Física conceitual: além de te preparar melhor para compreender bem as questões de cálculo, ela vai garantir suas questões teóricas, que também caem.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Matemática
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A disciplina de Matemática na UFPR segue um estilo mais tradicional, sem misturar muitos assuntos em uma única questão. As perguntas são objetivas e geralmente não apresentam grande complexidade, mas é importante revisar provas anteriores, pois os enunciados têm um padrão recorrente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            História
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de História da UFPR gosta de cobrar assuntos de História Geral, que compõem o top 5 de módulos. Porém, você deve se atentar a outros conteúdos que também aparecem bastante, como a contracultura nos EUA e no mundo, patrimônio e memória, Nova República, Segundo Reinado, Era Vargas, Ditadura Civil-Militar e o processo de redemocratização do Brasil!  
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Geografia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Aqui, é essencial se atualizar sobre geopolítica global e geografia humana, com foco em demografia e dinâmica populacional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Sociologia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Em 2018, a Sociologia passou a fazer parte do vestibular da UFPR. Desde então, o exame abrange diversos temas da Sociologia Contemporânea, e a cada ano são indicadas obras de leitura obrigatória.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Filosofia
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Assim como foi com Sociologia, em 2018, a UFPR incorporou Filosofia em seu vestibular. Com essa inclusão, a prova de 90 questões traz assuntos interdisciplinares que também envolvem a Filosofia e suas leituras obrigatórias.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Língua portuguesa
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            Na prova de Língua Portuguesa da UFPR, entre os assuntos que mais caem, destacam-se os gêneros textuais, especialmente o artigo de opinião. Além disso, conteúdos gramaticais, como uso e sentido das conjunções, pontuação, e sinônimos e antônimos, são abordados de forma objetiva.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Literatura
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            As leituras obrigatórias são os conteúdos centrais para resolver as questões de Literatura da UFPR, o que torna essencial ler todas as obras, além de estudar o contexto histórico e literário em que cada uma se insere.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Língua inglesa
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Língua Inglesa exige habilidades bem desenvolvidas em interpretação textual (81,7%) de diversos gêneros, como textos jornalísticos, literários e outros.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-study">
+                    <button class="accordion-header-study">
+                        <span>
+                            Espanhol
+                        </span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+
+                    <div class="accordion-body-study">
+                        <p>
+                            A prova de Língua Espanhola exige habilidades bem desenvolvidas em interpretação textual (77,6%) de diversos gêneros, como textos jornalísticos, charges, tirinhas e outros.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+            <div class="buttons-res">
+                <button class="showDiv1-res">Assuntos Recorrentes</button>
+                <button class="showDiv2-res">Assuntos Essenciais</button>
+            </div>
+            <div class="container-res">
+                <div class="box box1 boxactive div1-res">
+                    <ul>
+                    <li>Genética</li>
+                    <li>Botânica</li>
+                    <li>Citologia</li>
+                    <li>Funções inorgânicas</li>
+                    <li>Reações orgânicas</li>
+                    <li>Equilíbrio químico</li>
+                    <li>Cinemática</li>
+                    <li>Dinâmica</li>
+                    <li>Análise dimensional</li>
+                    <li>Geometria analítica</li>
+                    <li>Probabilidade</li>
+                    <li>Século XX</li>
+                    <li>Idade média</li>
+                    <li>Idade moderna</li>
+                    <li>Demografia</li>
+                    <li>Espaço urbano</li>
+                    <li>Hidrosfera</li>
+                    <li>Sociologia brasileira</li>
+                    <li>Cultura e sociedade</li>
+                    <li>Teoria do conhecimento</li>
+                    <li>Filosofia moderna</li>
+                    <li>Mal e justiça</li>
+                    <li>Conjunções</li>
+                    <li>Gramática e interpretação</li>
+                    <li>Figuras de linguagem</li>
+                    <li>Modernismo</li>
+                    <li>Introdução à literatura</li>
+                    </ul>
+                </div>
+                <div class="box box2 div2-res">
+                    <ul>
+                    <li>Ecologia</li>
+                    <li>Evolução</li>
+                    <li>Funções orgânicas</li>
+                    <li>Moléculas e propriedades</li>
+                    <li>Termologia</li>
+                    <li>Eletrodinâmica</li>
+                    <li>Funções</li>
+                    <li>Geometria plana</li>
+                    <li>Idade contemporânea</li>
+                    <li>Idade antiga</li>
+                    <li>Volta ao mundo</li>
+                    <li>Geopolítica</li>
+                    <li>Movimentos sociais</li>
+                    <li>Teoria sociológica</li>
+                    <li>Filosofia política</li>
+                    <li>Questões filosóficas da contemporaneidade</li>
+                    <li>Gêneros textuais</li>
+                    <li>Introdução à língua portuguesa</li>
+                    <li>Escolas literárias</li>
+                    <li>Literatura contemporânea</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para a UFPR</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtube.com/playlist?list=PLBeDi4xHURWGP9X9uyGlBSos5ZZmhE20h" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/GziN43vmzDg?si=J-Tis7KoVyoVRbaV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Biologia</p>
+                            <h2 class="card-title">UFPR 2025 - Sobre as enzimas e a sua atuação na síntese de DNA é correto afirmar #ufpr2026 #quibio</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtube.com/playlist?list=PLZumTT33EGmy6NJ-utE-WSJJDpC6419dn" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/u2hTzl29pRk?si=Mj8-lPdbbub2jNSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-quimica">Química</p>
+                            <h2 class="card-title">Correção UFPR - QUÍMICA- 2019/2020</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtube.com/playlist?list=PL61xd5-00Lh3WvuYRuBL_XzZ1K-4FJ-6P" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BBz2U0PZpUs?si=5ccyyucfdoNdrku-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-matematica">Física</p>
+                            <h2 class="card-title">Física 1 - Aula 0 - Sistema Internacional de Unidades e Notação Científica | UFPR 2021</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/yeXVV4gxGNQ" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/yeXVV4gxGNQ?si=y2yrCLob2sGK5WLm" title="Hora da Verdade UFPR 2025 1ª FASE - Matemática - Prof. Paulo Máximo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-matematica">Matemática</p>
+                            <h2 class="card-title">Hora da Verdade UFPR 2025 1ª FASE - Matemática - Prof. Paulo Máximo</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtube.com/playlist?list=PLoKZisyDwnVuon03O9lKyJzplTdvke8Ce" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/D99GKisz9Gg?si=kwAOSJbjlrsGJCJY" title="HISTÓRIA UFPR 2025-2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-historia">História</p>
+                            <h2 class="card-title">HISTÓRIA UFPR 2025-2026</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/85GuKS40dxo" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/85GuKS40dxo?si=gXDmsirJa7M2oHl4" title="Live de Revisão UFPR - GEOGRAFIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Geografia</p>
+                            <h2 class="card-title">Live de Revisão UFPR - GEOGRAFIA</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/w-d9yV3yrb8" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/w-d9yV3yrb8?si=NRarT513HaDXSWv_" title="Hora da Verdade UFPR 2024 1ª Fase - Sociologia - Prof. Ale Lopes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Sociologia</p>
+                            <h2 class="card-title">Hora da Verdade UFPR 2024 1ª Fase - Sociologia - Prof. Ale Lopes</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/98vUjmW-eYo" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/98vUjmW-eYo?si=Z-cG6sTIF530OKlu" title="Hora da Verdade UFPR 2026 1ª FASE - Filosofia com prof. Fernando Andrade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Filosofia</p>
+                            <h2 class="card-title">Hora da Verdade UFPR 2026 1ª FASE - Filosofia com prof. Fernando Andrade</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/ycAkw7x3t10" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ycAkw7x3t10?si=tTrBLPGgNAycHERS" title="Hora da Verdade UFPR 2024 1ª FASE - Português - Prof. Celina Gil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Português</p>
+                            <h2 class="card-title">Hora da Verdade UFPR 2024 1ª FASE - Português - Prof. Celina Gil</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtu.be/yqCD_f1b124" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/yqCD_f1b124?si=cZ4PT0H79FHGrUUv" title="UFPR Literatura 2026 - GABARITE A UFPR 2025! ANÁLISE COMPLETA DE 3 OBRAS OBRIGATÓRIAS!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Literatura</p>
+                            <h2 class="card-title">UFPR Literatura 2026 - GABARITE A UFPR 2025! ANÁLISE COMPLETA DE 3 OBRAS OBRIGATÓRIAS!</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtube.com/playlist?list=PLeyy0EwTLv3Aa_BujcAKKG9fSLbTo0UMj" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rR1rixAVKoA?si=-M3o1575VubYHXUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Inglês</p>
+                            <h2 class="card-title">FPR - Super Intensivo - Aula 1 - Professor Jomar - Texts and Tests</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/P13XLgdt2ZU" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/P13XLgdt2ZU?si=RsTWcPHt2Bjt-Gl_" title="Hora da Verdade UFPR 2025 1ª FASE - Espanhol - Profa. Nailla Malta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Espanhol</p>
+                            <h2 class="card-title">Hora da Verdade UFPR 2025 1ª FASE - Espanhol - Profa. Nailla Malta</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button onclick="mostrarPoup('ufpr')" class="close-popup-btn">Fechar</button>
+        </div>
+
+    </div>
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DA ESA-->
+
+<div class="popup-container" id="esa">
+    <div class="popup-box">
+
+          <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('esa')"  alt="">
+    </div>
+
+        <!-- Accordion  -->
+        <div class="aolado-res">
+            <div class="container-scroll">
+                <div id="container">
+                    <h3 class="materias-principal">Matérias</h3>
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Matemática
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Foca na resolução de problemas práticos, interpretação de gráficos e aplicação de
+                                conceitos básicos da matemática do ensino médio.
+                                O exame costuma enfatizar raciocínio lógico e cálculo numérico.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Português
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Avalia a capacidade de leitura, interpretação e domínio das estruturas gramaticais da
+                                língua portuguesa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Geografia
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Avalia o conhecimento sobre aspectos físicos, econômicos, políticos e sociais do Brasil
+                                e do mundo, com ênfase na realidade brasileira.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                História
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Foca em fatos marcantes da história do Brasil e mundial, priorizando os períodos
+                                colonial, imperial e republicano.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Inglês
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Cobra compreensão de textos e vocabulário básico, com foco em interpretação e estruturas
+                                simples.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Teoria Musical
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Avalia conhecimentos teóricos e práticos de música, leitura e escrita musical.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Área de Saúde
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Para candidatos à área de Saúde, inclui conteúdos de Biologia e primeiros socorros.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+                <div class="buttons-res">
+                    <button class="showDiv1-res">Assuntos Recorrentes</button>
+                    <button class="showDiv2-res">Assuntos Essenciais</button>
+                </div>
+                <div class="container-res">
+                    <div class="box box1 boxactive div1-res">
+                        <ul>
+                            <li>Razão, proporção e progressões (PA e PG)</li>
+                            <li>Crase, pontuação e concordância verbal</li>
+                            <li>Figuras de linguagem e funções da linguagem</li>
+                            <li>Guerras Mundiais e Ditadura Militar</li>
+                            <li>Urbanização, industrialização e questões ambientais</li>
+                            <li>Análise e interpretação de gráficos e tabelas</li>
+                            <li>Expressões e preposições em inglês</li>
+                            <li>Primeiros socorros e higiene</li>
+                            <li>Escalas, intervalos e acordes musicais</li>
+
+                        </ul>
+                    </div>
+                    <div class="box box2 div2-res">
+                        <ul>
+                            <li>Interpretação de texto e gramática normativa</li>
+                            <li>Porcentagem, regra de três e funções do 1º e 2º grau</li>
+                            <li>Geometria plana e espacial</li>
+                            <li>Brasil Colônia, Independência e Era Vargas</li>
+                            <li>Relevo, clima e vegetação do Brasil</li>
+                            <li>Globalização e blocos econômicos</li>
+                            <li>Tempos verbais e vocabulário em inglês</li>
+                            <li>Anatomia e fisiologia básica</li>
+                            <li>Leitura e identificação de notas musicais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <h3 class="playlists-h3">Principais Playlists para a ESA</h3>
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=BOj2xCwIo8M&list=PLfK3VGCIW9eSgmumCPKft6iJDbT6uRypU"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/texjKRIwdkg?si=Qc7-jWrNjhNPhGfe"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Português</p>
+                            <h2 class="card-title">Português ESA. Estudo de português</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=qk0vzOFFjA4&list=PLzhkw-ZGmLS3Ed-bFnFIFPF4qYRcLWMim"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/qe0eaxLnBQA?si=eWNV7WLeHYWWNath"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-matematica">Matemática</p>
+                            <h2 class="card-title">ESA - Matemática - 2024</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=ZzMcirfX1Ck&list=PLb1hgXShyDRyAl2pBvlra6t18miDO6Tf_"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/8xK3fQ84j8o?si=KeNrlCS7Jie-zaZO"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-historia">História</p>
+                            <h2 class="card-title">História ESA</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/J0MGj6Lohrw?si=YjInTZ6_BSMziy_E"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/live/J0MGj6Lohrw?si=YjInTZ6_BSMziy_E"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-quimica">Química</p>
+                            <h2 class="card-title">ESA - Química</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=yCLoa7Q00XI&list=PLCcSwgTwBMhyZSENrlJm_FM_naWpbbHhJ"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/RxuZYYnmKz8?si=tl56vut9F-xqp-9W"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Geografia</p>
+                            <h2 class="card-title">ESA - geografia</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="script.js"></script>
+
+        <button onclick="mostrarPoup('esa')" class="close-popup-btn">Fechar</button>
+    </div>
+</div>
+
+
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DA ESPCEX-->
+
+
+<div class="popup-container" id="espcex">
+    <div class="popup-box">
+
+          <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('espcex')"  alt="">
+    </div>
+
+        <!-- Accordion  -->
+        <div class="aolado-res">
+            <div class="container-scroll">
+                <div id="container">
+                    <h3 class="materias-principal">Matérias</h3>
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Matemática
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Versátil e exigente: aborda funções (principalmente do 2º grau), geometria analítica e
+                                espacial, sistemas lineares, progressões, logaritmos, análise combinatória, polinômios.
+                                Conteúdos de álgebra e geometria têm peso elevado.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Física
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Abrange mecânica (cinemática, dinâmica, trabalho e energia, leis de Newton), termologia,
+                                óptica, ondas, eletromagnetismo, medidas e física moderna (quando aplicável).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Química
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Conteúdo amplo: propriedades e transformações da matéria, estrutura atômica, ligações
+                                químicas, reações químicas, termoquímica, cinética, soluções, equilíbrio químico,
+                                eletroquímica, radioatividade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Português / Redação
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Cobre interpretação de textos, gramática normativa (sintaxe, morfologia, concordância,
+                                regência, etc.), coesão e coerência textual. A redação é dissertativo-argumentativa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Geografia
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Inclui geografia física (relevo, clima, hidrografia, solos), geografia humana
+                                (população, urbanização, economia), cartografia, demografia, domínios naturais do
+                                Brasil, geopolítica e uso de recursos naturais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                História
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                História geral e do Brasil: Idade Média, Renascimento, Estado moderno europeu, expansão
+                                marítima, Brasil-colônia, independência, Império, República, Era Vargas, ditadura
+                                militar, contemporaneidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Inglês
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Foco em leitura e interpretação de textos, vocabulário, estruturas gramaticais básicas
+                                (tempos verbais, pronomes, preposições etc.).
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+                <div class="buttons-res">
+                    <button class="showDiv1-res">Assuntos Recorrentes</button>
+                    <button class="showDiv2-res">Assuntos Essenciais</button>
+                </div>
+                <div class="container-res">
+                    <div class="box box1 boxactive div1-res">
+                        <ul>
+                            <li>Logaritmos e progressões (PA / PG)</li>
+                            <li>Análise combinatória e probabilidade</li>
+                            <li>Trigonometria e identidades trigonométricas</li>
+                            <li>Óptica e ondas</li>
+                            <li>Radioatividade e eletroquímica</li>
+                            <li>Equilíbrios químicos e cinética química</li>
+                            <li>Pesquisa cartográfica, demografia, blocos econômicos</li>
+                            <li>República Velha, Era Vargas, períodos contemporâneos</li>
+                            <li>Expressões idiomáticas e estruturas em inglês</li>
+                            <li>Tópicos de atualidades vinculados a geopolítica e meio ambiente</li>
+                        </ul>
+                    </div>
+                    <div class="box box2 div2-res">
+                        <ul>
+                            <li>Funções (1º e 2º grau)</li>
+                            <li>Geometria analítica e espacial</li>
+                            <li>Sistemas lineares e matrizes</li>
+                            <li>Mecânica clássica (Leis de Newton, energia, movimento)</li>
+                            <li>Eletromagnetismo e circuitos simples</li>
+                            <li>Propriedades da matéria e transformações químicas</li>
+                            <li>Química: reações, termoquímica, soluções, equilíbrio químico</li>
+                            <li>Interpretação de textos e gramática normativa</li>
+                            <li>Relevo, clima e vegetação do Brasil</li>
+                            <li>História do Brasil: colônia, império, república</li>
+                            <li>Leitura e compreensão de textos em inglês</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <h3 class="playlists-h3">Principais Playlists para a EsPCEx</h3>
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=Y31dLDyVWw0&list=PLpV9DvCZhRkI8btlHX2aq3a97SAfeZuEJ"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/Y31dLDyVWw0?si=ben6jjzj_-EhQVzT"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Português</p>
+                            <h2 class="card-title">Português EsPCEx. Estudo de português</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=MfUueslvE7M&list=PLzxO4B7OeQcW-3hehs74A8fMv8h-SRpQb"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/63AzRJ2h9Sk?si=55LOTBfNyDKemjil"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-matematica">Matemática</p>
+                            <h2 class="card-title">EsPCEx - Matemática - 2024</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=vzWxNISu3m4&list=PLpV9DvCZhRkKf6X9shZqVBHPZaiOfKMBe"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/watch?v=jhayY_isnl0&list=PLpV9DvCZhRkKf6X9shZqVBHPZaiOfKMBe&index=2"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-historia">História</p>
+                            <h2 class="card-title">História EsPCEx</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=uwXkQr13a4M&list=PL0LfmDSptaT0cyRFCpYbovp_vw--4jMZz"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/watch?v=589ztzzpuho&list=PL0LfmDSptaT0cyRFCpYbovp_vw--4jMZz&index=2"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-quimica">Química</p>
+                            <h2 class="card-title">EsPCEx Química</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=0_eFkmi8Yms&list=PLpV9DvCZhRkJMJWqqiYsOREleX4v7Cva1"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="http://youtube.com/watch?v=YO2GGLp77J0&list=PLpV9DvCZhRkJMJWqqiYsOREleX4v7Cva1&index=2"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Geografia</p>
+                            <h2 class="card-title">EsPCEx - geografia</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="script.js"></script>
+
+        <button onclick="mostrarPoup('espcex')" class="close-popup-btn">Fechar</button>
+    </div>
+</div>
+
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DO COLÉGIO NAVAL-->
+
+<div class="popup-container" id="colegio_naval">
+    <div class="popup-box">
+
+          <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('colegio_naval')"  alt="">
+    </div>
+
+        <!-- Accordion  -->
+        <div class="aolado-res">
+            <div class="container-scroll">
+                <div id="container">
+                    <h3 class="materias-principal">Matérias</h3>
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Matemática
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Cobre aritmética, álgebra, geometria e proporções. Inclui operações numéricas,
+                                potências, raízes, frações, equações e sistemas, além de noções de conjuntos. Também é
+                                frequente ver progressões, porcentagem e transformações algébricas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Inglês
+
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Avalia leitura e interpretação de textos em inglês, vocabulário, pronomes e estruturas
+                                gramaticais básicas. É aplicada já no primeiro dia de prova junto com Matemática.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Português / Redação
+
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Inclui interpretação de texto, gramática (morfologia, sintaxe, normas), coesão e
+                                coerência textual. A redação é dissertativo-argumentativa e costuma aparecer no segundo
+                                dia da prova.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Estudos Sociais (Geografia / História / Política etc.) </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Esse bloco aborda a história do Brasil, geografia física e humana, economia,
+                                urbanização, regionalização, meio ambiente, globalização, direitos humanos e estruturas
+                                políticas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Ciências (Física / Química / Biologia combinadas)
+
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                São incluídas questões básicas de ciências naturais: física, química e biologia
+                                integradas em um segmento. Pode aparecer em temas como ecologia, seres vivos, ciclos da
+                                natureza, química geral, entre outros.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+                <div class="buttons-res">
+                    <button class="showDiv1-res">Assuntos Recorrentes</button>
+                    <button class="showDiv2-res">Assuntos Essenciais</button>
+                </div>
+                <div class="container-res">
+                    <div class="box box1 boxactive div1-res">
+                        <ul>
+                            <li>Progressoes (PA e PG) e análise de sequências</li>
+                            <li>Conjuntos e operações com conjuntos</li>
+                            <li>Sintaxe, morfologia e figuras de linguagem em Português</li>
+                            <li>Globalização, blocos econômicos e relações internacionais</<li>
+                            <li>Solo, hidrografia e relevo regional brasileiro</li>
+                            <li>Química básica: reações simples e composição da matéria</li>
+                            <li>Energia, trabalho e fenômenos naturais (ciências gerais)</li>
+                            <li>Expressões idiomáticas em inglês e pronomes</li>
+                            <li>Direitos humanos e cidadania nos estudos sociais</li>
+                            <li>Questões ambientais atuais (mudanças climáticas, poluição)</li>
+                        </ul>
+                    </div>
+                    <div class="box box2 div2-res">
+                        <ul>
+                            <li>Aritmética básica: frações, potências e raízes</li>
+                            <li>Equações (1º grau e sistemas lineares)</li>
+                            <li>Geometria plana (triângulos, áreas)</li>
+                            <li>Porcentagem e proporção</li>
+                            <li>Interpretação de texto em Português</li>
+                            <li>Vocabulário e leitura em Inglês</li>
+                            <li>História do Brasil: colônia, império e república</li>
+                            <li>Geografia física do Brasil: relevo, clima, vegetação</li>
+                            <li>Noções de ecologia e meio ambiente</li>
+                            <li>Noções básicas de biologia (seres vivos, ecossistemas)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <h3 class="playlists-h3">Principais Playlists para o Cólegio Naval</h3>
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/fB2oCqrF350?si=_LBJANXlGTlAWQ2V"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/live/fB2oCqrF350?si=_LBJANXlGTlAWQ2V"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-portugues">Português</p>
+                            <h2 class="card-title"> Cólegio Naval - português</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=G62KW3_JE64&list=PLCWNUFXuGqADjK83VWEx_qTrwaygHqm0A"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://youtu.be/weWnjT_KHzQ?si=wnh6vIuS6IrMfsg7"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-matematica">Matemática</p>
+                            <h2 class="card-title">Cólegio Naval - Matemática - 2024</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=2d-twtidkfY"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/watch?v=2d-twtidkfY"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-historia">História</p>
+                            <h2 class="card-title">Cólegio Naval - História </h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/watch?v=b37gK_rSOuE&list=PL0LfmDSptaT2yA1eN1xsW_aEiNxvf50kM"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/watch?v=l9u20SSkaJI&list=PL0LfmDSptaT2yA1eN1xsW_aEiNxvf50kM&index=2"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-quimica">Química</p>
+                            <h2 class="card-title">Cólegio Naval - Química</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://www.youtube.com/live/0P-f7ybdDuQ?si=SPwltWXZhHNop55y"
+                            target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/live/0P-f7ybdDuQ?si=SPwltWXZhHNop55y"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="badge badge-geografia">Geografia</p>
+                            <h2 class="card-title">Cólegio Naval - geografia</h2>
+                            <button class="card-button material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="script.js"></script>
+
+        <button onclick="mostrarPoup('colegio_naval')" class="close-popup-btn">Fechar</button>
+    </div>
+</div>
+
+
+
+<!--CÓDIGO ABAIXO REFERENTE AO POUPUP DO ITA-->
+
+<div class="popup-container" id="ita">
+    <div class="popup-box">
+
+          <div class="container-close">
+        <img src="img/study-plan-close-button.png"  onclick="mostrarPoup('ita')"  alt="">
+    </div>
+
+        <!-- Accordion  -->
+        <div class="aolado-res">
+            <div class="container-scroll">
+                <div id="container">
+                    <h3 class="materias-principal">Matérias</h3>
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Matemática
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Prova bastante aprofundada, cobrando álgebra, geometria, funções, análise combinatória,
+                                cálculo básico e álgebra linear. Muitas questões exigem criatividade para resolver com
+                                rapidez e corretamente nas provas dissertativas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Física
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Enfoque em mecânica (Leis de Newton, movimento, energia), eletromagnetismo, óptica,
+                                termodinâmica e ondas. Também podem aparecer tópicos de física moderna.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Química
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Aborda química geral, físico-química, equilibrações, cinética, soluções e química
+                                inorgânica. Reações, equilíbrio químico e temas mais quantitativos são comuns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Português / Redação
+
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                A disciplina de Português inclui interpretação de textos, gramática normativa, análise
+                                textual. A redação do ITA é dissertativo-argumentativa, costuma versar sobre temas
+                                ligados à sociedade, ciência, tecnologia, ética ou desafios contemporâneos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-study">
+                        <button class="accordion-header-study">
+                            <span>
+                                Inglês
+                            </span>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
+                        </button>
+
+                        <div class="accordion-body-study">
+                            <p>
+                                Avalia principalmente a capacidade de leitura e interpretação de textos em inglês,
+                                vocabulário técnico e uso correto de estruturas gramaticais simples.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <!-- Assuntos recorrentes e essenciais -->
+            <div class="res-block">
+                <div class="buttons-res">
+                    <button class="showDiv1-res">Assuntos Recorrentes</button>
+                    <button class="showDiv2-res">Assuntos Essenciais</button>
+                </div>
+                <div class="container-res">
+                    <div class="box box1 boxactive div1-res">
+                        <ul>
+                            <li>Estatística básica e probabilidade em Matemática</li>
+                            <li>Trigonometria e identidades trigonométricas</li>
+                            <li>Óptica e ondas em Física</li>
+                            <li>Cinética química e equilíbrio iônico</li>
+                            <li>Figuras de linguagem e coesão textual</li>
+                            <li>Vocabulário técnico e expressões em inglês</li>
+                            <li>Temas científicos e tecnológicos em redações</li>
+                            <li>Problemas mistos que combinam disciplinas (ex: Física + Matemática)</li>
+                            <li>Interpretação gráfica e tabelas nas provas objetivas</li>
+                        </ul>
+                    </div>
+                    <div class="box box2 div2-res">
+                        <ul>
+                            <li>Funções (polinomiais, exponenciais, logarítmicas)</li>
+                            <li>Geometria analítica, plana e espacial</li>
+                            <li>Sistemas lineares, determinantes e matrizes</li>
+                            <li>Mecânica clássica (movimento, leis de Newton, energia)</li>
+                            <li>Eletrostática e eletrodinâmica</li>
+                            <li>Termodinâmica e ondas</li>
+                            <li>Equilíbrios químicos e reações</li>
+                            <li>Interpretar textos avançados em Português</li>
+                            <li>Redação dissertativa-argumentativa (tema contemporâneo)</li>
+                            <li>Leitura e interpretação de inglês</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Cards -->
+             <h3 class="playlists-h3">Principais Playlists para o ITA</h3>
+              <div class="container swiper">
+                <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=OxBFjFNDyDc&list=PLdWQuajA1_eNCfxmT75MAcBFqMavT7Qjv" target="_blank" class="card-link">
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://youtu.be/U6uP72yRX1s?si=7UBPESsAZVBHf7yU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-portugues">Português</p>
+                        <h2 class="card-title">ITA - Estudo de português</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=qONDYmRE7lI&list=PLP9omXFzW_n-s9fMloSBw6BWHzmuaHRfV" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/live/qfqTgX0rLuM?si=F5uCikgGrVGRedGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-matematica">Matemática</p>
+                        <h2 class="card-title">ITA - Matemática - 2024</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                    </li>
+                    
+                    <li class="card-item swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=paFJ7iYlNXI&list=PLpcBumK3Md9sBmXVI4gl_YyK8r_9Yvsag" target="_blank" class="card-link">
+                        <div class="video">
+                                <iframe width="560" height="315" src="https://youtu.be/VamwQjZmEdE?si=_hDAiE-nazZXbJSB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="badge badge-quimica">Química</p>
+                        <h2 class="card-title">ITA - Química</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                   
+                </ul>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <script src="script.js"></script>
+            
+            <button onclick="mostrarPoup('ita')" class="close-popup-btn">Fechar</button>
+        </div>
+    </div>
 
 
 
