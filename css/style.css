@@ -3297,14 +3297,30 @@
     color: white;
 }
 
+.swiper {
+  padding-bottom: 70px !important; /* dá espaço para as bolinhas */
+}
+
+.swiper .swiper-pagination {
+  overflow: visible !important;
+  padding-bottom: 15px ; /* dá espaço para as bolinhas */
+}
+
 .swiper-pagination {
-    bottom: 10px !important;
+  bottom: -20px !important; /* empurra para baixo */
+  position: absolute;
+  z-index: 10;
+}
+
+.header-carousel,
+.header-carousel-item {
+  overflow: visible !important; /* impede que o carrossel esconda as bolinhas */
 }
 
 .swiper-pagination-bullet {
     width: 12px !important;
     height: 12px !important;
-    margin: 0 6px !important;
+    margin: 0 10px 0 !important;
 }
 
 @media (max-width:1000px) {
