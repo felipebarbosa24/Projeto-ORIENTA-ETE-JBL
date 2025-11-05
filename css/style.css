@@ -674,7 +674,7 @@
 
 #carousel-hero .owl-nav .owl-prev:hover,
 #carousel-hero .owl-nav .owl-next:hover {
-  box-shadow: inset 0 0 100px 0 var(--bs-secondary);
+  box-shadow: inset 0 0 100px 0 var(--bs-primary);
   color: var(--bs-white);
 }
 
