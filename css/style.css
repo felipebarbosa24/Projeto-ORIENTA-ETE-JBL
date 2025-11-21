@@ -1833,6 +1833,10 @@
 .about {
     margin-top: 6rem;
 }
+
+#faq-about {
+    min-height: 710px;
+}
 /*** About End ***/
 
 
@@ -1990,6 +1994,10 @@
 .faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
     color: var(--bs-primary);
     background: var(--bs-light);
+}
+
+#faq-faq {
+    min-height: 1250px;
 }
 /*** FAQs End ***/
 
