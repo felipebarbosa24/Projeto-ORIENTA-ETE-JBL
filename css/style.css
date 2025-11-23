@@ -3307,7 +3307,7 @@
 }
 
 .swiper-pagination {
-  bottom: -20px !important; /* empurra para baixo */
+  bottom: -5px !important; /* empurra para baixo */
   position: absolute;
   z-index: 10;
 }
