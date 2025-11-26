@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', function () {
         margin: 25,
         nav: true,
         navText: [
-            '<i class="fa fa-arrow-left"></i>',
-            '<i class="fa fa-arrow-right"></i>'
+          '<i class="fa fa-arrow-right"></i>',
+          '<i class="fa fa-arrow-left"></i>'
         ],
         responsiveClass: true,
         responsive: {
